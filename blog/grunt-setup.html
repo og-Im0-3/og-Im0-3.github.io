@@ -1,0 +1,653 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>自動に処理してくれるタスクランナーGruntを準備したときのメモ -  03LOG</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </head>
+  <body>
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">自動に処理してくれるタスクランナーGruntを準備したときのメモ</h1>
+            <p class="article-date">2014/06/10</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <p>いろいろと便利な処理を自動で行ってくれるタスクランナーgruntをようやく使ってみたのでメモ。</p>
+
+<p>手順は下の通り
+<ul>
+    <li>Node.jsをインストール</li>
+    <li>grunt-cliをインストール</li>
+    <li>package.jsonを準備する</li>
+    <li>プラグインを追加する</li>
+    <li>Gruntfile.jsを準備</li>
+    <li>実行</li>
+</ul>
+&nbsp;
+<h2>Node.jsをインストール</h2>
+これがないとgruntが使えないので公式サイトからインストーラーをダウンロードします。
+<a href="http://nodejs.org/" target="_blank">Node.js</a></p>
+
+<p>インストールするとターミナルでNode.jsが使えるようになる。
+<h2>grunt-cliをインストール</h2>
+Node.jsをインストールしたらターミナルからgrunt-cliをインストールする
+実はここが一番はまった。</p>
+
+<p>まずはターミナルで下記のコマンドを入力</p>
+
+<p>[bash]
+npm install -g grunt-cli
+[/bash]</p>
+
+<p>上のコマンドをいれてEnterを押すとPasswordを聞かれるので
+Macのアカウントパスワードをいれるとインストールが始まる。</p>
+
+<p>はずだったのですがなぜかErrorが出てしまいました。
+Please try running this command again as root/Administrator.
+というエラーが出た場合は</p>
+
+<p>[bash]
+sudo npm install -g grunt-cil
+[/bash]</p>
+
+<p>と記入すればインストールができます。
+他の場面でも同じエラーが出る場合は先頭にsudoをつけてインストールをしてください。</p>
+
+<h2>package.jsonを準備する</h2>
+
+<p>grunt-cliをインストールしたら次はpackage.jsonを準備します。
+まずgruntを使用したいディレクトリまで移動します。
+ターミナルでの移動方法は</p>
+
+<p>[bash]
+cd [移動したいフォルダ名]
+[/bash]</p>
+
+<p>と入力。
+現在のディレクトリ内のフォルダを確認するには</p>
+
+<p>[bash]
+ls
+[/bash]
+と入力すれば確認できます。</p>
+
+<p>Macであればもっと簡単な移動方法があります。
+移動したいフォルダをターミナルアイコンにドラック＆ドロップです。</p>
+
+<p>そうすると左側の文字がフォルダを示すようになるはずです。
+今後gruntを使用するならDockにターミナルを入れておいた方が便利。</p>
+
+<p>うまく移動できたら$の左側が移動先のフォルダ名になります。
+移動したのが確認できたら</p>
+
+<p>[bash]
+npm init
+[/bash]</p>
+
+<p>と入力
+いろいろと質問されるのですが、とりあえずそのままEnter。
+すべて入力し終わるとpackage.jsonというファイルがディレクトリ内に作成されます。</p>
+
+<p>中身は以下の通り</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;
+}
+</code></pre>
+
+<p>ここまできたらgruntを追加します。
+追加するには下記のコマンドを入力。</p>
+
+<p>[bash]
+npm install grunt &ndash;save-dev
+[/bash]</p>
+
+<p>これを入れるとnode_moduleというフォルダが追加され、中にはgruntが入っているはずです。
+package.jsonの中身も以下のように変更されます。</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;,
+  &amp;quot;devDependencies&amp;quot;: {
+    &amp;quot;grunt&amp;quot;: &amp;quot;^0.4.5&amp;quot;
+  }
+}
+</code></pre>
+
+<h2>プラグインを追加する</h2>
+
+<p>grunt-contribはGruntの公式プラグインパッケージです。
+さまざまな処理を自動化してくれるプラグインが含まれています。
+今回はそのなかから個別にインストールします。
+今回はgrunt-contrib-watchとgrunt-contrib-cssminをインストールします。</p>
+
+<h3>grunt-contrib-watch</h3>
+
+<p>ファイルの更新を監視して処理を実行するためのプラグインです。</p>
+
+<p>インストールするにはターミナルで以下のコマンドを入力します。</p>
+
+<p>[bash]
+npm install grunt-contrib-watch &ndash;save-dev
+[/bash]</p>
+
+<p>するとpackage.jsonが以下のように更新されます。</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;,
+  &amp;quot;devDependencies&amp;quot;: {
+    &amp;quot;grunt&amp;quot;: &amp;quot;^0.4.5&amp;quot;,
+    &amp;quot;grunt-contrib-watch&amp;quot;: &amp;quot;^0.6.1&amp;quot;
+  }
+}
+</code></pre>
+
+<p>devDependencies内に追加されたのがわかると思います。
+またnode_moduleフォルダ内にも、grunt-contrib-watchというフォルダができているのが確認できるかと思います。</p>
+
+<h3>grunt-contrib-cssmin</h3>
+
+<p>minifyしたCSSファイルを自動で書き出してくれます。</p>
+
+<p>下記のコマンドをターミナルで入力するとインストールができます。</p>
+
+<p>[bash]
+npm install grunt-contrib-cssmin &ndash;save-dev
+[/bash]</p>
+
+<p>package.jsonはさらに下記のように書き加えられます。</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;,
+  &amp;quot;devDependencies&amp;quot;: {
+    &amp;quot;grunt&amp;quot;: &amp;quot;^0.4.5&amp;quot;,
+    &amp;quot;grunt-contrib-cssmin&amp;quot;: &amp;quot;^0.9.0&amp;quot;,
+    &amp;quot;grunt-contrib-watch&amp;quot;: &amp;quot;^0.6.1&amp;quot;
+  }
+}
+</code></pre>
+
+<p>これで準備は完了です。
+このプラグインを使って、CSSファイルが更新されたら自動的にminifyしたファイルを書き出すようにします。</p>
+
+<h2>Gruntfile.jsを準備して実行してみる</h2>
+
+<p>処理の内容はGruntfile.jsというファイルに書き込みます。
+まずはフォルダにGruntfile.jsというファイルを作って下記の内容を記入します。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+
+};
+</code></pre>
+
+<p>上記の記述はGruntを使用しますという宣言のようなものです。
+次はこの中に使用するプラグインを記述していきます。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+    grunt.loadNpmTasks(&#39;grunt-contrib-cssmin&#39;);
+    grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
+};
+</code></pre>
+
+<p>grunt.loadNpmTasks()でインストールしたプラグインを呼び出します。</p>
+
+<p>プラグインを呼び出したら、次はプラグインの処理の詳細を設定します。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+
+    grunt.loadNpmTasks(&#39;grunt-contrib-cssmin&#39;);
+    grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
+
+    grunt.initConfig({
+        cssmin: {
+            style: {
+                src: &#39;css/style.css&#39;,
+                dest: &#39;css/style.min.css&#39;
+            }
+        }
+    });
+};
+</code></pre>
+
+<p>処理の内容はgrunt.initConfig()内に記述します。
+まずはcssminに関する記述から。
+cssmin内のsrcはminifyするファイル名、destはminifyしたファイル名を指しています。
+ここまで記述したら、cssフォルダ内にstyle.cssを準備した状態で以下のコマンドを入力するとcssminが実行されます。</p>
+
+<p>[bash]
+grunt cssmin
+[/bash]</p>
+
+<p>実行後は下記のような表示が出ます。</p>
+
+<p>[bash]
+Running &ldquo;cssmin:styles&rdquo; (cssmin) task
+File css/style.min.css created: 95 B → 67 B
+[/bash]</p>
+
+<p>これでcssフォルダ内にminifyしたファイルができました。
+コマンドさえ入力すれば自動的にminifyしてくれるようになりました。</p>
+
+<p>ですがいちいちコマンドを入力するのは面倒、という場合はgrunt-contrib-watchを使います。
+Gruntfile.jsにさらに追加します。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+
+    grunt.loadNpmTasks(&#39;grunt-contrib-cssmin&#39;);
+    grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
+
+    grunt.initConfig({
+        cssmin: {
+            style: {
+                src: &#39;css/style.css&#39;,
+                dest: &#39;css/style.min.css&#39;
+            }
+        },
+        watch: {
+            css: {
+                files: [&#39;css/*.css&#39;],
+                tasks: [&#39;cssmin&#39;]
+            }
+        }
+    });
+};
+</code></pre>
+
+<p>grunt-contrib-watchはfilesとtasksの２つを設定する必要があります。
+filesは監視するファイル、tasksは監視したファイルが更新された際に実行する処理の名前です。
+今回watchにはcssフォルダ内のcssファイルが更新されたら、cssminを実行するというように記述しました。</p>
+
+<p>ここまで記述したら以下のコマンドをターミナルで実行。</p>
+
+<p>[bash]
+grunt watch
+[/bash]</p>
+
+<p>以下を実行した後にstyle.cssの内容を変更して保存してみると、自動的にcssminが実行されるようになりました。
+grunt-contribには他にもいろんなプラグインがあるので、これを組み合わせるだけでもいろいろと便利になりそうです。</p>
+
+<p>今回こちらの記事を参考にさせていただきました。ありがとうございました。
+<a href="https://app.codegrid.net/entry/grunt-introduction" target="_blank">現場で使えるGrunt入門 - Gruntを試そう | CodeGrid</a>
+<a href="http://kojika17.com/2013/03/grunt.js-memo.html" target="_blank">Web制作で面倒な作業を自動化するビルドツール、Grunt v0.4 入門 | Web Design KOJIKA17</a>
+<a href="http://blog.webcreativepark.net/2013/08/28-010250.html" target="_blank">Gruntで始めるWeb制作の自動化 - to-R</a></p>
+
+<p>glup.jsも気になるので今度はそっちも試してみたいです。</p>
+
+        </article>
+      <p>いろいろと便利な処理を自動で行ってくれるタスクランナーgruntをようやく使ってみたのでメモ。</p>
+
+<p>手順は下の通り
+<ul>
+    <li>Node.jsをインストール</li>
+    <li>grunt-cliをインストール</li>
+    <li>package.jsonを準備する</li>
+    <li>プラグインを追加する</li>
+    <li>Gruntfile.jsを準備</li>
+    <li>実行</li>
+</ul>
+&nbsp;
+<h2>Node.jsをインストール</h2>
+これがないとgruntが使えないので公式サイトからインストーラーをダウンロードします。
+<a href="http://nodejs.org/" target="_blank">Node.js</a></p>
+
+<p>インストールするとターミナルでNode.jsが使えるようになる。
+<h2>grunt-cliをインストール</h2>
+Node.jsをインストールしたらターミナルからgrunt-cliをインストールする
+実はここが一番はまった。</p>
+
+<p>まずはターミナルで下記のコマンドを入力</p>
+
+<p>[bash]
+npm install -g grunt-cli
+[/bash]</p>
+
+<p>上のコマンドをいれてEnterを押すとPasswordを聞かれるので
+Macのアカウントパスワードをいれるとインストールが始まる。</p>
+
+<p>はずだったのですがなぜかErrorが出てしまいました。
+Please try running this command again as root/Administrator.
+というエラーが出た場合は</p>
+
+<p>[bash]
+sudo npm install -g grunt-cil
+[/bash]</p>
+
+<p>と記入すればインストールができます。
+他の場面でも同じエラーが出る場合は先頭にsudoをつけてインストールをしてください。</p>
+
+<h2>package.jsonを準備する</h2>
+
+<p>grunt-cliをインストールしたら次はpackage.jsonを準備します。
+まずgruntを使用したいディレクトリまで移動します。
+ターミナルでの移動方法は</p>
+
+<p>[bash]
+cd [移動したいフォルダ名]
+[/bash]</p>
+
+<p>と入力。
+現在のディレクトリ内のフォルダを確認するには</p>
+
+<p>[bash]
+ls
+[/bash]
+と入力すれば確認できます。</p>
+
+<p>Macであればもっと簡単な移動方法があります。
+移動したいフォルダをターミナルアイコンにドラック＆ドロップです。</p>
+
+<p>そうすると左側の文字がフォルダを示すようになるはずです。
+今後gruntを使用するならDockにターミナルを入れておいた方が便利。</p>
+
+<p>うまく移動できたら$の左側が移動先のフォルダ名になります。
+移動したのが確認できたら</p>
+
+<p>[bash]
+npm init
+[/bash]</p>
+
+<p>と入力
+いろいろと質問されるのですが、とりあえずそのままEnter。
+すべて入力し終わるとpackage.jsonというファイルがディレクトリ内に作成されます。</p>
+
+<p>中身は以下の通り</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;
+}
+</code></pre>
+
+<p>ここまできたらgruntを追加します。
+追加するには下記のコマンドを入力。</p>
+
+<p>[bash]
+npm install grunt &ndash;save-dev
+[/bash]</p>
+
+<p>これを入れるとnode_moduleというフォルダが追加され、中にはgruntが入っているはずです。
+package.jsonの中身も以下のように変更されます。</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;,
+  &amp;quot;devDependencies&amp;quot;: {
+    &amp;quot;grunt&amp;quot;: &amp;quot;^0.4.5&amp;quot;
+  }
+}
+</code></pre>
+
+<h2>プラグインを追加する</h2>
+
+<p>grunt-contribはGruntの公式プラグインパッケージです。
+さまざまな処理を自動化してくれるプラグインが含まれています。
+今回はそのなかから個別にインストールします。
+今回はgrunt-contrib-watchとgrunt-contrib-cssminをインストールします。</p>
+
+<h3>grunt-contrib-watch</h3>
+
+<p>ファイルの更新を監視して処理を実行するためのプラグインです。</p>
+
+<p>インストールするにはターミナルで以下のコマンドを入力します。</p>
+
+<p>[bash]
+npm install grunt-contrib-watch &ndash;save-dev
+[/bash]</p>
+
+<p>するとpackage.jsonが以下のように更新されます。</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;,
+  &amp;quot;devDependencies&amp;quot;: {
+    &amp;quot;grunt&amp;quot;: &amp;quot;^0.4.5&amp;quot;,
+    &amp;quot;grunt-contrib-watch&amp;quot;: &amp;quot;^0.6.1&amp;quot;
+  }
+}
+</code></pre>
+
+<p>devDependencies内に追加されたのがわかると思います。
+またnode_moduleフォルダ内にも、grunt-contrib-watchというフォルダができているのが確認できるかと思います。</p>
+
+<h3>grunt-contrib-cssmin</h3>
+
+<p>minifyしたCSSファイルを自動で書き出してくれます。</p>
+
+<p>下記のコマンドをターミナルで入力するとインストールができます。</p>
+
+<p>[bash]
+npm install grunt-contrib-cssmin &ndash;save-dev
+[/bash]</p>
+
+<p>package.jsonはさらに下記のように書き加えられます。</p>
+
+<pre><code class="javascript">{
+  &amp;quot;name&amp;quot;: &amp;quot;grunt_test&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;0.0.0&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;Gruntfile.js&amp;quot;,
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;test&amp;quot;: &amp;quot;echo \&amp;quot;Error: no test specified\&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  },
+  &amp;quot;author&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;license&amp;quot;: &amp;quot;ISC&amp;quot;,
+  &amp;quot;devDependencies&amp;quot;: {
+    &amp;quot;grunt&amp;quot;: &amp;quot;^0.4.5&amp;quot;,
+    &amp;quot;grunt-contrib-cssmin&amp;quot;: &amp;quot;^0.9.0&amp;quot;,
+    &amp;quot;grunt-contrib-watch&amp;quot;: &amp;quot;^0.6.1&amp;quot;
+  }
+}
+</code></pre>
+
+<p>これで準備は完了です。
+このプラグインを使って、CSSファイルが更新されたら自動的にminifyしたファイルを書き出すようにします。</p>
+
+<h2>Gruntfile.jsを準備して実行してみる</h2>
+
+<p>処理の内容はGruntfile.jsというファイルに書き込みます。
+まずはフォルダにGruntfile.jsというファイルを作って下記の内容を記入します。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+
+};
+</code></pre>
+
+<p>上記の記述はGruntを使用しますという宣言のようなものです。
+次はこの中に使用するプラグインを記述していきます。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+    grunt.loadNpmTasks(&#39;grunt-contrib-cssmin&#39;);
+    grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
+};
+</code></pre>
+
+<p>grunt.loadNpmTasks()でインストールしたプラグインを呼び出します。</p>
+
+<p>プラグインを呼び出したら、次はプラグインの処理の詳細を設定します。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+
+    grunt.loadNpmTasks(&#39;grunt-contrib-cssmin&#39;);
+    grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
+
+    grunt.initConfig({
+        cssmin: {
+            style: {
+                src: &#39;css/style.css&#39;,
+                dest: &#39;css/style.min.css&#39;
+            }
+        }
+    });
+};
+</code></pre>
+
+<p>処理の内容はgrunt.initConfig()内に記述します。
+まずはcssminに関する記述から。
+cssmin内のsrcはminifyするファイル名、destはminifyしたファイル名を指しています。
+ここまで記述したら、cssフォルダ内にstyle.cssを準備した状態で以下のコマンドを入力するとcssminが実行されます。</p>
+
+<p>[bash]
+grunt cssmin
+[/bash]</p>
+
+<p>実行後は下記のような表示が出ます。</p>
+
+<p>[bash]
+Running &ldquo;cssmin:styles&rdquo; (cssmin) task
+File css/style.min.css created: 95 B → 67 B
+[/bash]</p>
+
+<p>これでcssフォルダ内にminifyしたファイルができました。
+コマンドさえ入力すれば自動的にminifyしてくれるようになりました。</p>
+
+<p>ですがいちいちコマンドを入力するのは面倒、という場合はgrunt-contrib-watchを使います。
+Gruntfile.jsにさらに追加します。</p>
+
+<pre><code class="javascript">module.exports = function (grunt) {
+
+    grunt.loadNpmTasks(&#39;grunt-contrib-cssmin&#39;);
+    grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
+
+    grunt.initConfig({
+        cssmin: {
+            style: {
+                src: &#39;css/style.css&#39;,
+                dest: &#39;css/style.min.css&#39;
+            }
+        },
+        watch: {
+            css: {
+                files: [&#39;css/*.css&#39;],
+                tasks: [&#39;cssmin&#39;]
+            }
+        }
+    });
+};
+</code></pre>
+
+<p>grunt-contrib-watchはfilesとtasksの２つを設定する必要があります。
+filesは監視するファイル、tasksは監視したファイルが更新された際に実行する処理の名前です。
+今回watchにはcssフォルダ内のcssファイルが更新されたら、cssminを実行するというように記述しました。</p>
+
+<p>ここまで記述したら以下のコマンドをターミナルで実行。</p>
+
+<p>[bash]
+grunt watch
+[/bash]</p>
+
+<p>以下を実行した後にstyle.cssの内容を変更して保存してみると、自動的にcssminが実行されるようになりました。
+grunt-contribには他にもいろんなプラグインがあるので、これを組み合わせるだけでもいろいろと便利になりそうです。</p>
+
+<p>今回こちらの記事を参考にさせていただきました。ありがとうございました。
+<a href="https://app.codegrid.net/entry/grunt-introduction" target="_blank">現場で使えるGrunt入門 - Gruntを試そう | CodeGrid</a>
+<a href="http://kojika17.com/2013/03/grunt.js-memo.html" target="_blank">Web制作で面倒な作業を自動化するビルドツール、Grunt v0.4 入門 | Web Design KOJIKA17</a>
+<a href="http://blog.webcreativepark.net/2013/08/28-010250.html" target="_blank">Gruntで始めるWeb制作の自動化 - to-R</a></p>
+
+<p>glup.jsも気になるので今度はそっちも試してみたいです。</p>
+
+        <div class="">
+          <ul class="share1">
+            <li class="share-hatena"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="70" height="20" src="javascript:false" style="width: 46px; height: 20px;"></iframe><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+            <li class="share-facebook"><div class="fb-like fb_iframe_widget" data-href="http://03log.me/css_smacss/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 98px; height: 20px;"><iframe name="fbea2c118" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df36b43858%26domain%3D03log.me%26origin%3Dhttp%253A%252F%252F03log.me%252Ff305062d64%26relation%3Dparent.parent&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false" style="border: none; visibility: visible; width: 98px; height: 20px;" class=""></iframe></span></div></li>
+            <li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.c27d2d163408c0fe087fbfe1c687ce2b.ja.html#_=1420494277017&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=ja&amp;original_referer=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;size=m&amp;text=SMACSS%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9FCSS%E8%A8%AD%E8%A8%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%7C%2003LOG&amp;url=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;via=Im0_3" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 131px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+          </ul>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>

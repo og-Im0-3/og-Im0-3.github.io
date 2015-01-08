@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>HTML5を正しくマークアップするためのルール『コンテンツモデル』 -  03LOG</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </head>
+  <body>
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">HTML5を正しくマークアップするためのルール『コンテンツモデル』</h1>
+            <p class="article-date">2013/12/22</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <p>ここ最近HTML5をもう一度ちゃんと勉強し直そうと思いいろいろと調べていたのですが、
+正しいマークアップをする際にはコンテンツモデルとカテゴリをしっかり理解する必要がありました。</p>
+
+<p>今まで大まかにしか掴んでいなかったコンテンツモデルについて改めて整理してみました。</p>
+
+<h2>コンテンツモデルってなに？</h2>
+
+<p>HTML5の要素にはそれぞれ『カテゴリ』と『コンテンツモデル』があります。
+カテゴリはその要素がどのような要素か分類をしたもの。
+コンテンツモデルは中にどんな要素を入れることが出来るかを示したルールです。
+<blockquote><a href="http://www.html5.jp/tag/models/" target="_blank">コンテンツ・モデル - HTML5タグリファレンス</a></blockquote></p>
+
+<h2>コンテンツモデルの例</h2>
+
+<p>ul要素のコンテンツモデルは『0個以上のli要素』です。
+つまりul要素の下にはli要素以外は使用してはいけません。</p>
+
+<p>以下は正しいマークアップの例
+~~~ html
+&lt;ul&gt;
+    &lt;li&gt;東京&lt;/li&gt;
+    &lt;li&gt;神奈川&lt;/li&gt;
+    &lt;li&gt;千葉&lt;/li&gt;
+    &lt;li&gt;埼玉&lt;/li&gt;
+&lt;/ul&gt;
+~~~
+ちゃんとulの直下にli要素が入っています。</p>
+
+<p>でも以下のマークアップは間違いです。
+~~~ html
+&lt;ul&gt;
+    &lt;a href=&ldquo;tokyo.html&rdquo;&gt;&lt;li&gt;東京&lt;/li&gt;&lt;/a&gt;
+    &lt;a href=&ldquo;kanagawa.html&rdquo;&gt;&lt;li&gt;神奈川&lt;/li&gt;&lt;/a&gt;
+    &lt;a href=&ldquo;chiba.html&rdquo;&gt;&lt;li&gt;千葉&lt;/li&gt;&lt;/a&gt;
+    &lt;a href=&ldquo;saitama.html&rdquo;&gt;&lt;li&gt;埼玉&lt;/li&gt;&lt;/a&gt;
+&lt;/ul&gt;
+~~~</p>
+
+<p>正しく書き直すとこうなります。
+~~~ html
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&ldquo;tokyo.html&rdquo;&gt;東京&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&ldquo;kanagawa.html&rdquo;&gt;神奈川&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&ldquo;chiba.html&rdquo;&gt;千葉&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&ldquo;saitama.html&rdquo;&gt;埼玉&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+~~~</p>
+
+<p>li要素のコンテンツモデルはフローコンテンツです。
+カテゴリがフロー・コンテンツのものを中に入れることができます。</p>
+
+<p>a要素はフロー・コンテンツというカテゴリを持っているので使用することが可能です。</p>
+
+<h2>カテゴリーの種類</h2>
+
+<p>ここで出てきたフロー・コンテンツというのはカテゴリの一種です。
+カテゴリにはいくつか分類があります。
+ここで主なカテゴリーを紹介します。</p>
+
+<h3>1．メタデータ・コンテンツ</h3>
+
+<p>ドキュメントのメタデータやスタイルの定義などをするときに使用するコンテンツ。
+ざっくり言うとブラウザで見たときに、ウインドウ内には表示されないもの。
+ドキュメントの情報を記述するための要素です。
+<blockquote>
+command, link, meta, noscript, script, style, title
+</blockquote></p>
+
+<h3>2．フロー・コンテンツ</h3>
+
+<p>ドキュメント内に現れるコンテンツ全般はフローコンテンツです。
+<blockquote>
+a abbr address area (map 要素の子孫の場合) article aside audio b bdi bdo blockquote br button canvas cite code command datalist del details dfn dialog div dl em embed fieldset figure footer form h1 h2 h3 h4 h5 h6 header hgroup hr i iframe img input ins kbd keygen label map mark math menu meter nav noscript object ol output p pre progress q ruby s samp script section select small span strong style (scoped 属性が存在する場合) sub sup svg table textarea time u ul var video wbr テキスト
+</blockquote></p>
+
+<h3>3．セクショニング・コンテンツ</h3>
+
+<p>見出しやフッターの範囲を指定するコンテンツのこと
+<blockquote>
+article aside nav section
+</blockquote></p>
+
+<h3>4．ヘッディング・コンテンツ</h3>
+
+<p>見出しを表すコンテンツのこと
+<blockquote>
+h1 h2 h3 h4 h5 h6 hgroup
+</blockquote></p>
+
+<h3>5．フレージング・コンテンツ</h3>
+
+<p>段落のなかのテキストを指し示す要素のこと
+HTML4でいうインライン要素に近い考え方。
+<blockquote>
+a abbr area (map 要素の子孫の場合) audio b bdi bdo br button canvas cite code command datalist del dfn em embed i iframe img input ins kbd keygen label map mark math meter noscript object output progress q ruby s samp script select small span strong sub sup svg textarea time u var video wbr テキスト
+</blockquote>
+フレージング・コンテンツほとんどはフレージング・コンテンツしか入れることが出来ないようです。
+その例外の代表がa要素です（あとで説明します）</p>
+
+<h3>6．エンベディッド・コンテンツ</h3>
+
+<p>外部のリソースをインポートするためのコンテンツ。
+画像やビデオ、フレーム、プラグイン、canvasなんかもそれにあたります。
+<blockquote>
+ audio canvas embed iframe img math object svg video
+</blockquote></p>
+
+<h3>7．インタラクティブ・コンテンツ</h3>
+
+<p>ユーザー・インタラクションに特化したコンテンツのことです。
+って言われると分かりづらいですが、簡単いうとブラウザで見た時、操作出来るコンテンツ。
+リンクだったりフォームだったり、クリックとかテキスト入力とか出来るコンテンツ。
+<blockquote>
+ a audio (controls 属性が存在する場合) button details embed iframe img (usemap 属性が存在する場合) input (type 属性が hidden 状態でない場合) keygen label menu (type 属性が toolbar 状態の場合) object (usemap 属性が存在する場合) select textarea video (controls 属性が存在する場合)
+</blockquote></p>
+
+<p>とこのようにカテゴリに分類されています。
+コンテンツモデルに「フロー・コンテンツ」と書かれていたら
+その中にはフロー・コンテンツしか入れることが出来ないという意味です。
+なので分類はどんなのがあるか覚えておきたいですね。</p>
+
+<h2>a要素のコンテンツモデル「トランスペアレント」</h2>
+
+<p>いろいろと調べてて一番衝撃受けたのがa要素。
+HTML4だとa要素はインライン要素だから中にブロック要素入れちゃだめ！って教わってきたけど
+例えば以下のようなマークアップ
+~~~ html
+&lt;aside&gt;
+    &lt;a href=&ldquo;index.html&rdquo;&gt;
+        &lt;section&gt;
+            &lt;h1&gt;タイトル&lt;/h1&gt;
+　　　　　    &lt;p&gt;テキストテキストテキスト&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/a&gt;
+&lt;/aside&gt;
+~~~
+HTML5だとこんなマークアップもありなんです。</p>
+
+<p>a要素のコンテンツモデルは「トランスペアレント（ただしインタラクディブコンテンツは除く）」
+トランスペアレントとは親要素のコンテンツモデル引き継ぐというものです。
+つまり上のマークアップの場合、aside要素のコンテンツモデルを引き継ぐため先ほどのマークアップはありなんです。</p>
+
+<p>各要素のコンテンツモデルについては仕様を確認しましょう。
+<blockquote>
+<a href="http://www.html5.jp/tag/elements/index.html" target="_blank">HTML 要素 - HTML5タグリファレンス</a>
+</blockquote></p>
+
+<h2>まとめ</h2>
+
+<p>HTML5は文書構造をより意識したマークアップになっていて仕様も結構変わってます。
+今回ちゃんとコンテンツモデルについてちゃんと理解して仕様を読むのが楽しくなりました。
+今まで何となくしか理解してなかったですが、美しいマークアップをするためにも今後は意識して仕様を読みたいと思います。</p>
+
+        </article>
+      <p>ここ最近HTML5をもう一度ちゃんと勉強し直そうと思いいろいろと調べていたのですが、
+正しいマークアップをする際にはコンテンツモデルとカテゴリをしっかり理解する必要がありました。</p>
+
+<p>今まで大まかにしか掴んでいなかったコンテンツモデルについて改めて整理してみました。</p>
+
+<h2>コンテンツモデルってなに？</h2>
+
+<p>HTML5の要素にはそれぞれ『カテゴリ』と『コンテンツモデル』があります。
+カテゴリはその要素がどのような要素か分類をしたもの。
+コンテンツモデルは中にどんな要素を入れることが出来るかを示したルールです。
+<blockquote><a href="http://www.html5.jp/tag/models/" target="_blank">コンテンツ・モデル - HTML5タグリファレンス</a></blockquote></p>
+
+<h2>コンテンツモデルの例</h2>
+
+<p>ul要素のコンテンツモデルは『0個以上のli要素』です。
+つまりul要素の下にはli要素以外は使用してはいけません。</p>
+
+<p>以下は正しいマークアップの例
+~~~ html
+&lt;ul&gt;
+    &lt;li&gt;東京&lt;/li&gt;
+    &lt;li&gt;神奈川&lt;/li&gt;
+    &lt;li&gt;千葉&lt;/li&gt;
+    &lt;li&gt;埼玉&lt;/li&gt;
+&lt;/ul&gt;
+~~~
+ちゃんとulの直下にli要素が入っています。</p>
+
+<p>でも以下のマークアップは間違いです。
+~~~ html
+&lt;ul&gt;
+    &lt;a href=&ldquo;tokyo.html&rdquo;&gt;&lt;li&gt;東京&lt;/li&gt;&lt;/a&gt;
+    &lt;a href=&ldquo;kanagawa.html&rdquo;&gt;&lt;li&gt;神奈川&lt;/li&gt;&lt;/a&gt;
+    &lt;a href=&ldquo;chiba.html&rdquo;&gt;&lt;li&gt;千葉&lt;/li&gt;&lt;/a&gt;
+    &lt;a href=&ldquo;saitama.html&rdquo;&gt;&lt;li&gt;埼玉&lt;/li&gt;&lt;/a&gt;
+&lt;/ul&gt;
+~~~</p>
+
+<p>正しく書き直すとこうなります。
+~~~ html
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&ldquo;tokyo.html&rdquo;&gt;東京&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&ldquo;kanagawa.html&rdquo;&gt;神奈川&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&ldquo;chiba.html&rdquo;&gt;千葉&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&ldquo;saitama.html&rdquo;&gt;埼玉&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+~~~</p>
+
+<p>li要素のコンテンツモデルはフローコンテンツです。
+カテゴリがフロー・コンテンツのものを中に入れることができます。</p>
+
+<p>a要素はフロー・コンテンツというカテゴリを持っているので使用することが可能です。</p>
+
+<h2>カテゴリーの種類</h2>
+
+<p>ここで出てきたフロー・コンテンツというのはカテゴリの一種です。
+カテゴリにはいくつか分類があります。
+ここで主なカテゴリーを紹介します。</p>
+
+<h3>1．メタデータ・コンテンツ</h3>
+
+<p>ドキュメントのメタデータやスタイルの定義などをするときに使用するコンテンツ。
+ざっくり言うとブラウザで見たときに、ウインドウ内には表示されないもの。
+ドキュメントの情報を記述するための要素です。
+<blockquote>
+command, link, meta, noscript, script, style, title
+</blockquote></p>
+
+<h3>2．フロー・コンテンツ</h3>
+
+<p>ドキュメント内に現れるコンテンツ全般はフローコンテンツです。
+<blockquote>
+a abbr address area (map 要素の子孫の場合) article aside audio b bdi bdo blockquote br button canvas cite code command datalist del details dfn dialog div dl em embed fieldset figure footer form h1 h2 h3 h4 h5 h6 header hgroup hr i iframe img input ins kbd keygen label map mark math menu meter nav noscript object ol output p pre progress q ruby s samp script section select small span strong style (scoped 属性が存在する場合) sub sup svg table textarea time u ul var video wbr テキスト
+</blockquote></p>
+
+<h3>3．セクショニング・コンテンツ</h3>
+
+<p>見出しやフッターの範囲を指定するコンテンツのこと
+<blockquote>
+article aside nav section
+</blockquote></p>
+
+<h3>4．ヘッディング・コンテンツ</h3>
+
+<p>見出しを表すコンテンツのこと
+<blockquote>
+h1 h2 h3 h4 h5 h6 hgroup
+</blockquote></p>
+
+<h3>5．フレージング・コンテンツ</h3>
+
+<p>段落のなかのテキストを指し示す要素のこと
+HTML4でいうインライン要素に近い考え方。
+<blockquote>
+a abbr area (map 要素の子孫の場合) audio b bdi bdo br button canvas cite code command datalist del dfn em embed i iframe img input ins kbd keygen label map mark math meter noscript object output progress q ruby s samp script select small span strong sub sup svg textarea time u var video wbr テキスト
+</blockquote>
+フレージング・コンテンツほとんどはフレージング・コンテンツしか入れることが出来ないようです。
+その例外の代表がa要素です（あとで説明します）</p>
+
+<h3>6．エンベディッド・コンテンツ</h3>
+
+<p>外部のリソースをインポートするためのコンテンツ。
+画像やビデオ、フレーム、プラグイン、canvasなんかもそれにあたります。
+<blockquote>
+ audio canvas embed iframe img math object svg video
+</blockquote></p>
+
+<h3>7．インタラクティブ・コンテンツ</h3>
+
+<p>ユーザー・インタラクションに特化したコンテンツのことです。
+って言われると分かりづらいですが、簡単いうとブラウザで見た時、操作出来るコンテンツ。
+リンクだったりフォームだったり、クリックとかテキスト入力とか出来るコンテンツ。
+<blockquote>
+ a audio (controls 属性が存在する場合) button details embed iframe img (usemap 属性が存在する場合) input (type 属性が hidden 状態でない場合) keygen label menu (type 属性が toolbar 状態の場合) object (usemap 属性が存在する場合) select textarea video (controls 属性が存在する場合)
+</blockquote></p>
+
+<p>とこのようにカテゴリに分類されています。
+コンテンツモデルに「フロー・コンテンツ」と書かれていたら
+その中にはフロー・コンテンツしか入れることが出来ないという意味です。
+なので分類はどんなのがあるか覚えておきたいですね。</p>
+
+<h2>a要素のコンテンツモデル「トランスペアレント」</h2>
+
+<p>いろいろと調べてて一番衝撃受けたのがa要素。
+HTML4だとa要素はインライン要素だから中にブロック要素入れちゃだめ！って教わってきたけど
+例えば以下のようなマークアップ
+~~~ html
+&lt;aside&gt;
+    &lt;a href=&ldquo;index.html&rdquo;&gt;
+        &lt;section&gt;
+            &lt;h1&gt;タイトル&lt;/h1&gt;
+　　　　　    &lt;p&gt;テキストテキストテキスト&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/a&gt;
+&lt;/aside&gt;
+~~~
+HTML5だとこんなマークアップもありなんです。</p>
+
+<p>a要素のコンテンツモデルは「トランスペアレント（ただしインタラクディブコンテンツは除く）」
+トランスペアレントとは親要素のコンテンツモデル引き継ぐというものです。
+つまり上のマークアップの場合、aside要素のコンテンツモデルを引き継ぐため先ほどのマークアップはありなんです。</p>
+
+<p>各要素のコンテンツモデルについては仕様を確認しましょう。
+<blockquote>
+<a href="http://www.html5.jp/tag/elements/index.html" target="_blank">HTML 要素 - HTML5タグリファレンス</a>
+</blockquote></p>
+
+<h2>まとめ</h2>
+
+<p>HTML5は文書構造をより意識したマークアップになっていて仕様も結構変わってます。
+今回ちゃんとコンテンツモデルについてちゃんと理解して仕様を読むのが楽しくなりました。
+今まで何となくしか理解してなかったですが、美しいマークアップをするためにも今後は意識して仕様を読みたいと思います。</p>
+
+        <div class="">
+          <ul class="share1">
+            <li class="share-hatena"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="70" height="20" src="javascript:false" style="width: 46px; height: 20px;"></iframe><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+            <li class="share-facebook"><div class="fb-like fb_iframe_widget" data-href="http://03log.me/css_smacss/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 98px; height: 20px;"><iframe name="fbea2c118" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df36b43858%26domain%3D03log.me%26origin%3Dhttp%253A%252F%252F03log.me%252Ff305062d64%26relation%3Dparent.parent&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false" style="border: none; visibility: visible; width: 98px; height: 20px;" class=""></iframe></span></div></li>
+            <li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.c27d2d163408c0fe087fbfe1c687ce2b.ja.html#_=1420494277017&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=ja&amp;original_referer=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;size=m&amp;text=SMACSS%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9FCSS%E8%A8%AD%E8%A8%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%7C%2003LOG&amp;url=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;via=Im0_3" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 131px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+          </ul>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>

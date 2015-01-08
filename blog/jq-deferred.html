@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>jQuery.Deferredについてまとめてみた -  03LOG</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </head>
+  <body>
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">jQuery.Deferredについてまとめてみた</h1>
+            <p class="article-date">2014/08/26</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <p>jQuery.Deferred()についてわからない部分もあったのでいろいろと調べてみました。</p>
+
+<h2>$.Deferred()について</h2>
+
+<p>・Deferrdオブジェクトは非同期処理を監視するためのオブジェクト<br />
+・Deferrdオブジェクトの中にはPromiseオブジェクトというオブジェクトが内包している
+・PromiseオブジェクトはDeferrdの状態を保持している。<br />
+状態は３種類<br />
+pending 処理中の状態<br />
+resolve 処理が成功したときの状態<br />
+rejected　処理が失敗したときの状態<br />
+・DeferredオブジェクトはPromiseの中身を変更する役割</p>
+
+<h2>deferredの使い方</h2>
+
+<p>deferredは下記のように使用します。</p>
+
+<pre><code class="javascript">var func  = function (){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&#39;delay!&#39;);
+        d.resolve();//Deferredオブジェクトをresolveに変更
+    },1000);
+    return d.promise();//Promiseオブジェクトだけを返す
+};
+
+var promise = func();
+promise.done(function(){
+    console.log(&#39;resolved!&#39;);
+}).fail(function(){
+    console.log(&#39;rejected!&#39;);
+});
+</code></pre>
+
+<p>func内でdeferredオブジェクトを呼び出して、funcが実行されたときにdefferredオブジェクトのpromiseを返します。
+かえってきたオブジェクトによって.done()、.fail()が実行されます。</p>
+
+<h3>deferred.resolve()</h3>
+
+<p>Deferredオブジェクトをresolveの状態に変更する</p>
+
+<h3>deferred.rejected()</h3>
+
+<p>Deferredオブジェクトをrejectedの状態に変更する</p>
+
+<h3>deferred.promise()</h3>
+
+<p>DeferredオブジェクトのPromiseオブジェクトを返す</p>
+
+<h3>deferred.done()</h3>
+
+<p>Deferredオブジェクトがresolveの時実行する</p>
+
+<h3>deferred.fail()</h3>
+
+<p>Deferredオブジェクトがrejectedの時実行する</p>
+
+<h2>deferred.then()について</h2>
+
+<h3>deferred.then()</h3>
+
+<p>done()とfail()をいっぺんに記述することができる。<br />
+先ほどのコードをthen()を使って書くとこうなる。</p>
+
+<pre><code class="javascript">var func  = function (){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&#39;delay!&#39;);
+        d.resolve();//Deferredオブジェクトをresolveに変更
+    },1000);
+    return d.promise();//Promiseオブジェクトだけを返す
+};
+
+var promise = func();
+promise.then(function(){
+    console.log(&#39;resolved!&#39;);
+},function(){
+    console.log(&#39;rejected!&#39;);
+});
+</code></pre>
+
+<p>またdeferred.then()は新たにDeferredオブジェクトを返す<br /></p>
+
+<pre><code class="javascript">var func = function func(){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&#39;delay!&#39;);
+        d.resolve();
+    },1000);
+    return d.promise();
+};
+
+func()
+.then(func)
+.then(func)
+.then(func);
+</code></pre>
+
+<p>上記のコードはそれぞれのdeferred.then()がDeferredオブジェクトを返すため、1秒ごとにconsole.logが実行される。</p>
+
+<h2>deferred.when()について</h2>
+
+<h3>deferred.when()</h3>
+
+<p>複数  のDeferredオブジェクトをまとめて、新たにDeferredオブジェクトを返す。<br />
+下記のように使用する。</p>
+
+<p>[code lang=javascript]
+$.when(func(), func(), func())
+.done(hello1);
+[/code]</p>
+
+<p>when()の中がすべてresolovedの場合はresolovedになる。<br />
+rejectedが一つでも含まれるの場合はrejectedになる。<br />
+pendingの状態の場合は処理が進まない。</p>
+
+<h2>jQuery.ajax()・jQuery.getJSON()について</h2>
+
+<p>ajaxなどで返されるjqXHRオブジェクトに対しても.done(),.fail(),.then()が使用できます
+またリクエスト完了時に実行される.always()も使用可能です。</p>
+
+<p>[code lang=javascript]
+$.ajax({
+    url: &ldquo;data.json&rdquo;,
+    data: data,
+    dataType: &ldquo;json&rdquo;
+}).done(function(){
+    console.log(&#039;done!&#039;);
+}).fail(function(){
+    console.log(&#039;fail!&#039;);
+}).always(function(){
+    console.log(&#039;complete!&#039;);
+});
+[/code]</p>
+
+<p>下記のサイトを参考にさせていただきました。ありがとうございました。</p>
+
+<blockquote>
+<a href="http://techblog.yahoo.co.jp/programming/jquery-deferred/" target="_blank">爆速でわかるjQuery.Deferred超入門</a>
+</blockquote>
+
+        </article>
+      <p>jQuery.Deferred()についてわからない部分もあったのでいろいろと調べてみました。</p>
+
+<h2>$.Deferred()について</h2>
+
+<p>・Deferrdオブジェクトは非同期処理を監視するためのオブジェクト<br />
+・Deferrdオブジェクトの中にはPromiseオブジェクトというオブジェクトが内包している
+・PromiseオブジェクトはDeferrdの状態を保持している。<br />
+状態は３種類<br />
+pending 処理中の状態<br />
+resolve 処理が成功したときの状態<br />
+rejected　処理が失敗したときの状態<br />
+・DeferredオブジェクトはPromiseの中身を変更する役割</p>
+
+<h2>deferredの使い方</h2>
+
+<p>deferredは下記のように使用します。</p>
+
+<pre><code class="javascript">var func  = function (){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&#39;delay!&#39;);
+        d.resolve();//Deferredオブジェクトをresolveに変更
+    },1000);
+    return d.promise();//Promiseオブジェクトだけを返す
+};
+
+var promise = func();
+promise.done(function(){
+    console.log(&#39;resolved!&#39;);
+}).fail(function(){
+    console.log(&#39;rejected!&#39;);
+});
+</code></pre>
+
+<p>func内でdeferredオブジェクトを呼び出して、funcが実行されたときにdefferredオブジェクトのpromiseを返します。
+かえってきたオブジェクトによって.done()、.fail()が実行されます。</p>
+
+<h3>deferred.resolve()</h3>
+
+<p>Deferredオブジェクトをresolveの状態に変更する</p>
+
+<h3>deferred.rejected()</h3>
+
+<p>Deferredオブジェクトをrejectedの状態に変更する</p>
+
+<h3>deferred.promise()</h3>
+
+<p>DeferredオブジェクトのPromiseオブジェクトを返す</p>
+
+<h3>deferred.done()</h3>
+
+<p>Deferredオブジェクトがresolveの時実行する</p>
+
+<h3>deferred.fail()</h3>
+
+<p>Deferredオブジェクトがrejectedの時実行する</p>
+
+<h2>deferred.then()について</h2>
+
+<h3>deferred.then()</h3>
+
+<p>done()とfail()をいっぺんに記述することができる。<br />
+先ほどのコードをthen()を使って書くとこうなる。</p>
+
+<pre><code class="javascript">var func  = function (){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&#39;delay!&#39;);
+        d.resolve();//Deferredオブジェクトをresolveに変更
+    },1000);
+    return d.promise();//Promiseオブジェクトだけを返す
+};
+
+var promise = func();
+promise.then(function(){
+    console.log(&#39;resolved!&#39;);
+},function(){
+    console.log(&#39;rejected!&#39;);
+});
+</code></pre>
+
+<p>またdeferred.then()は新たにDeferredオブジェクトを返す<br /></p>
+
+<pre><code class="javascript">var func = function func(){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&#39;delay!&#39;);
+        d.resolve();
+    },1000);
+    return d.promise();
+};
+
+func()
+.then(func)
+.then(func)
+.then(func);
+</code></pre>
+
+<p>上記のコードはそれぞれのdeferred.then()がDeferredオブジェクトを返すため、1秒ごとにconsole.logが実行される。</p>
+
+<h2>deferred.when()について</h2>
+
+<h3>deferred.when()</h3>
+
+<p>複数  のDeferredオブジェクトをまとめて、新たにDeferredオブジェクトを返す。<br />
+下記のように使用する。</p>
+
+<p>[code lang=javascript]
+$.when(func(), func(), func())
+.done(hello1);
+[/code]</p>
+
+<p>when()の中がすべてresolovedの場合はresolovedになる。<br />
+rejectedが一つでも含まれるの場合はrejectedになる。<br />
+pendingの状態の場合は処理が進まない。</p>
+
+<h2>jQuery.ajax()・jQuery.getJSON()について</h2>
+
+<p>ajaxなどで返されるjqXHRオブジェクトに対しても.done(),.fail(),.then()が使用できます
+またリクエスト完了時に実行される.always()も使用可能です。</p>
+
+<p>[code lang=javascript]
+$.ajax({
+    url: &ldquo;data.json&rdquo;,
+    data: data,
+    dataType: &ldquo;json&rdquo;
+}).done(function(){
+    console.log(&#039;done!&#039;);
+}).fail(function(){
+    console.log(&#039;fail!&#039;);
+}).always(function(){
+    console.log(&#039;complete!&#039;);
+});
+[/code]</p>
+
+<p>下記のサイトを参考にさせていただきました。ありがとうございました。</p>
+
+<blockquote>
+<a href="http://techblog.yahoo.co.jp/programming/jquery-deferred/" target="_blank">爆速でわかるjQuery.Deferred超入門</a>
+</blockquote>
+
+        <div class="">
+          <ul class="share1">
+            <li class="share-hatena"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="70" height="20" src="javascript:false" style="width: 46px; height: 20px;"></iframe><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+            <li class="share-facebook"><div class="fb-like fb_iframe_widget" data-href="http://03log.me/css_smacss/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 98px; height: 20px;"><iframe name="fbea2c118" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df36b43858%26domain%3D03log.me%26origin%3Dhttp%253A%252F%252F03log.me%252Ff305062d64%26relation%3Dparent.parent&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false" style="border: none; visibility: visible; width: 98px; height: 20px;" class=""></iframe></span></div></li>
+            <li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.c27d2d163408c0fe087fbfe1c687ce2b.ja.html#_=1420494277017&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=ja&amp;original_referer=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;size=m&amp;text=SMACSS%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9FCSS%E8%A8%AD%E8%A8%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%7C%2003LOG&amp;url=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;via=Im0_3" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 131px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+          </ul>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>

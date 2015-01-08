@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>CSS3で出来るアニメーション ２.CSS animation -  03LOG</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </head>
+  <body>
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">CSS3で出来るアニメーション ２.CSS animation</h1>
+            <p class="article-date">2014/01/23</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <h2>animationとは</h2>
+
+<ul>
+    <li>キーフレームを設定したアニメーションが出来る</li>
+    <li>transitionと違い、きっかけなしでもアニメーションが出来きる</li>
+        <li>アニメーションをループさせることが出来きる</li>
+</ul>
+
+<p>transitionに関してはこちらを参照
+<blockquote>
+<a href="http://03log.me/css3-transition/" target="_blank">CSS3で出来るアニメーション 1.CSS transition | 03LOG</a>
+</blockquote></p>
+
+<p>プロパティはtransitionと似ていますが、animation-name、animation-iteration-count、animation-directionはanimationはtransitionにはないプロパディです。</p>
+
+<h3>animation-name</h3>
+
+<p>キーフレームの名前を指定します。
+キーフレームの指定の仕方は後半で説明します。</p>
+
+<h3>animation-duration</h3>
+
+<p>変化にかかる時間を指定
+初期値は0, 一秒＝1s、値が増えるほど変化にかかる時間が長くなる。</p>
+
+<h3>animation-timing-function</h3>
+
+<p>変化のタイミング、具合を調整
+<blockquote>
+ease:開始と終了をなめらかに（初期値）
+ease-in：ゆっくり始まる
+ease-out：ゆっくり終わる
+ease-in-out：ゆっくり始まってゆっくり終わる
+linear：一定に変化する
+</blockquote></p>
+
+<h3>animation-delay</h3>
+
+<p>変化がいつ始まるかを指定できる。
+初期値は0、一秒なら1s、値が増えるほど始まるタイミングが遅くなる。</p>
+
+<h3>animation-iteration-count</h3>
+
+<p>変化のタイミング、具合を調整
+<blockquote>
+infinite:繰り返しアニメーションさせる
+数値:指定下回数だけアニメーションさせる（初期値は1）
+</blockquote></p>
+
+<h3>animation-direction</h3>
+
+<p>最後までアニメーションした後のアニメーションの方向について指定できます。
+<blockquote>
+normal:最後までアニメーションした後、また最初からアニメーションする（初期値）
+alternate:最後までアニメーションしたら、逆再生でアニメーションする
+</blockquote></p>
+
+<h2>@keyframesとは</h2>
+
+<p>キーフレームを設定するには@keyframesを使います。
+記述の仕方は以下の通りです。</p>
+
+<pre><code class="css">@keyframes アニメーション名{
+0%{スタート時の状態を記述}
+100%{終了時の状態を記述}
+}
+</code></pre>
+
+<p>animation-nameにアニメーション名を指定するとそのキーフレームが適用されます。</p>
+
+<pre><code class="css">@keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>この場合、moveというアニメーション名で、widthが０から100pxへ変化するアニメーションになります。</p>
+
+<pre><code class="css">@keyframes move{
+0%{width:0px}
+50%{width:200px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>上記のように、0〜100%の間で変化の度合いを指定することが出来ます。
+この場合はスタートは0で、半分すぎたところで200pxまでのびて、その後100pxで縮むアニメーションになります。</p>
+
+<h2>使用できるブラウザは</h2>
+
+<p>IEは10から使用が可能です。またChrome、iOS、Androidはベンダープレフィックスが必要です。
+またFirefoxの古いバージョンも必要なので</p>
+
+<pre><code class="css">#box{
+animation:move 2s ease-out 0s 1 normal;
+}
+
+@keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>こちらのアニメーションを多くのブラウザで対応させるためには</p>
+
+<pre><code class="css">#box{
+-webkit-animation:move 2s ease-out 0s 1 normal;
+-moz-animation:move 2s ease-out 0s 1 normal;
+animation:move 2s ease-out 0s 1 normal;
+}
+
+@-webkit-keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+
+@-moz-keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+
+@keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>このような記述になります。</p>
+
+<p>うまく使えばこんな感じに細かくアニメーションさせることも出来ます。
+<iframe width="100%" height="300" src="http://jsfiddle.net/sY4XK/embedded/result,css,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+
+        </article>
+      <h2>animationとは</h2>
+
+<ul>
+    <li>キーフレームを設定したアニメーションが出来る</li>
+    <li>transitionと違い、きっかけなしでもアニメーションが出来きる</li>
+        <li>アニメーションをループさせることが出来きる</li>
+</ul>
+
+<p>transitionに関してはこちらを参照
+<blockquote>
+<a href="http://03log.me/css3-transition/" target="_blank">CSS3で出来るアニメーション 1.CSS transition | 03LOG</a>
+</blockquote></p>
+
+<p>プロパティはtransitionと似ていますが、animation-name、animation-iteration-count、animation-directionはanimationはtransitionにはないプロパディです。</p>
+
+<h3>animation-name</h3>
+
+<p>キーフレームの名前を指定します。
+キーフレームの指定の仕方は後半で説明します。</p>
+
+<h3>animation-duration</h3>
+
+<p>変化にかかる時間を指定
+初期値は0, 一秒＝1s、値が増えるほど変化にかかる時間が長くなる。</p>
+
+<h3>animation-timing-function</h3>
+
+<p>変化のタイミング、具合を調整
+<blockquote>
+ease:開始と終了をなめらかに（初期値）
+ease-in：ゆっくり始まる
+ease-out：ゆっくり終わる
+ease-in-out：ゆっくり始まってゆっくり終わる
+linear：一定に変化する
+</blockquote></p>
+
+<h3>animation-delay</h3>
+
+<p>変化がいつ始まるかを指定できる。
+初期値は0、一秒なら1s、値が増えるほど始まるタイミングが遅くなる。</p>
+
+<h3>animation-iteration-count</h3>
+
+<p>変化のタイミング、具合を調整
+<blockquote>
+infinite:繰り返しアニメーションさせる
+数値:指定下回数だけアニメーションさせる（初期値は1）
+</blockquote></p>
+
+<h3>animation-direction</h3>
+
+<p>最後までアニメーションした後のアニメーションの方向について指定できます。
+<blockquote>
+normal:最後までアニメーションした後、また最初からアニメーションする（初期値）
+alternate:最後までアニメーションしたら、逆再生でアニメーションする
+</blockquote></p>
+
+<h2>@keyframesとは</h2>
+
+<p>キーフレームを設定するには@keyframesを使います。
+記述の仕方は以下の通りです。</p>
+
+<pre><code class="css">@keyframes アニメーション名{
+0%{スタート時の状態を記述}
+100%{終了時の状態を記述}
+}
+</code></pre>
+
+<p>animation-nameにアニメーション名を指定するとそのキーフレームが適用されます。</p>
+
+<pre><code class="css">@keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>この場合、moveというアニメーション名で、widthが０から100pxへ変化するアニメーションになります。</p>
+
+<pre><code class="css">@keyframes move{
+0%{width:0px}
+50%{width:200px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>上記のように、0〜100%の間で変化の度合いを指定することが出来ます。
+この場合はスタートは0で、半分すぎたところで200pxまでのびて、その後100pxで縮むアニメーションになります。</p>
+
+<h2>使用できるブラウザは</h2>
+
+<p>IEは10から使用が可能です。またChrome、iOS、Androidはベンダープレフィックスが必要です。
+またFirefoxの古いバージョンも必要なので</p>
+
+<pre><code class="css">#box{
+animation:move 2s ease-out 0s 1 normal;
+}
+
+@keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>こちらのアニメーションを多くのブラウザで対応させるためには</p>
+
+<pre><code class="css">#box{
+-webkit-animation:move 2s ease-out 0s 1 normal;
+-moz-animation:move 2s ease-out 0s 1 normal;
+animation:move 2s ease-out 0s 1 normal;
+}
+
+@-webkit-keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+
+@-moz-keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+
+@keyframes move{
+0%{width:0px}
+100%{width:100px}
+}
+</code></pre>
+
+<p>このような記述になります。</p>
+
+<p>うまく使えばこんな感じに細かくアニメーションさせることも出来ます。
+<iframe width="100%" height="300" src="http://jsfiddle.net/sY4XK/embedded/result,css,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+
+        <div class="">
+          <ul class="share1">
+            <li class="share-hatena"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="70" height="20" src="javascript:false" style="width: 46px; height: 20px;"></iframe><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+            <li class="share-facebook"><div class="fb-like fb_iframe_widget" data-href="http://03log.me/css_smacss/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 98px; height: 20px;"><iframe name="fbea2c118" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df36b43858%26domain%3D03log.me%26origin%3Dhttp%253A%252F%252F03log.me%252Ff305062d64%26relation%3Dparent.parent&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false" style="border: none; visibility: visible; width: 98px; height: 20px;" class=""></iframe></span></div></li>
+            <li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.c27d2d163408c0fe087fbfe1c687ce2b.ja.html#_=1420494277017&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=ja&amp;original_referer=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;size=m&amp;text=SMACSS%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9FCSS%E8%A8%AD%E8%A8%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%7C%2003LOG&amp;url=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;via=Im0_3" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 131px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+          </ul>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>

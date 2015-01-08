@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>jQueryの属性フィルタを使いこなす -  03LOG</title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </head>
+  <body>
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">jQueryの属性フィルタを使いこなす</h1>
+            <p class="article-date">2013/12/21</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <p>久々にjQueryを使って作業したのですが
+その時属性フィルタが便利だと改めて気づいたのでまとめます。</p>
+
+<h2>基本の形 $(&rsquo;[属性]&rsquo;)</h2>
+
+<p>基本は[]で囲む形です。
+いままで先頭にタグを絶対付けなきゃいけないって思っていましたがなくてもいけます。</p>
+
+<h2>$(&rsquo;[属性=値]&rsquo;)</h2>
+
+<p>指定した属性と値が一致した場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性!=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値を持っていない場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性＾=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値ではじまる場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性$=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値でおわる場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性*=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値がどこかに入っている場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性1][属性2]&rsquo;)</h2>
+
+<p>２つくっつけるとAND検索になります。
+属性１を持っているかつ属性２を持っている場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性|=値]&rsquo;)</h2>
+
+<p>これがちょっとわかりづらい。接頭語フィルタ。
+属性の値がその値、または-で区切られた前に付いている場合処理を行う。</p>
+
+<pre><code class="javascript">$(&#39;[name|=&amp;quot;red&amp;quot;]&#39;).css({&#39;color&#39;:&#39;red&#39;});
+</code></pre>
+
+<pre><code class="html">&amp;lt;p name=&amp;quot;red&amp;quot;&amp;gt;りんご&amp;lt;/p&amp;gt;
+&amp;lt;p name=&amp;quot;red-sweet&amp;quot;&amp;gt;いちご&amp;lt;/p&amp;gt;
+&amp;lt;p name=&amp;quot;redsweet&amp;quot;&amp;gt;ぶどう&amp;lt;/p&amp;gt;
+</code></pre>
+
+<p>この場合<strong>りんご</strong>と<strong>いちご</strong>は赤色になるけどぶどうには適用されません。</p>
+
+<p>色んな種類の属性セレクタがありましたが、CSSでも同じセレクタが有ります。
+ちなみにCSS3から登場した[属性＾=値]、[属性$=値]、[属性*=値]などは
+jQuery1.0からサポートしています。</p>
+
+        </article>
+      <p>久々にjQueryを使って作業したのですが
+その時属性フィルタが便利だと改めて気づいたのでまとめます。</p>
+
+<h2>基本の形 $(&rsquo;[属性]&rsquo;)</h2>
+
+<p>基本は[]で囲む形です。
+いままで先頭にタグを絶対付けなきゃいけないって思っていましたがなくてもいけます。</p>
+
+<h2>$(&rsquo;[属性=値]&rsquo;)</h2>
+
+<p>指定した属性と値が一致した場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性!=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値を持っていない場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性＾=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値ではじまる場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性$=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値でおわる場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性*=値]&rsquo;)</h2>
+
+<p>指定した属性がこの値がどこかに入っている場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性1][属性2]&rsquo;)</h2>
+
+<p>２つくっつけるとAND検索になります。
+属性１を持っているかつ属性２を持っている場合処理を行います。</p>
+
+<h2>$(&rsquo;[属性|=値]&rsquo;)</h2>
+
+<p>これがちょっとわかりづらい。接頭語フィルタ。
+属性の値がその値、または-で区切られた前に付いている場合処理を行う。</p>
+
+<pre><code class="javascript">$(&#39;[name|=&amp;quot;red&amp;quot;]&#39;).css({&#39;color&#39;:&#39;red&#39;});
+</code></pre>
+
+<pre><code class="html">&amp;lt;p name=&amp;quot;red&amp;quot;&amp;gt;りんご&amp;lt;/p&amp;gt;
+&amp;lt;p name=&amp;quot;red-sweet&amp;quot;&amp;gt;いちご&amp;lt;/p&amp;gt;
+&amp;lt;p name=&amp;quot;redsweet&amp;quot;&amp;gt;ぶどう&amp;lt;/p&amp;gt;
+</code></pre>
+
+<p>この場合<strong>りんご</strong>と<strong>いちご</strong>は赤色になるけどぶどうには適用されません。</p>
+
+<p>色んな種類の属性セレクタがありましたが、CSSでも同じセレクタが有ります。
+ちなみにCSS3から登場した[属性＾=値]、[属性$=値]、[属性*=値]などは
+jQuery1.0からサポートしています。</p>
+
+        <div class="">
+          <ul class="share1">
+            <li class="share-hatena"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="70" height="20" src="javascript:false" style="width: 46px; height: 20px;"></iframe><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+            <li class="share-facebook"><div class="fb-like fb_iframe_widget" data-href="http://03log.me/css_smacss/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 98px; height: 20px;"><iframe name="fbea2c118" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df36b43858%26domain%3D03log.me%26origin%3Dhttp%253A%252F%252F03log.me%252Ff305062d64%26relation%3Dparent.parent&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false" style="border: none; visibility: visible; width: 98px; height: 20px;" class=""></iframe></span></div></li>
+            <li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.c27d2d163408c0fe087fbfe1c687ce2b.ja.html#_=1420494277017&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=ja&amp;original_referer=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;size=m&amp;text=SMACSS%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9FCSS%E8%A8%AD%E8%A8%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%7C%2003LOG&amp;url=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;via=Im0_3" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 131px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+          </ul>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>
