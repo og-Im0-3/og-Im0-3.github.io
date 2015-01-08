@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title> 03LOG</title>
+    <title>03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,17 +49,17 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container l-content">
-      <div class="articles">
+        <div class="articles">
   <section class="article">
     <h1 class="article-title"><a href="/blog/visual-programing.html">ビジュアルや動きをコードで作るProcessing</a></h1>
     <p class="article-date">2014/12/11</p>
@@ -54,9 +67,7 @@
     <div class="article-summary"><p><a href="http://theguild.jp/" target="_blank">THE GUILD</a>の皆さんがやっているインタラクティブ・プログラミング勉強会の記事をみて触発されたので、最近Processingでちょこちょことスケッチを書いています。</p>
 
 <blockquote>
-<strong>インタラクティブ・プログラミング勉強会</strong>
-<a href="http://fladdict.net/blog/2014/10/visual-coding-1.html" target="_blank">インタラクティブ・プログラミング勉強会 第1回 乱数 | fladdict</a>
-<a href="http://cocopon.me/blog/?p=4992" target="_blank">イン...</a>
+<strong>インタラクティブ・プ...</strong>
 </blockquote></div>
   </section>
 
@@ -68,12 +79,7 @@
     <p class="article-cat"><a href="/categories/web.html">Web</a></p>
     <div class="article-summary"><p>今までOOCSS、BEMの考えを取り入れたコーディングをしていたのですが、今回SMACSSのルールに従ってコーディングしてみたので考え方と、感想をメモします。</p>
 
-<p>今回コーディングするにあたり、下記を参考にしました。<br>
-詳しい内容に関してはこちらを参考にしていただければと思います。</p>
-
-<blockquote>
-<a href="https://smacss.com/" target="_blank">Scalable...</a>
-</blockquote></div>
+<p>今回コーディングするにあたり、下...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -89,10 +95,8 @@
 <p>Node.jsを使用したビルドシステムです。</p>
 
 <blockquote>
-  <a href="http://gulpjs.com/">gulp.js - the streaming build system</a>
-</blockquote>
-
-<p>gruntのように構築時に便利な処理を自動で実行させることができま...</p></div>
+  <a href="http://gulpjs.com/">gulp.js - the streaming...</a>
+</blockquote></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -106,10 +110,7 @@ p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングが�
 
 <h2>使い方</h2>
 
-<p>p5.jsのサイトからダウンロード、またはCDNで読み込むことができます。<br>
-CDNを使用する場合は下記のコードを追加してください。</p>
-
-<pre><code class="javascript">&amp;lt...</code></pre></div>
+<p>p5.jsのサイトからダウンロード、ま...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -122,10 +123,7 @@ CDNを使用する場合は下記のコードを追加してください。</p>
 
 <pre><code class="javascript">var array = ['A','A','B','B','C','A','C','D','B'];
 var sort = [];
-var flag;
-sort.push(array[0]);
-
-for(var i = 0; i &amp;lt...</code></pre></div>
+var...</code></pre></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -138,8 +136,7 @@ for(var i = 0; i &amp;lt...</code></pre></div>
 
 <h2>$.Deferred()について</h2>
 
-<p>・Deferrdオブジェクトは非同期処理を監視するためのオブジェクト<br>
-・Deferrdオブジェクトの中にはPromiseオブジェクトというオブジェクトが内包して...</p></div>
+<p>・Deferrdオブジェクトは非同期処理を監視するためのオブ...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just

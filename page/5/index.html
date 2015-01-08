@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title> 03LOG</title>
+    <title>03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,17 +49,17 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container l-content">
-      <div class="articles">
+        <div class="articles">
   <section class="article">
     <h1 class="article-title"><a href="/blog/sass-configrb.html">sassを使う際のファイルの構成とconfig.rbについて</a></h1>
     <p class="article-date">2014/01/23</p>
@@ -55,10 +68,7 @@
 今まで個人で触る時はファイルの管理が煩雑だったので、改めて自分なりに整理してみました。
 今回はその際のディレクトリ構成や設定などをメモ。</p>
 
-<h2>ファイル構成について</h2>
-
-<p>主なscssファイルは
-main.scss／<em>mixin.scss/</em>var.scss...</p></div>
+<h2>フ...</h2></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -72,13 +82,8 @@ main.scss／<em>mixin.scss/</em>var.scss...</p></div>
 <ul>
     <li>キーフレームを設定したアニメーションが出来る</li>
     <li>transitionと違い、きっかけなしでもアニメーションが出来きる</li>
-        <li>アニメーションをループさせることが出来きる</li>
-</ul>
-
-<p>transitionに関してはこちらを参照
-</p><blockquote>
-<a href="http://03log.me/css3-transition/" target="_blank">CSS3で出来るアニメー...</a>
-</blockquote></div>
+        <li>アニメーションをル...</li>
+</ul></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -92,13 +97,8 @@ main.scss／<em>mixin.scss/</em>var.scss...</p></div>
 <h2>transitionとは</h2>
 
 <ul>
-    <li>:hoverなどで値が変化したときにスムーズに変化させることが出来る。</li>
-    <li>値が元に戻ると、スムーズに戻る。</li>
-</ul>
-
-<h3>transition-property</h3>
-
-<p>変化を適...</p></div>
+    <li>:hoverなどで値が変化したときにスムーズに変化させることが出来る...</li>
+</ul></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -110,9 +110,7 @@ main.scss／<em>mixin.scss/</em>var.scss...</p></div>
     <div class="article-summary"><p>今回ブログのリニューアルでtwittreやFacebookのアイコンなどはSVGを使用しました。
 初めて外部のSVGファイルを使用したのでその際に学んだこと、困ったこととかをメモ。</p>
 
-<h2>SVGとは</h2>
-
-<p>SVGはベクター形式の画像です。jpgやpngなどラスター形式の画像と違い、パスで書かれているの...</p></div>
+<h2>SVGとは</h2></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -132,10 +130,6 @@ main.scss／<em>mixin.scss/</em>var.scss...</p></div>
 <div class="amazlet-box" style="margin-bottom: 0px;">
 <div class="amazlet-image" style="float: left; margin: 0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048863231/iits3-22/ref=nosim/" target="_blank" name="amazletlink"><img style="border: none;" alt="レスポンシブWebデザイン マルチデバイス時代のコンセプトとテクニック (WEB PROFESSIONAL)" src="http://ecx.images-amazon.com/images/I/417RBoT17SL._SL160_.jpg"></a></div>
 <div class="amazlet-info" style="line-height: 120%; margin-bottom: 10px;">
-<div class="amazlet-name" style="margin-bottom: 10px; line-height: 120%;">
-
-<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048863231/iits3-22/ref=nosim/" target="_blank" name="amazletlink">レスポンシブWebデザイン マルチデバイス時代のコンセプトとテクニック (WEB PROFESSIONAL...</a>
-</div>
 </div>
 </div>
 </blockquote></div>
@@ -152,11 +146,7 @@ main.scss／<em>mixin.scss/</em>var.scss...</p></div>
 <h2>MIMEタイプの設定</h2>
 
 <p>ローカルでは表示されるのに、サーバー上では表示がうまく行かない場合は
-MIMEタイプの設定を変更する必要があるようです。</p>
-
-<p>.htaccessに以下の文言を追加すれば対応出来ます。
-~~~ html
-AddType image...</p></div>
+MIMEタイプの設定を変更する必要があるようです...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just

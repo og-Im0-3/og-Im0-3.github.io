@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>Emmetで格段に気持ちよくコーディングするために（HTML編） -  03LOG</title>
+    <title>Emmetで格段に気持ちよくコーディングするために（HTML編） - 03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,11 +49,11 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
@@ -52,7 +65,8 @@
             <p class="article-date">2013/12/20</p>
             <p class="article-cat"><a href="/categories/web.html">Web</a></p>
           </header>
-          <p>最近は会社ではwin、家ではmacなので、coda2からSublime Textを使うようになりました。
+          <div class="article-body">
+            <p>最近は会社ではwin、家ではmacなので、coda2からSublime Textを使うようになりました。
 それと一緒にEmmetもつかうようになって便利だなーとか思いながらもいまいち使いこなせて無い気がしたので
 改めて使い方をまとめてみました。</p>
 
@@ -63,82 +77,93 @@
 基本、タグはタグの名前を打って展開すれば閉じタグまで自動で書いてくれます。
 <h2>覚えておきたいショートコード＆ショートカット</h2>
 <blockquote>.はclass,#はid</blockquote>
-~~~ html
-div#hoge
-&lt;div id=&ldquo;hoge&rdquo;&gt;&lt;/div&gt;
+~~~ html</p>
+
+<p>div#hoge
+<div id="hoge"&gt;</div&gt;
 div.hoge
-&lt;div class=&ldquo;hoge&rdquo;&gt;&lt;/div&gt;
+<div class="hoge"&gt;</div&gt;
 ~~~
 <blockquote>[○○○]で属性を追加</blockquote>
-~~~ html
-a[href=&ldquo;https://www.google.co.jp&rdquo;]
-&lt;a href=&ldquo;https://www.google.co.jp&rdquo;&gt;&lt;/a&gt;
+~~~ html</p>
+
+<p>a[href=&ldquo;https://www.google.co.jp&rdquo;]
+<a href="https://www.google.co.jp"&gt;</a&gt;
 ~~~
 <blockquote>&gt;で一つ下の階層へ移動</blockquote>
-~~~ html
-div&gt;p
-&lt;div&gt;
-    &lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
+~~~ html</p>
+
+<p>div&gt;p
+<div&gt;
+    <p&gt;</p&gt;
+</div&gt;
 ~~~
 <blockquote>+で兄弟関係</blockquote>
-~~~ html
-ul&gt;li+li
-&lt;ul&gt;
-    &lt;li&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
+~~~ html</p>
+
+<p>ul&gt;li+li
+<ul&gt;
+    <li&gt;</li&gt;
+    <li&gt;</li&gt;
+</ul&gt;
 ~~~
-<blockquote><em>○で○回繰り返し</blockquote>
-~~~ html
-ul&gt;li</em>3
-&lt;ul&gt;
-    &lt;li&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<blockquote>*○で○回繰り返し</blockquote>
+~~~ html</p>
+
+<p>ul&gt;li*3
+<ul&gt;
+    <li&gt;</li&gt;
+    <li&gt;</li&gt;
+    <li&gt;</li&gt;
+</ul&gt;
 ~~~
 <blockquote>()でグループ化</blockquote>
-~~~ html
-ul&gt;(li&gt;a)<em>3
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+~~~ html</p>
+
+<p>ul&gt;(li&gt;a)*3
+<ul&gt;
+    <li&gt;<a href=""&gt;</a&gt;</li&gt;
+    <li&gt;<a href=""&gt;</a&gt;</li&gt;
+    <li&gt;<a href=""&gt;</a&gt;</li&gt;
+</ul&gt;
 ~~~
 <blockquote>^で上の階層に戻る</blockquote>
-~~~ html
-div&gt;h1&gt;a^p
-&lt;div&gt;
-    &lt;h1&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/h1&gt;
-    &lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
+~~~ html</p>
+
+<p>div&gt;h1&gt;a^p
+<div&gt;
+    <h1&gt;<a href=""&gt;</a&gt;</h1&gt;
+    <p&gt;</p&gt;
+</div&gt;
 ~~~
 <blockquote>$で連番</blockquote>
-~~~ html
-ul&gt;li.item$</em>3
-&lt;ul&gt;
-    &lt;li class=&ldquo;item1&rdquo;&gt;&lt;/li&gt;
-    &lt;li class=&ldquo;item2&rdquo;&gt;&lt;/li&gt;
-    &lt;li class=&ldquo;item3&rdquo;&gt;&lt;/li&gt;
-&lt;/ul&gt;
+~~~ html</p>
+
+<p>ul&gt;li.item$*3
+<ul&gt;
+    <li class="item1"&gt;</li&gt;
+    <li class="item2"&gt;</li&gt;
+    <li class="item3"&gt;</li&gt;
+</ul&gt;
 ~~~
 <blockquote>{}でタグの中のテキストを指定</blockquote>
-~~~ html
-p{テキストが入ります}
-&lt;p&gt;テキストが入ります&lt;/p&gt;
+~~~ html</p>
+
+<p>p{テキストが入ります}
+<p&gt;テキストが入ります</p&gt;
 ~~~
 <blockquote>loremでダミーテキスト</blockquote>
-~~~ html
-p&gt;lorem
-&lt;p&gt;
+~~~ html</p>
+
+<p>p&gt;lorem
+<p&gt;
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, officia repellendus doloribus praesentium alias tempora ipsum eius modi vel nam inventore saepe quidem qui delectus architecto incidunt quisquam ea eligendi?
-&lt;/p&gt;
+</p&gt;
 ~~~
 <blockquote>shift+option+/でコメントアウト</blockquote>
-~~~ html
-&lt;div&gt;
+~~~ html</p>
+
+<p>&lt;div&gt;
     &lt;p&gt;text&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
@@ -149,8 +174,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, officia repellendu
 
 <blockquote>shift+control+Iで画像サイズ取得</blockquote>
 
-<pre><code class="html">&amp;lt;img src=&amp;quot;hoge.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;
-&amp;lt;img src=&amp;quot;hoge.jpg&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot;&amp;gt;
+<pre><code class="html">
+&lt;img src=&quot;hoge.jpg&quot; alt=&quot;&quot;&amp;gt;
+&lt;img src=&quot;hoge.jpg&quot; alt=&quot;&quot; width=&quot;100&quot; height=&quot;100&quot;&amp;gt;
 </code></pre>
 
 <p>これも同じでimgタグの中にカーソルを合わせるのがポイント</p>
@@ -160,121 +186,27 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, officia repellendu
 
 <p>CSSも書く時すごく便利なのですがそれはまた次の機会に</p>
 
+          </div>
         </article>
-      <p>最近は会社ではwin、家ではmacなので、coda2からSublime Textを使うようになりました。
-それと一緒にEmmetもつかうようになって便利だなーとか思いながらもいまいち使いこなせて無い気がしたので
-改めて使い方をまとめてみました。</p>
-
-<h2>使い方</h2>
-
-<p>ctrl + e または tab でショートコードを展開出来ます。
-ショートコードというのはコードを短縮したもの。
-基本、タグはタグの名前を打って展開すれば閉じタグまで自動で書いてくれます。
-<h2>覚えておきたいショートコード＆ショートカット</h2>
-<blockquote>.はclass,#はid</blockquote>
-~~~ html
-div#hoge
-&lt;div id=&ldquo;hoge&rdquo;&gt;&lt;/div&gt;
-div.hoge
-&lt;div class=&ldquo;hoge&rdquo;&gt;&lt;/div&gt;
-~~~
-<blockquote>[○○○]で属性を追加</blockquote>
-~~~ html
-a[href=&ldquo;https://www.google.co.jp&rdquo;]
-&lt;a href=&ldquo;https://www.google.co.jp&rdquo;&gt;&lt;/a&gt;
-~~~
-<blockquote>&gt;で一つ下の階層へ移動</blockquote>
-~~~ html
-div&gt;p
-&lt;div&gt;
-    &lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-~~~
-<blockquote>+で兄弟関係</blockquote>
-~~~ html
-ul&gt;li+li
-&lt;ul&gt;
-    &lt;li&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-~~~
-<blockquote><em>○で○回繰り返し</blockquote>
-~~~ html
-ul&gt;li</em>3
-&lt;ul&gt;
-    &lt;li&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-~~~
-<blockquote>()でグループ化</blockquote>
-~~~ html
-ul&gt;(li&gt;a)<em>3
-&lt;ul&gt;
-    &lt;li&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-~~~
-<blockquote>^で上の階層に戻る</blockquote>
-~~~ html
-div&gt;h1&gt;a^p
-&lt;div&gt;
-    &lt;h1&gt;&lt;a href=&ldquo;&rdquo;&gt;&lt;/a&gt;&lt;/h1&gt;
-    &lt;p&gt;&lt;/p&gt;
-&lt;/div&gt;
-~~~
-<blockquote>$で連番</blockquote>
-~~~ html
-ul&gt;li.item$</em>3
-&lt;ul&gt;
-    &lt;li class=&ldquo;item1&rdquo;&gt;&lt;/li&gt;
-    &lt;li class=&ldquo;item2&rdquo;&gt;&lt;/li&gt;
-    &lt;li class=&ldquo;item3&rdquo;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-~~~
-<blockquote>{}でタグの中のテキストを指定</blockquote>
-~~~ html
-p{テキストが入ります}
-&lt;p&gt;テキストが入ります&lt;/p&gt;
-~~~
-<blockquote>loremでダミーテキスト</blockquote>
-~~~ html
-p&gt;lorem
-&lt;p&gt;
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, officia repellendus doloribus praesentium alias tempora ipsum eius modi vel nam inventore saepe quidem qui delectus architecto incidunt quisquam ea eligendi?
-&lt;/p&gt;
-~~~
-<blockquote>shift+option+/でコメントアウト</blockquote>
-~~~ html
-&lt;div&gt;
-    &lt;p&gt;text&lt;/p&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;!&ndash; &lt;p&gt;text&lt;/p&gt; &ndash;&gt;
-&lt;/div&gt;
-~~~
-コメントアウトしたいタグの中にカーソルを合わせるのがポイント</p>
-
-<blockquote>shift+control+Iで画像サイズ取得</blockquote>
-
-<pre><code class="html">&amp;lt;img src=&amp;quot;hoge.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;
-&amp;lt;img src=&amp;quot;hoge.jpg&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot;&amp;gt;
-</code></pre>
-
-<p>これも同じでimgタグの中にカーソルを合わせるのがポイント</p>
-
-<p>とこんな感じでコーディングを補助してくれます。
-とりあえずこの辺を覚えておけばHTML書くのが格段と楽になりそうです。</p>
-
-<p>CSSも書く時すごく便利なのですがそれはまた次の機会に</p>
-
-        <div class="">
-          <ul class="share1">
-            <li class="share-hatena"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="70" height="20" src="javascript:false" style="width: 46px; height: 20px;"></iframe><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
-            <li class="share-facebook"><div class="fb-like fb_iframe_widget" data-href="http://03log.me/css_smacss/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 98px; height: 20px;"><iframe name="fbea2c118" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df36b43858%26domain%3D03log.me%26origin%3Dhttp%253A%252F%252F03log.me%252Ff305062d64%26relation%3Dparent.parent&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false" style="border: none; visibility: visible; width: 98px; height: 20px;" class=""></iframe></span></div></li>
-            <li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.c27d2d163408c0fe087fbfe1c687ce2b.ja.html#_=1420494277017&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=ja&amp;original_referer=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;size=m&amp;text=SMACSS%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9FCSS%E8%A8%AD%E8%A8%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%7C%2003LOG&amp;url=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;via=Im0_3" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 131px; height: 20px;"></iframe>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+        <div class="share">
+          <ul>
+            <li class="share-hatena">
+              <a href="http://b.hatena.ne.jp/entry/03log.me" class="hatena-bookmark-button" data-hatena-bookmark-title="03LOG" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </li>
+            <li class="share-facebook">
+              <div class="fb-like" data-href="http://03log.me" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </li>
+            <li class="share-twitter">
+              <a href="https://twitter.com/share" class="twitter-tweet-button" data-via="Im0_3">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </li>
+            <li class="share-g-plus">
+              <div class="g-plusone" data-size="medium"></div>
+            </li>
+            <li>
+              <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+            </li>
           </ul>
         </div>
     </div>

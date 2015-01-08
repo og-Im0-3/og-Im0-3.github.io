@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>processingっぽくかけるp5.jsでフラクタル図形を書いてみた -  03LOG</title>
+    <title>processingっぽくかけるp5.jsでフラクタル図形を書いてみた - 03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,11 +49,11 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
@@ -52,7 +65,8 @@
             <p class="article-date">2014/08/31</p>
             <p class="article-cat"><a href="/categories/web.html">Web</a></p>
           </header>
-          <p>p5.jsを使ってみたのでメモ。<br />
+          <div class="article-body">
+            <p>p5.jsを使ってみたのでメモ。<br />
 p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングができるライブラリです。</p>
 
 <h2>使い方</h2>
@@ -60,7 +74,7 @@ p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングが�
 <p>p5.jsのサイトからダウンロード、またはCDNで読み込むことができます。<br />
 CDNを使用する場合は下記のコードを追加してください。</p>
 
-<pre><code class="javascript">&amp;lt;script src=&amp;quot;//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+<pre><code class="javascript">&lt;script src=&quot;//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js&quot;&amp;gt;&lt;/script&amp;gt;
 </code></pre>
 
 <h2>基本的な使い方</h2>
@@ -215,176 +229,27 @@ function setup(){
 
 <p>お手軽に図形を書くには使いやすく書きやすかったです。Processingとほぼ同じようにかけるのと、基本はJavaScriptなのでProcessing・JavaScriptを書いたことある人には使いやすいと思います。</p>
 
+          </div>
         </article>
-      <p>p5.jsを使ってみたのでメモ。<br />
-p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングができるライブラリです。</p>
-
-<h2>使い方</h2>
-
-<p>p5.jsのサイトからダウンロード、またはCDNで読み込むことができます。<br />
-CDNを使用する場合は下記のコードを追加してください。</p>
-
-<pre><code class="javascript">&amp;lt;script src=&amp;quot;//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-</code></pre>
-
-<h2>基本的な使い方</h2>
-
-<p>書き方はほぼProcessingに近い形です。１度使ったことある人はとっても扱いやすいと思います。</p>
-
-<p>ベースは下記のように書きます。</p>
-
-<pre><code class="javascript">function setup(){
-
-}
-
-function draw(){
-
-}
-</code></pre>
-
-<p>setup()内に、画面サイズなどの初期設定を書きます。<br />
-そしてdraw()の中に描画のためのコードを書きます。</p>
-
-<p>setup()起動時に一回だけ実行され、draw()はループされ、何度も実行されます。</p>
-
-<p>円を書きたい場合は下記のように書きます。</p>
-
-<pre><code class="javascript">function setup(){
-  createCanvas(400, 400);
-}
-
-function draw(){
-  ellipse(200, 200, 100 ,100);
-}
-</code></pre>
-
-<p>createCanvas()でcanvasのサイズを指定できます。<br />
-ellipse()でx:200px、y:200pxの位置に半径100pxの円を描画しています。<br />
-たったこれだけ。簡単ですね。</p>
-
-<p>ほかにもいろいろできるのですがその辺はLearnのページからExampleをみるとわかりやすいです。</p>
-
-<blockquote>
-  <a href="http://p5js.org/learn/" target="_blank">Learn - p5.js</a>
-</blockquote>
-
-<p>またp5.jsにはp5.sound libraryというWeb Audio APIを扱うことのできるライブラリと、p5.dom libraryというDOMを扱うことのできるライブラリが用意されています。<br />
-上記のライブラリを使用する場合は別途読み込むことが必要になります。</p>
-
-<p>ProcessingとのP5.jsとの違いはこちらのページにまとめられいますので参考にしてください。</p>
-
-<blockquote>
-  <a href="https://github.com/lmccart/p5.js/wiki/Processing-transition" target="_blank">Processing transition · lmccart/p5.js</a>
-</blockquote>
-
-<h2>シェルピンスキーのギャスケットを書いてみた</h2>
-
-<p>という訳で何か書いてみようと思ったので、初のフラクタル図形にチャレンジ。</p>
-
-<blockquote>
-  <a href="http://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%83%94%E3%83%B3%E3%82%B9%E3%82%AD%E3%83%BC%E3%81%AE%E3%82%AE%E3%83%A3%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88" target="_blank">シェルピンスキーのギャスケット - Wikipedia</a>
-</blockquote>
-
-<p>いろいろ調べてみた中で一番簡単にかけそうだったのでシェルピンスキーのギャスケットという図形を書いてみました。<br />
-再帰関数をつかって処理をループさせて書いています。</p>
-
-<p><a href="http://03log.me/demo/gasket/">DEMO</a>はこちらから</p>
-
-<p>コードはこんな感じになっています。<br /></p>
-
-<pre><code class="javascript">var start_a = {},
-  start_b = {},
-  start_c = {},
-  triangle_height,
-  triangle_length,
-  w_width,
-  w_height,
-  center_x,
-  center_y,
-  repeat = 9;
-
-function triangle(){
-  if(w_width &amp;gt; w_height){
-    start_b.x = center_x - center_y + 40;
-    start_c.x = center_x + center_y - 40;
-  }else{
-    start_b.x = 40;
-    start_c.x = w_width - 40;
-  }
-
-  triangle_length = start_c.x - start_b.x;
-  triangle_height = sqrt(3) * triangle_length / 2;
-  start_b.y = (w_height - triangle_height) / 2 + triangle_height;
-  start_c.y = start_b.y;
-
-  start_a.x = triangle_length / 2 + start_b.x;
-  start_a.y = start_b.y - triangle_height;
-}
-
-function gasket(a, b, c ,n){
-  var count = n,
-  d = {},
-  e = {},
-  f = {};
-  stroke(255, 255, 255);
-  noFill();
-  triangle(a.x, a.y, b.x, b.y, c.x, c.y);
-
-  d.x = (a.x + b.x)/2;
-  d.y = (a.y + b.y)/2;
-  e.x = (b.x + c.x)/2;
-  e.y = (b.y + c.y)/2;
-  f.x = (c.x + a.x)/2;
-  f.y = (c.y + a.y)/2;
-
-  if(count &amp;gt; 1){
-    return setTimeout(function(){
-      gasket(a, d, f ,count - 1);
-      gasket(b, d, e ,count - 1);
-      gasket(c, e, f ,count - 1);
-    },500);
-  }
-}
-
-function setup(){
-  w_width = windowWidth;
-  w_height = windowHeight;
-  center_x = w_width / 2;
-  center_y = w_height / 2;
-  createCanvas(w_width, w_height);
-  background(0,0);
-
-  if(w_width &amp;gt; w_height){
-    start_b.x = center_x - center_y + 40;
-    start_c.x = center_x + center_y - 40;
-  }else{
-    start_b.x = 40;
-    start_c.x = w_width - 40;
-  }
-
-  triangle_length = start_c.x - start_b.x;
-  triangle_height = sqrt(3) * triangle_length / 2;
-  start_b.y = (w_height - triangle_height) / 2 + triangle_height;
-  start_c.y = start_b.y;
-
-  start_a.x = triangle_length / 2 + start_b.x;
-  start_a.y = start_b.y - triangle_height;
-
-  triangle();
-  gasket(start_a, start_b, start_c, repeat);
-}
-</code></pre>
-
-<p>もうちょい効率よくかけるのかなーといろいろ考えたんですが、短時間で書いたらとりあえずこんな感じになりました。</p>
-
-<p>お手軽に図形を書くには使いやすく書きやすかったです。Processingとほぼ同じようにかけるのと、基本はJavaScriptなのでProcessing・JavaScriptを書いたことある人には使いやすいと思います。</p>
-
-        <div class="">
-          <ul class="share1">
-            <li class="share-hatena"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="70" height="20" src="javascript:false" style="width: 46px; height: 20px;"></iframe><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
-            <li class="share-facebook"><div class="fb-like fb_iframe_widget" data-href="http://03log.me/css_smacss/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 98px; height: 20px;"><iframe name="fbea2c118" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.0/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F7r8gQb8MIqE.js%3Fversion%3D41%23cb%3Df36b43858%26domain%3D03log.me%26origin%3Dhttp%253A%252F%252F03log.me%252Ff305062d64%26relation%3Dparent.parent&amp;href=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=false&amp;show_faces=false" style="border: none; visibility: visible; width: 98px; height: 20px;" class=""></iframe></span></div></li>
-            <li class="share-twitter"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.c27d2d163408c0fe087fbfe1c687ce2b.ja.html#_=1420494277017&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=ja&amp;original_referer=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;size=m&amp;text=SMACSS%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9FCSS%E8%A8%AD%E8%A8%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%7C%2003LOG&amp;url=http%3A%2F%2F03log.me%2Fcss_smacss%2F&amp;via=Im0_3" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 131px; height: 20px;"></iframe>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+        <div class="share">
+          <ul>
+            <li class="share-hatena">
+              <a href="http://b.hatena.ne.jp/entry/03log.me" class="hatena-bookmark-button" data-hatena-bookmark-title="03LOG" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </li>
+            <li class="share-facebook">
+              <div class="fb-like" data-href="http://03log.me" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </li>
+            <li class="share-twitter">
+              <a href="https://twitter.com/share" class="twitter-tweet-button" data-via="Im0_3">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </li>
+            <li class="share-g-plus">
+              <div class="g-plusone" data-size="medium"></div>
+            </li>
+            <li>
+              <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+            </li>
           </ul>
         </div>
     </div>

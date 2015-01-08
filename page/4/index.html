@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title> 03LOG</title>
+    <title>03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,17 +49,17 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container l-content">
-      <div class="articles">
+        <div class="articles">
   <section class="article">
     <h1 class="article-title"><a href="/blog/js-get-query.html">【JavaScript】クエリの情報を分解して使用する</a></h1>
     <p class="article-date">2014/03/30</p>
@@ -56,12 +69,8 @@
 
 <p>こちらの記事を参考にしました。ありがとうございました。
 </p><blockquote>
-<a href="http://bl6.jp/web/javascript/location-search-query/" target="_blank">JavaScriptのlocation.searchでクエリ情報を取得してみる
-</a>
-</blockquote>
-
-<p>実際に使ったコードはこんな感じです。</p>
-...</div>
+<a href="http://bl6.jp/web/javascript/location-search-query/" target="_blank">JavaScriptのlocation...</a>
+</blockquote></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -73,8 +82,7 @@
     <div class="article-summary"><p>transform:rotate()をつかってCSSで矢印を書いたのですが
 Android2.3でrotateが正常に機能しない状態に遭遇しました。</p>
 
-<p>調べたところによるとtransform: translate3d();を使用すると
-それ以降にscale()、rotate()、skew()を...</p></div>
+<p>調べたところによるとtransform: translate3d...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -86,11 +94,7 @@ Android2.3でrotateが正常に機能しない状態に遭遇しました。</p>
     <div class="article-summary"><p>Retina対応のために自動でimg要素に画像の半分の長さを入れる処理を書こうと思い
 img要素の高さをjQueryで取得しようとしたのですが</p>
 
-<pre><code class="javascript">　$('#hoge img').width();
-  $('#hoge img').height();
-</code></pre>
-
-<p>上の記述を使うと、画像のオリジナルではな...</p></div>
+<pre><code class="javascript">　$('#hoge img').width();...</code></pre></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -103,13 +107,7 @@ img要素の高さをjQueryで取得しようとしたのですが</p>
 
 <p>Sassでのfor文の使い方は以下の通りです。</p>
 
-<pre><code class="css">@for $i from 【開始の数字】 through 【開始の数字】{
-　---繰り返す処理の内容---
-}
-</code></pre>
-
-<p>使い方の例として、
-リストにそれぞれ別の背景画像を設定す...</p></div>
+<pre><code class="css">@for $i from 【開始の数字】 through 【開始の数字】{...</code></pre></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -126,12 +124,8 @@ img要素の高さをjQueryで取得しようとしたのですが</p>
 <h2>canvasでアニメーションする際の手順</h2>
 
 <ol>
-    <li>画面に描画したものを消す</li>
-    <li>図形の位置を計算</li>
-    <li>描画する</li>
-</ol>
-
-<p>この繰り返しでアニメーションをさせています。</p></div>
+    <li>画面に描画したもの...</li>
+</ol></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -141,9 +135,7 @@ img要素の高さをjQueryで取得しようとしたのですが</p>
     <p class="article-date">2014/01/28</p>
     <p class="article-cat"><a href="/categories/web.html">Web</a></p>
     <div class="article-summary"><p>Sassを使いたいけど、周りは使ってないのでなかなか使えなかったのですが、今回初めて業務でSassを使いました。
-状況にもよりますが、今回はがっつりベースからすべてコーディングすることになっていたのでSassを使うことにしました。</p>
-
-<p>そこで気をつけたかったのが、CSSにコンパイルしたときのコー...</p></div>
+状況にもよりますが、今回はがっつりベースからすべてコーディングすることになってい...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just

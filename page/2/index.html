@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title> 03LOG</title>
+    <title>03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,17 +49,17 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container l-content">
-      <div class="articles">
+        <div class="articles">
   <section class="article">
     <h1 class="article-title"><a href="/blog/js-curry.html">JavaScriptの関数の部分適用とカリー化を理解する</a></h1>
     <p class="article-date">2014/08/02</p>
@@ -55,10 +68,7 @@
 
 <h2>部分適用とは？</h2>
 
-<p>関数の部分適用とは仮引数の一部の値を固定して、新たに関数を作ることです。
-まずは２つの値を足し算した値を返す関数を普通に書いてみます。</p>
-
-<pre><code class="javascript">var add...</code></pre></div>
+<p>関数の部分適用とは仮引数の一部の値を固定して、新た...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -71,10 +81,7 @@
 
 <h2>respond.jsとは</h2>
 
-<p>IE8以下では使用できないMedia queryによるブレイクポイントを使用できるようにしてくれるライブラリです。
-</p><blockquote>
-<a href="https://github.com/scottjehl/Respond" target="_blank">scottjehl/Respond...</a>
-</blockquote></div>
+<p>IE8以下では使用できないMedia queryによ...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -86,9 +93,7 @@
     <div class="article-summary"><p>今回は<a href="http://www.oreilly.co.jp/books/9784873114880/" target="_blank">JavaScriptパターン</a>の中で紹介されていた単独varパターンについてまとめます。
 </p><h2>変数の巻き上げ</h2>
 関数内では変数の巻き上げ（hoisting）が発生します。
-巻き上げとは変数が関数のどの位置にあっても、先頭で定義されるという現象です。
-
-<pre><code class="javascript">var name = 'taro';　//グ...</code></pre></div>
+巻き上げとは変数が関数の...</div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -104,11 +109,7 @@
 <h2>グローバル変数とローカル変数</h2>
 
 <p>グローバル変数はコードのどこからでも取得が可能な変数です。
-ローカル変数は有効範囲内でしか取得ができない変数を言います。</p>
-
-<pre><code class="javascript">var myName = 'taro';　//グローバル変数
-
-var hello...</code></pre></div>
+ローカル変数は有効範囲内でしか取得ができ...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -126,13 +127,7 @@ function hoge(){
 }
 
 //function式
-var hoge = function(){
-
-};
-</code></pre>
-
-<p>functionから始まる関数がfunction文、
-式...</p></div>
+var hoge...</code></pre></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -143,10 +138,7 @@ var hoge = function(){
     <p class="article-cat"><a href="/categories/web.html">Web</a></p>
     <div class="article-summary"><p>文字列を数値に変化するときにつかうparseInt()ですが、使用するときには第二引数まで指定した方がよさそうな感じだったのでメモ。</p>
 
-<p>parseInt()は文字列の引数をパースし、指定された基数の整数を返します。
-第一引数が文字列、そして第二引数が、数値の基数を表します。</p>
-
-<p>つまりこんな感じ...</p></div>
+<p>parseInt()は文字列の引数をパースし、指定された基...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just

@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title> 03LOG</title>
+    <title>03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,17 +49,17 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container l-content">
-      <div class="articles">
+        <div class="articles">
   <section class="article">
     <h1 class="article-title"><a href="/blog/box-sizing.html">レスポンシブな設計をもっと楽になるbox-sizing</a></h1>
     <p class="article-date">2013/10/22</p>
@@ -54,9 +67,7 @@
     <div class="article-summary"><p>最近はスマートフォン用にコーディングすることも多くなってきました。
 レスポンシブなデザインの場合、borderやpaddingがあると計算とかが結構ややこしかったりします。</p>
 
-<p>その時box-sizingをつかったら設計がしやすくなったのでご紹介。
-</p><h2>box-sizingとは？</h2>
-普通はwidth、padding...</div>
+<p>その時box-sizing...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -68,7 +79,7 @@
     <div class="article-summary"><p>Webデザイナーとして働きだして３ヶ月が経ちました。
 デザイナーとしてまだまだひよっこですが、自分なりにデザインで気になったことをまとめてみました。</p>
 
-<p>今回はフォントの与える印象の違いです。フォントといっても種類がいっぱいあって悩むことも多いのですが、自分なりにフォントに対してどんな印象を持っ...</p></div>
+<p>今回はフォントの与える印象の違いです。フォ...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -82,8 +93,7 @@
 <p>jQuery load()で日本語URLを読み込もうとするとIEでうまく表示されないようです。
 エンコードする必要あります。</p>
 
-<p>ユーザーエージェントでIEかどうか判定しています。
-そしてencordURI()で日本語URLをエンコードしてload()に渡して上げ...</p></div>
+<p>ユーザーエージェントでIEかどうか...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -96,13 +106,7 @@
 
 <p>テキストエリアに数値を入れると自動的に計算し、四角が変形します。
 左のメニューから黄金比、白銀比を選択出来るようにしてみました。
-ちなみにメニューは開閉式にしました。</p>
-
-<blockquote>
-<a title="Golden Ratio | 03log.com" href="http://03log.me/goldenratio/">Golden Ratio | 03LOG</a>
-</blockquote>
-
-<p>よろしければ使ってみ...</p></div>
+ちなみ...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -116,8 +120,7 @@
 
 <h2>1.position absolute + ネガティブマージン</h2>
 
-<p>この方法は高さが決まっていることが前提。
-中央に寄せるものの半分の長さのネガティブマージンを加えます。...</p></div>
+<p>こ...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -133,9 +136,7 @@
 <h2>カテゴリのIDを調べる</h2>
 
 <p>管理画面から　投稿＞カテゴリー＞IDを調べたいカテゴリをクリック
-URLにカテゴリIDが表示されるのでそこを調べます。</p>
-
-<h2>headerの中に以下の以下のソースを書き込む</h2></div>
+URL...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just

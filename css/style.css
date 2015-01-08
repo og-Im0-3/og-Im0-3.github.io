@@ -110,7 +110,6 @@ figure {
 
 /* line 211, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_normalize.scss */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -182,8 +181,6 @@ input[type="number"]::-webkit-outer-spin-button {
 /* line 357, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 /* line 370, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_normalize.scss */
@@ -311,15 +308,11 @@ th {
     border: 1px solid #ddd !important; } }
 /* line 11, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 /* line 14, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 /* line 22, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
@@ -330,8 +323,8 @@ html {
 /* line 27, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
 body {
   font-family: Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 2.1;
   color: #333333;
   background-color: #fff; }
 
@@ -346,11 +339,11 @@ textarea {
 
 /* line 48, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
 a {
-  color: #337ab7;
+  color: #009e88;
   text-decoration: none; }
   /* line 52, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
   a:hover, a:focus {
-    color: #23527c;
+    color: #005146;
     text-decoration: underline; }
   /* line 58, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
   a:focus {
@@ -379,12 +372,11 @@ img {
 /* line 93, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
 .img-thumbnail {
   padding: 4px;
-  line-height: 2;
+  line-height: 2.1;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -396,10 +388,10 @@ img {
 
 /* line 113, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
 hr {
-  margin-top: 28px;
-  margin-bottom: 28px;
+  margin-top: 33px;
+  margin-bottom: 33px;
   border: 0;
-  border-top: 1px solid #eeeeee; }
+  border-top: 1px solid #e2e2e2; }
 
 /* line 125, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_scaffolding.scss */
 .sr-only {
@@ -451,8 +443,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 28px;
-  margin-bottom: 14px; }
+  margin-top: 33px;
+  margin-bottom: 16.5px; }
   /* line 30, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
   h1 small,
   h1 .small, .h1 small,
@@ -469,8 +461,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 14px;
-  margin-bottom: 14px; }
+  margin-top: 16.5px;
+  margin-bottom: 16.5px; }
   /* line 41, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
   h4 small,
   h4 .small, .h4 small,
@@ -485,19 +477,19 @@ h6, .h6 {
 
 /* line 47, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 h1, .h1 {
-  font-size: 23px; }
+  font-size: 24px; }
 
 /* line 48, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 h2, .h2 {
-  font-size: 21px; }
+  font-size: 22px; }
 
 /* line 49, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 h3, .h3 {
-  font-size: 21px; }
+  font-size: 20px; }
 
 /* line 50, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 h4, .h4 {
-  font-size: 19px; }
+  font-size: 18px; }
 
 /* line 51, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 h5, .h5 {
@@ -509,23 +501,23 @@ h6, .h6 {
 
 /* line 58, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 p {
-  margin: 0 0 28px; }
+  margin: 0 0 33px; }
 
 /* line 62, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 .lead {
-  margin-bottom: 28px;
-  font-size: 16px;
+  margin-bottom: 33px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.4; }
   @media (min-width: 768px) {
     /* line 62, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
     .lead {
-      font-size: 21px; } }
+      font-size: 24px; } }
 
 /* line 78, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 small,
 .small {
-  font-size: 85%; }
+  font-size: 87%; }
 
 /* line 83, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 mark,
@@ -571,11 +563,11 @@ mark,
 
 /* line 5, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_text-emphasis.scss */
 .text-primary {
-  color: #337ab7; }
+  color: #009e88; }
 
 /* line 8, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_text-emphasis.scss */
 a.text-primary:hover {
-  color: #286090; }
+  color: #006b5c; }
 
 /* line 5, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_text-emphasis.scss */
 .text-success {
@@ -615,11 +607,11 @@ a.text-danger:hover {
 
 /* line 5, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_background-variant.scss */
 .bg-primary {
-  background-color: #337ab7; }
+  background-color: #009e88; }
 
 /* line 8, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_background-variant.scss */
 a.bg-primary:hover {
-  background-color: #286090; }
+  background-color: #006b5c; }
 
 /* line 5, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_background-variant.scss */
 .bg-success {
@@ -655,15 +647,15 @@ a.bg-danger:hover {
 
 /* line 138, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 .page-header {
-  padding-bottom: 13px;
-  margin: 56px 0 28px;
-  border-bottom: 1px solid #eeeeee; }
+  padding-bottom: 15.5px;
+  margin: 66px 0 33px;
+  border-bottom: 1px solid #e2e2e2; }
 
 /* line 149, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 14px; }
+  margin-bottom: 16.5px; }
   /* line 153, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
   ul ul,
   ul ol,
@@ -690,12 +682,12 @@ ol {
 /* line 185, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 dl {
   margin-top: 0;
-  margin-bottom: 28px; }
+  margin-bottom: 33px; }
 
 /* line 189, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 dt,
 dd {
-  line-height: 2; }
+  line-height: 2.1; }
 
 /* line 193, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 dt {
@@ -739,10 +731,10 @@ abbr[data-original-title] {
 
 /* line 241, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 blockquote {
-  padding: 14px 28px;
-  margin: 0 0 28px;
-  font-size: 17.5px;
-  border-left: 5px solid #eeeeee; }
+  padding: 16.5px 33px;
+  margin: 0 0 33px;
+  font-size: 20px;
+  border-left: 5px solid #e2e2e2; }
   /* line 250, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
   blockquote p:last-child,
   blockquote ul:last-child,
@@ -754,7 +746,7 @@ blockquote {
   blockquote .small {
     display: block;
     font-size: 80%;
-    line-height: 2;
+    line-height: 2.1;
     color: #777777; }
     /* line 265, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
     blockquote footer:before,
@@ -767,7 +759,7 @@ blockquote {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #e2e2e2;
   border-left: 0;
   text-align: right; }
   /* line 286, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
@@ -789,9 +781,9 @@ blockquote.pull-right {
 
 /* line 294, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_type.scss */
 address {
-  margin-bottom: 28px;
+  margin-bottom: 33px;
   font-style: normal;
-  line-height: 2; }
+  line-height: 2.1; }
 
 /* line 7, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_code.scss */
 code,
@@ -826,10 +818,10 @@ kbd {
 /* line 41, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_code.scss */
 pre {
   display: block;
-  padding: 13.5px;
-  margin: 0 0 14px;
-  font-size: 13px;
-  line-height: 2;
+  padding: 16px;
+  margin: 0 0 16.5px;
+  font-size: 15px;
+  line-height: 2.1;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -1760,7 +1752,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 28px; }
+  margin-bottom: 33px; }
   /* line 31, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_tables.scss */
   .table > thead > tr > th,
   .table > thead > tr > td,
@@ -1769,7 +1761,7 @@ th {
   .table > tfoot > tr > th,
   .table > tfoot > tr > td {
     padding: 8px;
-    line-height: 2;
+    line-height: 2.1;
     vertical-align: top;
     border-top: 1px solid #ddd; }
   /* line 41, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_tables.scss */
@@ -1935,7 +1927,7 @@ table th[class*="col-"] {
     /* line 171, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_tables.scss */
     .table-responsive {
       width: 100%;
-      margin-bottom: 21px;
+      margin-bottom: 24.75px;
       overflow-y: hidden;
       -ms-overflow-style: -ms-autohiding-scrollbar;
       border: 1px solid #ddd; }
@@ -1988,8 +1980,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 28px;
-  font-size: 21px;
+  margin-bottom: 33px;
+  font-size: 24px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -2004,8 +1996,6 @@ label {
 
 /* line 47, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 /* line 52, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
@@ -2041,33 +2031,30 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 2.1;
   color: #555555; }
 
 /* line 115, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .form-control {
   display: block;
   width: 100%;
-  height: 42px;
+  height: 47px;
   padding: 6px 12px;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 2.1;
   color: #555555;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
   /* line 57, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
   .form-control:focus {
     border-color: #66afe9;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
   /* line 103, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_vendor-prefixes.scss */
   .form-control::-moz-placeholder {
@@ -2082,7 +2069,7 @@ output {
   /* line 141, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
-    background-color: #eeeeee;
+    background-color: #e2e2e2;
     opacity: 1; }
 
 /* line 153, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
@@ -2099,7 +2086,7 @@ input[type="search"] {
   input[type="time"],
   input[type="datetime-local"],
   input[type="month"] {
-    line-height: 42px; }
+    line-height: 47px; }
 
   /* line 184, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
@@ -2117,7 +2104,7 @@ input[type="search"] {
   .input-group-sm > input[type="month"].form-control,
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn {
-    line-height: 30px; }
+    line-height: 33px; }
 
   /* line 190, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
@@ -2135,7 +2122,7 @@ input[type="search"] {
   .input-group-lg > input[type="month"].form-control,
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn {
-    line-height: 44px; } }
+    line-height: 46px; } }
 /* line 204, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .form-group {
   margin-bottom: 15px; }
@@ -2150,7 +2137,7 @@ input[type="search"] {
   /* line 220, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
   .radio label,
   .checkbox label {
-    min-height: 28px;
+    min-height: 33px;
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
@@ -2223,9 +2210,9 @@ input[type="checkbox"] {
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .form-group-sm .form-control {
-  height: 30px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -2233,8 +2220,8 @@ input[type="checkbox"] {
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn, .form-group-sm .form-control {
-  height: 30px;
-  line-height: 30px; }
+  height: 33px;
+  line-height: 33px; }
 
 /* line 84, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 textarea.input-sm, .input-group-sm > textarea.form-control,
@@ -2250,9 +2237,9 @@ select[multiple].input-sm,
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .form-group-lg .form-control {
-  height: 44px;
+  height: 46px;
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.33;
   border-radius: 6px; }
 
@@ -2260,8 +2247,8 @@ select[multiple].input-sm,
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn, .form-group-lg .form-control {
-  height: 44px;
-  line-height: 44px; }
+  height: 46px;
+  line-height: 46px; }
 
 /* line 84, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 textarea.input-lg, .input-group-lg > textarea.form-control,
@@ -2278,7 +2265,7 @@ select[multiple].input-lg,
   position: relative; }
   /* line 329, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
   .has-feedback .form-control {
-    padding-right: 52.5px; }
+    padding-right: 58.75px; }
 
 /* line 334, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .form-control-feedback {
@@ -2287,9 +2274,9 @@ select[multiple].input-lg,
   right: 0;
   z-index: 2;
   display: block;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
+  width: 47px;
+  height: 47px;
+  line-height: 47px;
   text-align: center;
   pointer-events: none; }
 
@@ -2297,17 +2284,17 @@ select[multiple].input-lg,
 .input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback {
-  width: 44px;
-  height: 44px;
-  line-height: 44px; }
+  width: 46px;
+  height: 46px;
+  line-height: 46px; }
 
 /* line 351, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback {
-  width: 30px;
-  height: 30px;
-  line-height: 30px; }
+  width: 33px;
+  height: 33px;
+  line-height: 33px; }
 
 /* line 8, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 .has-success .help-block,
@@ -2320,12 +2307,10 @@ select[multiple].input-lg,
 /* line 21, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 .has-success .form-control {
   border-color: #3c763d;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
   /* line 24, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
   .has-success .form-control:focus {
     border-color: #2b542c;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168; }
 /* line 31, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 .has-success .input-group-addon {
@@ -2347,12 +2332,10 @@ select[multiple].input-lg,
 /* line 21, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 .has-warning .form-control {
   border-color: #8a6d3b;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
   /* line 24, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
   .has-warning .form-control:focus {
     border-color: #66512c;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b; }
 /* line 31, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 .has-warning .input-group-addon {
@@ -2374,12 +2357,10 @@ select[multiple].input-lg,
 /* line 21, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 .has-error .form-control {
   border-color: #a94442;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
   /* line 24, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
   .has-error .form-control:focus {
     border-color: #843534;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483; }
 /* line 31, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_forms.scss */
 .has-error .input-group-addon {
@@ -2392,7 +2373,7 @@ select[multiple].input-lg,
 
 /* line 371, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .has-feedback label ~ .form-control-feedback {
-  top: 33px; }
+  top: 38px; }
 /* line 374, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0; }
@@ -2465,7 +2446,7 @@ select[multiple].input-lg,
 /* line 502, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 35px; }
+  min-height: 40px; }
 /* line 508, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2502,14 +2483,15 @@ select[multiple].input-lg,
   font-weight: normal;
   text-align: center;
   vertical-align: middle;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 2.1;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2528,7 +2510,6 @@ select[multiple].input-lg,
   .btn:active, .btn.active {
     outline: 0;
     background-image: none;
-    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
   /* line 46, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
   .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
@@ -2536,7 +2517,6 @@ select[multiple].input-lg,
     pointer-events: none;
     opacity: 0.65;
     filter: alpha(opacity=65);
-    -webkit-box-shadow: none;
     box-shadow: none; }
 
 /* line 60, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
@@ -2564,23 +2544,23 @@ select[multiple].input-lg,
 /* line 63, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4; }
+  background-color: #009e88;
+  border-color: #008472; }
   /* line 11, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_buttons.scss */
   .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74; }
+    background-color: #006b5c;
+    border-color: #00473d; }
   /* line 21, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_buttons.scss */
   .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
     background-image: none; }
   /* line 29, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_buttons.scss */
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-    background-color: #337ab7;
-    border-color: #2e6da4; }
+    background-color: #009e88;
+    border-color: #008472; }
   /* line 40, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_buttons.scss */
   .btn-primary .badge {
-    color: #337ab7;
+    color: #009e88;
     background-color: #fff; }
 
 /* line 67, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
@@ -2673,20 +2653,19 @@ select[multiple].input-lg,
 
 /* line 88, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
 .btn-link {
-  color: #337ab7;
+  color: #009e88;
   font-weight: normal;
   border-radius: 0; }
   /* line 93, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
   .btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
     background-color: transparent;
-    -webkit-box-shadow: none;
     box-shadow: none; }
   /* line 101, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   /* line 107, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
   .btn-link:hover, .btn-link:focus {
-    color: #23527c;
+    color: #005146;
     text-decoration: underline;
     background-color: transparent; }
   /* line 115, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
@@ -2697,21 +2676,21 @@ select[multiple].input-lg,
 /* line 127, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.33;
   border-radius: 6px; }
 
 /* line 131, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
 /* line 135, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_buttons.scss */
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -2734,7 +2713,6 @@ input[type="button"].btn-block {
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
   /* line 13, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_component-animations.scss */
   .fade.in {
@@ -2800,13 +2778,12 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
   /* line 52, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_dropdowns.scss */
@@ -2816,7 +2793,7 @@ tbody.collapse.in {
   /* line 58, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_dropdowns.scss */
   .dropdown-menu .divider {
     height: 1px;
-    margin: 13px 0;
+    margin: 15.5px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   /* line 63, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_dropdowns.scss */
@@ -2825,7 +2802,7 @@ tbody.collapse.in {
     padding: 3px 20px;
     clear: both;
     font-weight: normal;
-    line-height: 2;
+    line-height: 2.1;
     color: #333333;
     white-space: nowrap; }
 
@@ -2840,7 +2817,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #337ab7; }
+  background-color: #009e88; }
 
 /* line 101, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_dropdowns.scss */
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
@@ -2874,8 +2851,8 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
-  line-height: 2;
+  font-size: 14px;
+  line-height: 2.1;
   color: #777777;
   white-space: nowrap; }
 
@@ -3015,11 +2992,9 @@ tbody.collapse.in {
 
 /* line 115, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_button-groups.scss */
 .btn-group.open .dropdown-toggle {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
   /* line 119, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_button-groups.scss */
   .btn-group.open .dropdown-toggle.btn-link {
-    -webkit-box-shadow: none;
     box-shadow: none; }
 
 /* line 126, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_button-groups.scss */
@@ -3157,12 +3132,12 @@ tbody.collapse.in {
 /* line 73, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_input-groups.scss */
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1;
   color: #555555;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #e2e2e2;
   border: 1px solid #ccc;
   border-radius: 4px; }
   /* line 85, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_input-groups.scss */
@@ -3170,14 +3145,14 @@ tbody.collapse.in {
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 3px; }
   /* line 90, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_input-groups.scss */
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 10px 16px;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 6px; }
   /* line 97, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_input-groups.scss */
   .input-group-addon input[type="radio"],
@@ -3261,7 +3236,7 @@ tbody.collapse.in {
       /* line 23, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
-        background-color: #eeeeee; }
+        background-color: #e2e2e2; }
     /* line 31, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
     .nav > li.disabled > a {
       color: #777777; }
@@ -3273,12 +3248,12 @@ tbody.collapse.in {
         cursor: not-allowed; }
   /* line 46, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #eeeeee;
-    border-color: #337ab7; }
+    background-color: #e2e2e2;
+    border-color: #009e88; }
   /* line 59, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
   .nav .nav-divider {
     height: 1px;
-    margin: 13px 0;
+    margin: 15.5px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   /* line 66, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
@@ -3295,12 +3270,12 @@ tbody.collapse.in {
     /* line 84, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
     .nav-tabs > li > a {
       margin-right: 2px;
-      line-height: 2;
+      line-height: 2.1;
       border: 1px solid transparent;
       border-radius: 4px 4px 0 0; }
       /* line 89, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
       .nav-tabs > li > a:hover {
-        border-color: #eeeeee #eeeeee #ddd; }
+        border-color: #e2e2e2 #e2e2e2 #ddd; }
     /* line 96, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
@@ -3321,7 +3296,7 @@ tbody.collapse.in {
   /* line 131, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
   .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #fff;
-    background-color: #337ab7; }
+    background-color: #009e88; }
 
 /* line 144, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navs.scss */
 .nav-stacked > li {
@@ -3400,7 +3375,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 28px;
+  margin-bottom: 33px;
   border: 1px solid transparent; }
   /* line 14, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_clearfix.scss */
   .navbar:before, .navbar:after {
@@ -3527,9 +3502,9 @@ tbody.collapse.in {
 /* line 164, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 11px 15px;
-  font-size: 16px;
-  line-height: 28px;
+  padding: 8.5px 15px;
+  font-size: 18px;
+  line-height: 33px;
   height: 50px; }
   /* line 171, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
   .navbar-brand:hover, .navbar-brand:focus {
@@ -3574,12 +3549,12 @@ tbody.collapse.in {
 
 /* line 235, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 5.5px -15px; }
+  margin: 4.25px -15px; }
   /* line 238, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 28px; }
+    line-height: 33px; }
   @media (max-width: 767px) {
     /* line 246, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
     .navbar-nav .open .dropdown-menu {
@@ -3596,7 +3571,7 @@ tbody.collapse.in {
         padding: 5px 15px 5px 25px; }
       /* line 258, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
       .navbar-nav .open .dropdown-menu > li > a {
-        line-height: 28px; }
+        line-height: 33px; }
         /* line 260, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
         .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
           background-image: none; } }
@@ -3610,8 +3585,8 @@ tbody.collapse.in {
         float: left; }
         /* line 275, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
         .navbar-nav > li > a {
-          padding-top: 11px;
-          padding-bottom: 11px; } }
+          padding-top: 8.5px;
+          padding-bottom: 8.5px; } }
 
 /* line 289, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
 .navbar-form {
@@ -3620,10 +3595,9 @@ tbody.collapse.in {
   padding: 10px 15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 4px;
-  margin-bottom: 4px; }
+  margin-top: 1.5px;
+  margin-bottom: 1.5px; }
   @media (min-width: 768px) {
     /* line 410, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_forms.scss */
     .navbar-form .form-group {
@@ -3689,7 +3663,6 @@ tbody.collapse.in {
       margin-right: 0;
       padding-top: 0;
       padding-bottom: 0;
-      -webkit-box-shadow: none;
       box-shadow: none; } }
 
 /* line 330, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
@@ -3707,12 +3680,12 @@ tbody.collapse.in {
 
 /* line 345, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 4px;
-  margin-bottom: 4px; }
+  margin-top: 1.5px;
+  margin-bottom: 1.5px; }
   /* line 348, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-top: 8.5px;
+    margin-bottom: 8.5px; }
   /* line 351, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
     margin-top: 14px;
@@ -3720,8 +3693,8 @@ tbody.collapse.in {
 
 /* line 361, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 11px;
-  margin-bottom: 11px; }
+  margin-top: 8.5px;
+  margin-bottom: 8.5px; }
   @media (min-width: 768px) {
     /* line 361, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_navbar.scss */
     .navbar-text {
@@ -3906,7 +3879,7 @@ tbody.collapse.in {
 /* line 6, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_breadcrumbs.scss */
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 28px;
+  margin-bottom: 33px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px; }
@@ -3926,13 +3899,12 @@ tbody.collapse.in {
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 28px;
-  line-height: 2;
+  margin-bottom: 33px;
+  line-height: 2.1;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out; }
   /* line 17, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_thumbnails.scss */
   .thumbnail > img,
@@ -3951,7 +3923,7 @@ tbody.collapse.in {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7; }
+  border-color: #009e88; }
 
 /* line 1, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_media.scss */
 .media {
@@ -4032,7 +4004,7 @@ a.list-group-item {
 
 /* line 64, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_list-group.scss */
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
-  background-color: #eeeeee;
+  background-color: #e2e2e2;
   color: #777777;
   cursor: not-allowed; }
   /* line 72, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_list-group.scss */
@@ -4045,8 +4017,8 @@ a.list-group-item {
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7; }
+  background-color: #009e88;
+  border-color: #009e88; }
   /* line 90, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_list-group.scss */
   .list-group-item.active .list-group-item-heading,
   .list-group-item.active .list-group-item-heading > small,
@@ -4058,7 +4030,7 @@ a.list-group-item {
     color: inherit; }
   /* line 95, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_list-group.scss */
   .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-    color: #c7ddef; }
+    color: #6bffeb; }
 
 /* line 4, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_list-group.scss */
 .list-group-item-success {
@@ -4156,11 +4128,10 @@ a.list-group-item-danger {
 
 /* line 7, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_panels.scss */
 .panel {
-  margin-bottom: 28px;
+  margin-bottom: 33px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
 
 /* line 16, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_panels.scss */
@@ -4188,7 +4159,7 @@ a.list-group-item-danger {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: inherit; }
   /* line 39, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_panels.scss */
   .panel-title > a {
@@ -4376,7 +4347,7 @@ a.list-group-item-danger {
 
 /* line 212, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_panels.scss */
 .panel-group {
-  margin-bottom: 28px; }
+  margin-bottom: 33px; }
   /* line 216, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_panels.scss */
   .panel-group .panel {
     margin-bottom: 0;
@@ -4419,22 +4390,22 @@ a.list-group-item-danger {
 
 /* line 247, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_panels.scss */
 .panel-primary {
-  border-color: #337ab7; }
+  border-color: #009e88; }
   /* line 6, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_panels.scss */
   .panel-primary > .panel-heading {
     color: #fff;
-    background-color: #337ab7;
-    border-color: #337ab7; }
+    background-color: #009e88;
+    border-color: #009e88; }
     /* line 11, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_panels.scss */
     .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-      border-top-color: #337ab7; }
+      border-top-color: #009e88; }
     /* line 14, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_panels.scss */
     .panel-primary > .panel-heading .badge {
-      color: #337ab7;
+      color: #009e88;
       background-color: #fff; }
   /* line 20, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/mixins/_panels.scss */
   .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #337ab7; }
+    border-bottom-color: #009e88; }
 
 /* line 250, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_panels.scss */
 .panel-success {
@@ -4547,7 +4518,6 @@ a.list-group-item-danger {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
   /* line 15, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_wells.scss */
   .well blockquote {
@@ -4567,7 +4537,7 @@ a.list-group-item-danger {
 /* line 6, /Users/omi/works/og-Im0-3.github.io/source/css/bootstrap/_close.scss */
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -4859,136 +4829,218 @@ button.close {
 base
 ------------------*/
 /* line 8, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+body {
+  background: #fcfcfc; }
+
+/* line 12, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+a {
+  text-decoration: underline;
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+  color: #009e88; }
+  /* line 17, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  a:hover {
+    text-decoration: none;
+    color: #00d1b4; }
+
+/* line 23, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .container {
-  max-width: 780px; }
+  max-width: 820px; }
 
 /*-----------------
 layout
 ------------------*/
 @media (max-width: 767px) {
-  /* line 15, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  /* line 30, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .l-nav {
     text-align: center; } }
 
-/* line 21, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 36, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .l-header {
   background: #00bfa5; }
 
-/* line 29, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 44, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .l-footer {
-  margin: 80px 0; }
+  padding: 20px 0;
+  background: #00bfa5; }
 
 /*-----------------
 module
 ------------------*/
-/* line 37, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 53, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .logo {
-  height: 54px; }
+  height: 50px; }
 
-/* line 44, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 60, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .nav li a {
-  color: white; }
+  color: white;
+  font-size: 14px;
+  text-decoration: none; }
+  /* line 65, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .nav li a:hover {
+    background: #00d1b4; }
 
-/* line 51, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 73, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .pager {
-  position: relative; }
-  /* line 54, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  position: relative;
+  margin: 100px 0 80px;
+  width: 100%;
+  height: 33px;
+  background: #e0e0e0; }
+  /* line 80, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .pager a {
+    display: block;
+    background: #eee;
+    text-decoration: none;
+    color: #555555; }
+    /* line 86, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    .pager a:hover {
+      color: #777777;
+      -webkit-transform: translateX(3px) translateY(-3px);
+          -ms-transform: translateX(3px) translateY(-3px);
+              transform: translateX(3px) translateY(-3px); }
+  /* line 92, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .pager-prev {
-    width: 10%;
-    float: left; }
-  /* line 59, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    position: relative;
+    z-index: 2;
+    width: 24%;
+    float: left;
+    text-align: center; }
+  /* line 100, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .pager-txt {
     position: absolute;
     width: 100%;
     text-align: center;
-    z-index: -1; }
-  /* line 66, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    z-index: 1;
+    top: 4px;
+    font-size: 12px; }
+  /* line 109, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .pager-next {
-    width: 10%;
-    float: right; }
+    position: relative;
+    z-index: 2;
+    width: 24%;
+    float: right;
+    text-align: center; }
 
-/* line 73, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 119, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .article {
-  position: relative;
+  padding: 10px 0 10px 0;
   margin-bottom: 40px; }
-  /* line 77, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  /* line 123, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .article-header {
-    margin-bottom: 60px; }
-  /* line 81, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    position: relative;
+    padding: 10px 0 2px 20px;
+    border-left: 8px solid #ccc;
+    margin: 10px 0 46px; }
+  /* line 130, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .article-title {
-    padding-top: 38px;
-    text-align: left; }
-    /* line 85, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    margin: 30px 0 24px 0;
+    text-align: left;
+    letter-spacing: 0.05em; }
+    /* line 135, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
     .article-title a {
-      color: text-color; }
-      /* line 88, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+      color: #333333;
+      text-decoration: none; }
+      /* line 139, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
       .article-title a:hover {
-        color: text-color; }
-  /* line 94, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+        color: gray; }
+  /* line 145, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .article-date {
     position: absolute;
-    top: 0;
+    top: 10px;
     margin: 0;
-    width: 70px;
+    width: 100px;
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
     color: #777777; }
-  /* line 104, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  /* line 155, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .article-cat {
     position: absolute;
-    top: -3px;
-    left: 70px;
+    top: 7px;
+    left: 100px;
     text-align: center; }
-    /* line 110, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    /* line 161, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
     .article-cat a {
       color: white;
       line-height: 1;
-      padding: 3px 8px;
-      background: #777777;
-      font-size: 10px; }
+      padding: 3px 10px;
+      background: #009e88;
+      font-size: 12px; }
+      /* line 168, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+      .article-cat a:hover {
+        text-decoration: none;
+        background: #00d1b4; }
+  /* line 176, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 {
+    margin-top: 48px;
+    letter-spacing: 0.05em; }
+  /* line 181, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .article-body pre {
+    background: #444;
+    border: none; }
+  /* line 186, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .article-body blockquote {
+    font-size: 18px; }
+    /* line 189, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    .article-body blockquote a {
+      display: block; }
 
-/* line 122, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 198, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .articles .article {
-  position: relative; }
-  /* line 125, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  position: relative;
+  padding: 10px 0 10px 20px;
+  border-left: 8px solid #ccc; }
+  /* line 203, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .articles .article-title {
     text-align: left;
-    margin-bottom: 8px; }
-    /* line 129, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    font-size: 18px; }
+    /* line 207, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
     .articles .article-title a {
       color: #333333; }
-      /* line 132, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+      /* line 210, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
       .articles .article-title a:hover {
-        color: #333333; }
-  /* line 144, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+        color: gray; }
+  /* line 222, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
   .articles .article-summary {
-    margin-top: 10px;
-    font-size: 12px !important; }
-    /* line 148, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    font-size: 14px !important; }
+    /* line 225, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
     .articles .article-summary h1, .articles .article-summary h2, .articles .article-summary h3, .articles .article-summary h4, .articles .article-summary h5, .articles .article-summary h6,
     .articles .article-summary div,
     .articles .article-summary p,
     .articles .article-summary blockquote,
     .articles .article-summary ul, .articles .article-summary ol, .articles .article-summary li {
-      font-size: 12px !important;
+      font-size: 14px !important;
       display: inline;
       border: none;
       margin: 0;
       padding: 0; }
-    /* line 160, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+    /* line 237, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
     .articles .article-summary pre, .articles .article-summary iframe, .articles .article-summary img, .articles .article-summary br {
       display: none; }
 
-/* line 171, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
-.share li {
-  list-style-type: none;
-  float: left; }
+/* line 245, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+.share {
+  border-bottom: 1px solid #c1c1c1;
+  box-shadow: 0px 1px 0 0 #fff;
+  padding-bottom: 40px;
+  margin-bottom: 40px; }
+  /* line 252, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .share li {
+    list-style-type: none;
+    float: left;
+    margin-right: 10px; }
+  /* line 258, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .share .share-facebook {
+    margin-top: -8px; }
+  /* line 262, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+  .share .share-g-plus, .share .share-twitter {
+    margin-right: 0px; }
 
-/* line 179, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 270, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .page-title {
   margin-bottom: 60px; }
 
-/* line 185, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
+/* line 276, /Users/omi/works/og-Im0-3.github.io/source/css/style.scss */
 .copyright {
   text-align: center;
-  font-size: 10px; }
+  font-size: 12px; }

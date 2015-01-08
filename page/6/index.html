@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title> 03LOG</title>
+    <title>03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/components/google-code-prettify/prettify.css">
+    <!-- js -->
     <script type="text/javascript"
  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/bootstrap/collapse.js"></script>
     <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-  </head>
-  <body>
+    <!-- end -->
     <header class="l-header navbar">
       <div class="container">
         <div class="navbar-header">
@@ -36,17 +49,17 @@
         </div>
         <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/categories/practis.html">Practis</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container l-content">
-      <div class="articles">
+        <div class="articles">
   <section class="article">
     <h1 class="article-title"><a href="/blog/html5-ie.html">HTML5で書くときにIEのためにしておきたいこと</a></h1>
     <p class="article-date">2013/12/26</p>
@@ -54,10 +67,7 @@
     <div class="article-summary"><p>HTML5を使用したいけど、IE6〜IE8までは対応していません。
 かといってそのまま放置してしまうと、古いIEでは見れないことになってしまいます。</p>
 
-<p>もちろん新しいブラウザで見てもらえればそれでいいのですがそうも行かないので
-古いIEでも最低限見れるようにするための方法をまとめました。</p>
-
-<h2>1...</h2></div>
+<p>もちろん新しいブラウザで見てもらえればそれ...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -69,9 +79,7 @@
     <div class="article-summary"><p>ここ最近HTML5をもう一度ちゃんと勉強し直そうと思いいろいろと調べていたのですが、
 正しいマークアップをする際にはコンテンツモデルとカテゴリをしっかり理解する必要がありました。</p>
 
-<p>今まで大まかにしか掴んでいなかったコンテンツモデルについて改めて整理してみました。</p>
-
-<h2>コンテンツモデルってなに？</h2></div>
+<p>今まで大まか...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -86,11 +94,7 @@
 <h2>基本の形 $(’[属性]’)</h2>
 
 <p>基本は[]で囲む形です。
-いままで先頭にタグを絶対付けなきゃいけないって思っていましたがなくてもいけます。</p>
-
-<h2>$(’[属性=値]’)</h2>
-
-<p>指定した属性と値が一...</p></div>
+いままで先頭にタグを絶対付けな...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -100,12 +104,7 @@
     <p class="article-date">2013/12/20</p>
     <p class="article-cat"><a href="/categories/web.html">Web</a></p>
     <div class="article-summary"><p>最近は会社ではwin、家ではmacなので、coda2からSublime Textを使うようになりました。
-それと一緒にEmmetもつかうようになって便利だなーとか思いながらもいまいち使いこなせて無い気がしたので
-改めて使い方をまとめてみました。</p>
-
-<h2>使い方</h2>
-
-<p>ctrl + e または tab で...</p></div>
+それと一緒にEmmetもつかうようになって便利だなーとか思いながらもいまいち使いこなせて...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -118,11 +117,7 @@
 
 <p>iframe側の要素を取得するには</p>
 
-<pre><code class="javascript">$('iframe').contents().find('hoge')…
-</code></pre>
-
-<p>contents()でその要素の中身をテキストなども含め全て取得してくれます。
-そこからお目...</p></div>
+<pre><code class="javascript">$('iframe').contents().find('hoge')...</code></pre></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -136,13 +131,7 @@
 
 <h2>overflowとは</h2>
 
-<p>overflowはボックスからはみ出したコンテンツをどう表示するかを指定するものです。</p>
-
-<blockquote>
-<ul>
-    <li>visible...</li>
-</ul>
-</blockquote></div>
+<p>overflow...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
