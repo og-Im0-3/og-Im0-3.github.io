@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>SMACSSを利用したCSS設計について - 03LOG</title>
+    <title>わかりやすくて軽快なビルドシステム gulpのはじめ方 - 03LOG</title>
     <meta name="discription" content="content">
     <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
     <meta property="og:url" content="http:03log.me">
@@ -61,181 +61,218 @@
     <div class="container l-content">
         <article class="article">
           <header class="article-header">
-            <h1 class="article-title">SMACSSを利用したCSS設計について</h1>
-            <p class="article-date">2014/09/30</p>
+            <h1 class="article-title">わかりやすくて軽快なビルドシステム gulpのはじめ方</h1>
+            <p class="article-date">2014/09/07</p>
             <p class="article-cat"><a href="/categories/web.html">Web</a></p>
           </header>
           <div class="article-body">
-            <p>今までOOCSS、BEMの考えを取り入れたコーディングをしていたのですが、今回SMACSSのルールに従ってコーディングしてみたので考え方と、感想をメモします。</p>
+            <p>gulpを触ってみたら使い勝手がかなりよかったので、gulpの使い方をメモ。</p>
 
-<p>今回コーディングするにあたり、下記を参考にしました。<br />
-詳しい内容に関してはこちらを参考にしていただければと思います。</p>
+<h2>gulpとは</h2>
+
+<p>Node.jsを使用したビルドシステムです。</p>
 
 <blockquote>
-<a href="https://smacss.com/" target="_blank">Scalable and Modular Architecture for CSS</a>  
-<a href="https://app.codegrid.net/entry/template-smacss-1" target="_blank">知っておきたいHTMLテンプレート設計法 - SMACSSのルール 1 | CodeGrid</a>  
+  <a href="http://gulpjs.com/">gulp.js - the streaming build system</a>
 </blockquote>
 
-<h2>SMACSSとは？</h2>
+<p>gruntのように構築時に便利な処理を自動で実行させることができます。
+gulpとgruntを使ってみた感想ですが、gruntはプラグインがある一つの機能をまとめて実行するのに対して、gulpは細かな機能を組み合わせて使用するようなイメージです。
+gulpのほうがJSファイルもわかりやすくてよい感じでした。</p>
 
-<p>SMACSSはScalable and Modular Architecture for CSSの略です。<br />
-<a href="https://smacss.com/" target="_blank">Scalable and Modular Architecture for CSS</a>にはCSSをより体系立て、より構造化させることで制作とメンテナンスをより容易に行うテクニックと書かれています。</p>
+<p>gulpを使用するには<a href="http://nodejs.org/">node.js</a>が必要なのでダウンロードをしておいてください。</p>
 
-<h2>SMACSSの考え方</h2>
+<h2>package.jsonを準備する</h2>
 
-<p>SMACSSには五つのルールが存在します。<br />
-Base - ベースルール<br />
-Layout - レイアウトルール<br />
-Module - モジュールルール<br />
-State - 状態（ステート）ルール<br />
-Theme - テーマルール</p>
+<p>まずgulpのプラグインを管理するためにpackage.jsonを準備する必要があります。
+使用するフォルダまで移動して下記を実行します。</p>
 
-<h3>Base - ベースルール</h3>
+<p>[code lang=text]
+$ npm init
+[/code]</p>
 
-<p>ベースはサイトのデフォルトのスタイル設定です。
-<strong>Reset.css</strong>や<strong>Nomalize.css</strong>もこちらに含まれます。
-他によくベースで設定するものをあげるとするとベースのフォントサイズや行間、a要素の文字色や:hoverなど、タグに直接設定するものはベースルールとして記述します。</p>
+<p>すると質問形式で、ファイルが自動的に構築されます。</p>
 
-<h3>Layout - レイアウトルール</h3>
+<p>package.jsonについて詳しく知りたい方は下記の内容を参考に。
+<a href="http://liberty-technology.biz/PublicItems/npm/package.json.html">npm package.json 日本語版 取扱説明書</a></p>
 
-<p>レイアウトは大枠を指定するためのルールです。
-ヘッダー、フッター、ナビゲーション、メインコンテンツ、サイドバーなど、よくIDを使用して指定する要素が、レイアウトになります。
-また、例えばページ内で段組みになっている部分の枠の部分などもレイアウトとして扱います。</p>
+<p>ここではとりあえず、package.jsonが準備できればOKです。</p>
 
-<p>このルールにはIDを使用するか、layout-やl-などの接頭語をつけることをSMACSSでは推奨しています。</p>
+<h2>gulpのインストール</h2>
 
-<h3>Module - モジュールルール</h3>
+<p>package.jsonが準備できたら、次はgulpのインストールです。
+まずはターミナルで以下を実行します。</p>
 
-<p>モジュールは名前の通りモジュールを表すスタイルです。
-BEMのBlock、Elementの考え方と似ています。
-クラス名の書き方はモジュール名-サブクラス名の順番で書きます。
-下記はモジュールルールを使用した例です。</p>
+<p>[code lang=text]
+$ npm install -g gulp
+[/code]</p>
 
-<pre><code class="html">&lt;div class=&quot;l-column&quot;&amp;gt;
-  &lt;div class=&quot;module&quot;&amp;gt;
-    &lt;h1 class=&quot;module-title&quot;&amp;gt;タイトル&lt;/h1&amp;gt;
-    &lt;p class=&quot;module-description&quot;&amp;gt;説明&lt;/p&amp;gt;
-  &lt;/div&amp;gt;
-&lt;/div&amp;gt;
+<p>-gでグローバル環境にインストールされ、どこからでもgulpを使えるようになります。
+何もつけないとローカルでインストールされます。</p>
+
+<p>次にpackage.jsonの入っているディレクトリまで移動して、以下を実行します。</p>
+
+<p>[code lang=text]
+$ npm install &ndash;save-dev gulp
+[/code]</p>
+
+<p>できたらgulpfile.jsを用意してとりあえず下記の内容を記入します。</p>
+
+<pre><code class="javascript">var gulp = require(&#39;gulp&#39;);
+
+gulp.task(&#39;default&#39;, function() {
+  console.log(&#39;hello world&#39;);
+});
+```~~~
+上記を実行してうまくいけば設定完了です。
+
+&lt;h2&gt;gulpfile.jsについて&lt;/h2&gt;
+
+&lt;h3&gt;var gulp = require(&amp;#039;gulp&amp;#039;);&lt;/h3&gt;
+
+Node.jsでモジュールを読み込むときに使用します。
+上記のコードでgulpという変数にgulpのモジュールを入れています。
+
+&lt;h3&gt;gulp.task()&lt;/h3&gt;
+
+タスクを登録します。
+第一引数はタスクの名前です。
+
+
+~~~ javascript
+var gulp = require(&amp;#039;gulp&amp;#039;);
+
+gulp.task(&amp;#039;default&amp;#039;, function() {
+  console.log(&amp;#039;hello world&amp;#039;);
+});
 </code></pre>
 
-<pre><code class="css">.l-column{
-  width: 200px;
-  margin: 0 auto;
-}
+<p>名前をdefaultと指定すると</p>
 
-.module{
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
+<p>[code lang=text]
+$ gulp
+[/code]</p>
 
-.module-title{
-  font-size: 18px;
-  font-weight: bold;
-}
+<p>で実行ができます。</p>
 
-.module-description{
-  font-size: 14px;
-}
+<pre><code class="javascript">var gulp = require(&amp;#039;gulp&amp;#039;);
+
+gulp.task(&amp;#039;hello&amp;#039;, function() {
+  console.log(&amp;#039;hello world&amp;#039;);
+});
 </code></pre>
 
-<p>例えば上記のように記述します。.moduleがBEMでいうBlock、-でつないだものがElementにあたります。
-そして全体の幅などはレイアウトで指定することで、いろんなところで使い回しやすいModuleができます。
-またSMACSSは子孫セレクタや子セレクタの使用も許されています。</p>
+<p>上記のように&#039;hello&#039;とした場合は、</p>
 
-<pre><code class="html">&lt;div class=&quot;l-column&quot;&amp;gt;
-  &lt;div class=&quot;module&quot;&amp;gt;
-    &lt;h1&amp;gt;タイトル&lt;/h1&amp;gt;
-    &lt;p&amp;gt;説明&lt;/p&amp;gt;
-  &lt;/div&amp;gt;
-&lt;/div&amp;gt;
+<p>[code lang=text]
+$ gulp hello
+[/code]</p>
+
+<p>で実行可能です。</p>
+
+<p>第２引数にはタスクを複数指定することもできます。
+複数指定する場合は配列にタスク名を入れます。</p>
+
+<pre><code class="javascript">var gulp = require(&amp;#039;gulp&amp;#039;);
+
+gulp.task(&amp;#039;hello&amp;#039;, function() {
+  console.log(&amp;#039;hello&amp;#039;);
+});
+
+gulp.task(&amp;#039;world&amp;#039;, function() {
+  console.log(&amp;#039;world&amp;#039;);
+});
+
+gulp.task(&amp;#039;default&amp;#039;, [&amp;#039;hello&amp;#039;, &amp;#039;world&amp;#039;]);
 </code></pre>
 
-<pre><code class="css">.l-column{
-  width: 200px;
-  margin: 0 auto;
-}
+<p>上記の状態で</p>
 
-.module{
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
+<p>[code lang=text]
+$ gulp
+[/code]</p>
 
-.module &amp;gt; h1{
-  font-size: 18px;
-  font-weight: bold;
-}
+<p>を実行した場合helloとworldが実行されます。</p>
 
-.module &amp;gt; p{
-  font-size: 14px;
-}
+<h3>gulp.watch()</h3>
+
+<p>ファイルを監視する際に使用します。
+第一引数に監視したいファイルのpathを入れます。
+第二引数には実行したいタスク名を入れます。</p>
+
+<pre><code class="javascript">var gulp = require(&amp;#039;gulp&amp;#039;);
+
+gulp.tast(&amp;#039;watch&amp;#039;, function(){
+  console.log(&amp;#039;change&amp;#039;);
+});
+
+gulp.task(&amp;#039;default&amp;#039;, function() {
+  gulp.watch(&amp;#039;htdocs/css/style.css&amp;#039;, [&amp;#039;watch&amp;#039;]);
+});
 </code></pre>
 
-<p>タイトルと説明の部分のクラスをとり、上記のようなコードに変更しました。
-ただし上記のような書き方をする場合はCSSの影響範囲や、HTMLの変更が無いかなど注意が必要です。</p>
+<p>上記の場合、gulpを実行した後style.cssを変更するとwatchが実行されます。</p>
 
-<h3>State - 状態（ステート）ルール</h3>
+<h3>gulp.src()、gulp.dest()</h3>
 
-<p>ステートはモジュールの状態を表すためのルールです。
-例えば、.is-disable、.is-active、.is-current、といったような状態を示すClassをつけることで、見た目の変更を行ったりするときに使います。</p>
+<p>gulp.src()はタスクを実行するファイルを指定します。
+gulp.dest()はタスクを実行した後のファイルの保存先です。</p>
 
-<pre><code class="html">&lt;div class=&quot;l-column&quot;&amp;gt;
-  &lt;div class=&quot;module is-disable&quot;&amp;gt;
-    &lt;h1 class=&quot;module-title&quot;&amp;gt;タイトル&lt;/h1&amp;gt;
-    &lt;p class=&quot;module-description&quot;&amp;gt;説明&lt;/p&amp;gt;
-  &lt;/div&amp;gt;
-&lt;/div&amp;gt;
+<pre><code class="javascript">var gulp = require(&amp;#039;gulp&amp;#039;);
+
+gulp.task(&amp;#039;watch&amp;#039;, function(){
+  gulp.src(&amp;#039;htdocs/css/style.css&amp;#039;)
+    .pipe(gulp.dest(&amp;#039;htdocs/css_copy/&amp;#039;));
+});
+
+gulp.task(&amp;#039;default&amp;#039;, function() {
+  gulp.watch(&amp;#039;htdocs/css/style.css&amp;#039;, [&amp;#039;watch&amp;#039;]);
+});
 </code></pre>
 
-<pre><code class="css">.module.is-disable{
-  display: none;
-}
+<p>gulpを実行してstyle.cssを変更すると、新たにcss_copyフォルダ内に同じファイルが作成されます。
+gulp.src()に対してpipe()で処理をつなげて、gulp.dest()で書き出しを行うというようなイメージです。
+上記のgulp.src()の後ろに様々なプラグインをつなげることで便利な処理をいろいろと実行できるようになります。</p>
+
+<h2>プラグインを使用してみる</h2>
+
+<p>gulpには様々なプラグインが用意されています。
+<a href="http://gulpjs.com/plugins/">gulp.js plugin registry</a></p>
+
+<p>今回はSassをコンパイルするプラグインを使用します。
+まずは下記を実行し、ローカルにgulp-sassをインストールします。</p>
+
+<p>[code lang=text]
+$ npm install &ndash;savave-dev gulp-sass
+[/code]</p>
+
+<p>インストールしたらgulpfile.jsを以下のように変更します。</p>
+
+<pre><code class="javascript">var gulp = require(&#39;gulp&#39;);
+var sass = require(&#39;gulp-sass&#39;);
+
+gulp.task(&#39;watch&#39;, function(){
+  gulp.src(&#39;htdocs/scss/style.scss&#39;)
+    .pipe(sass())
+    .pipe(gulp.dest(&#39;htdocs/css/&#39;));
+});
+
+gulp.task(&#39;default&#39;, function() {
+  gulp.watch(&#39;htdocs/scss/style.scss&#39;, [&#39;watch&#39;]);
+});
 </code></pre>
 
-<p>上記の例では、.is-disableをつけることでoduleを非表示にする例です。</p>
+<p>require()でgulp-sassを呼び出します。
+gulp.watch()はscssファイルを指定して、監視します。
+gulp.src()でコンパイルするファイルを指定して、.pipe()でgulp-sassを実行します。
+実行した後のコンパイル先をgulp.dest()で指定します。
+さらにほかにも機能を追加したいときは.pipe(sass())の後ろに連結していけば様々な処理を自分で組み合わせて行うことができます。</p>
 
-<h3>Theme - テーマルール</h3>
+<p>今回使ってみて、個人的にはgruntよりもJSファイルがわかりやすく、管理しやすいように感じました。
+また処理がgulpの方が軽快です。
+いろいろと情報もいっぱいあるので調べてみれば結構簡単にいけそうです。</p>
 
-<p>テーマは全体のスタイルを変更する場合に使うクラスです。
-テーマは後から読み込ませたり、クラスを付加してあとからスタイルを変更させる場合に使います。
-普段は使う必要がないかもしれませんが、状況に応じて使用します。</p>
-
-<pre><code class="css">.body{
-  color: #000;
-}
-</code></pre>
-
-<p>たとえば上記のCSSの後に、次のCSSを読み込ませた場合</p>
-
-<pre><code class="css">.body{
-  color: #f00;
-}
-</code></pre>
-
-<p>全体の文字色は赤色に変更されます。</p>
-
-<h2>SMACSSでコーディングしてみて</h2>
-
-<p>ここまで、SMACSSについてまとめてきましたが、今回私が個人的によいなと思ったところ、注意が必要だと感じたところをまとめました。</p>
-
-<h3>よいなと思ったところ。</h3>
-
-<ul>
-<li>OOCSSよりも構造がはっきりとわかりやすい。</li>
-<li>BEMよりもクラス名が単調になりにくい。</li>
-<li>Moduleを使い回ししやすい。</li>
-<li>接頭語の考え方(レイアウト:.l- / 状態.is-)が参考になった。</li>
-</ul>
-
-<h3>注意が必要なと感じたところ</h3>
-
-<ul>
-<li>CSSの強固さはBEMよりは劣る。</li>
-<li>ルールを明確にする必要があるためコーディング前のCSSの設計がとても重要。</li>
-</ul>
-
-<p>以前はBEMを参考に自分なりルールで構築を行っていたのですが、今回SMACSSを使用してみてこのルールは自分の中でもCSSをより理解しやすくできるように感じました。
-大規模な開発では世の中にあるさまざまなCSS設計からいろいろと学び、より強固なCSS設計を行っていくのが今後必要だなと感じました。</p>
+<p>まだ使い初めなので、もし間違いなどございましたらご指摘いただけたら幸いです。</p>
 
           </div>
         </article>

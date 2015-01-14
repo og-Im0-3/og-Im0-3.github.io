@@ -80,103 +80,104 @@
 ~~~ html</p>
 
 <p>div#hoge
-<div id="hoge"&gt;</div&gt;
+<div id="hoge"></div>
 div.hoge
-<div class="hoge"&gt;</div&gt;
+<div class="hoge"></div>
 ~~~
 <blockquote>[○○○]で属性を追加</blockquote>
 ~~~ html</p>
 
 <p>a[href=&ldquo;https://www.google.co.jp&rdquo;]
-<a href="https://www.google.co.jp"&gt;</a&gt;
+<a href="https://www.google.co.jp"></a>
 ~~~
 <blockquote>&gt;で一つ下の階層へ移動</blockquote>
 ~~~ html</p>
 
 <p>div&gt;p
-<div&gt;
-    <p&gt;</p&gt;
-</div&gt;
+<div>
+    <p></p>
+</div>
 ~~~
 <blockquote>+で兄弟関係</blockquote>
 ~~~ html</p>
 
 <p>ul&gt;li+li
-<ul&gt;
-    <li&gt;</li&gt;
-    <li&gt;</li&gt;
-</ul&gt;
+<ul>
+    <li></li>
+    <li></li>
+</ul>
 ~~~
 <blockquote>*○で○回繰り返し</blockquote>
 ~~~ html</p>
 
 <p>ul&gt;li*3
-<ul&gt;
-    <li&gt;</li&gt;
-    <li&gt;</li&gt;
-    <li&gt;</li&gt;
-</ul&gt;
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 ~~~
 <blockquote>()でグループ化</blockquote>
 ~~~ html</p>
 
 <p>ul&gt;(li&gt;a)*3
-<ul&gt;
-    <li&gt;<a href=""&gt;</a&gt;</li&gt;
-    <li&gt;<a href=""&gt;</a&gt;</li&gt;
-    <li&gt;<a href=""&gt;</a&gt;</li&gt;
-</ul&gt;
+<ul>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+</ul>
 ~~~
 <blockquote>^で上の階層に戻る</blockquote>
 ~~~ html</p>
 
 <p>div&gt;h1&gt;a^p
-<div&gt;
-    <h1&gt;<a href=""&gt;</a&gt;</h1&gt;
-    <p&gt;</p&gt;
-</div&gt;
+<div>
+    <h1><a href=""></a></h1>
+    <p></p>
+</div>
 ~~~
 <blockquote>$で連番</blockquote>
 ~~~ html</p>
 
 <p>ul&gt;li.item$*3
-<ul&gt;
-    <li class="item1"&gt;</li&gt;
-    <li class="item2"&gt;</li&gt;
-    <li class="item3"&gt;</li&gt;
-</ul&gt;
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+</ul>
 ~~~
 <blockquote>{}でタグの中のテキストを指定</blockquote>
 ~~~ html</p>
 
 <p>p{テキストが入ります}
-<p&gt;テキストが入ります</p&gt;
+<p>テキストが入ります</p>
 ~~~
 <blockquote>loremでダミーテキスト</blockquote>
 ~~~ html</p>
 
 <p>p&gt;lorem
-<p&gt;
+<p>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, officia repellendus doloribus praesentium alias tempora ipsum eius modi vel nam inventore saepe quidem qui delectus architecto incidunt quisquam ea eligendi?
-</p&gt;
+</p>
 ~~~
 <blockquote>shift+option+/でコメントアウト</blockquote>
 ~~~ html</p>
 
-<p>&lt;div&gt;
-    &lt;p&gt;text&lt;/p&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;!&ndash; &lt;p&gt;text&lt;/p&gt; &ndash;&gt;
-&lt;/div&gt;
-~~~
-コメントアウトしたいタグの中にカーソルを合わせるのがポイント</p>
+<div>
+    <p>text</p>
+</div>
 
-<blockquote>shift+control+Iで画像サイズ取得</blockquote>
+<div>
+    <!-- <p>text</p> &ndash;>
+</div>
 
-<pre><code class="html">
-&lt;img src=&quot;hoge.jpg&quot; alt=&quot;&quot;&amp;gt;
-&lt;img src=&quot;hoge.jpg&quot; alt=&quot;&quot; width=&quot;100&quot; height=&quot;100&quot;&amp;gt;
+<pre><code>コメントアウトしたいタグの中にカーソルを合わせるのがポイント
+
+&lt;blockquote&gt;shift+control+Iで画像サイズ取得&lt;/blockquote&gt;
+~~~ html
+
+&lt;img src=&quot;hoge.jpg&quot; alt=&quot;&quot;&gt;
+&lt;img src=&quot;hoge.jpg&quot; alt=&quot;&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
 </code></pre>
 
 <p>これも同じでimgタグの中にカーソルを合わせるのがポイント</p>

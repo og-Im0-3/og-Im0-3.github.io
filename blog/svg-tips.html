@@ -84,7 +84,7 @@
 <p>SVGファイルは画像なので普通にimgタグを使って表示することが出来ます。
 ~~~ html</p>
 
-<p>&lt;img src=&ldquo;image.svg&rdquo; width=&ldquo;24&rdquo; height=&ldquo;24&rdquo;&gt;
+<p><img src="image.svg" width="24" height="24">
 ~~~
 width、heightを指定してあげれば自ずとそのサイズでキレイに表示してくれます。</p>
 
@@ -93,9 +93,9 @@ svgに対応していないブラウザではラスター形式の画像を準�
 その際はobjectタグを使用して以下のように書きます。
 ~~~ html</p>
 
-<p>&lt;object data=&ldquo;image.svg&rdquo; type=&ldquo;image/svg+xml&rdquo; width=&ldquo;24&rdquo; height=&ldquo;24&rdquo;&gt;
-  &lt;img src=&ldquo;image.jpg&rdquo; width=&ldquo;24&rdquo; height=&ldquo;24&rdquo;/&gt;
-&lt;/object&gt;
+<p><object data="image.svg" type="image/svg+xml" width="24" height="24">
+  <img src="image.jpg" width="24" height="24"/>
+</object>
 ~~~</p>
 
 <h2>サーバーによっては表示されない？</h2>

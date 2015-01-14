@@ -1,0 +1,128 @@
+/*----------------------------------
+ex
+----------------------------------*/
+
+.menuIcon-bar.bar1 {
+	top: -10px;
+}
+
+.menuIcon-bar.bar2 {
+	top: 0px;
+}
+
+.menuIcon-bar.bar3 {
+	top: 10px;
+}
+
+.gb-header-nav-button.active .bar1 {
+	top: 0px;
+}
+
+.gb-header-nav-button.active .bar2 {
+	top: 0px;
+}
+
+.gb-header-nav-button.active .bar3 {
+	top: 0px;
+}
+
+.clientImage-titles {
+	width: 300px;
+}
+
+.clientImage-titles img {
+	width: 300px;
+}
+
+.clientImage-title {
+	width: 300px;
+}
+
+.clientImage-title img {
+	width: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+
+.menuIcon-bar.bar1 {
+	top: -12px;
+}
+
+.menuIcon-bar.bar2 {
+	top: -2px;
+}
+
+.menuIcon-bar.bar3 {
+	top: 8px;
+}
+
+.gb-header-nav-button.active .bar1 {
+	top: -2px;
+}
+
+.gb-header-nav-button.active .bar2 {
+	top: -2px;
+}
+
+.gb-header-nav-button.active .bar3 {
+	top: -2px;
+}
+
+.clientImage-titles {
+	width: 620px;
+}
+
+.clientImage-titles img {
+	width: 620px;
+}
+
+.clientImage-title {
+	width: 620px;
+}
+
+.clientImage-title img {
+	width: 620px;
+}
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.clientImage-titles {
+	width: 730px;
+}
+
+.clientImage-titles img {
+	width: 730px;
+}
+
+.clientImage-title {
+	width: 730px;
+}
+
+.clientImage-title img {
+	width: 730px;
+}
+
+}
+
+@media only screen and (min-width: 1180px) {
+
+.clientImage-titles {
+	width: 730px;
+}
+
+.clientImage-titles img {
+	width: 730px;
+}
+
+.clientImage-title {
+	width: 730px;
+}
+
+.clientImage-title img {
+	width: 730px;
+}
+
+}
+

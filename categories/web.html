@@ -79,7 +79,7 @@
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
   <section class="article">
-    <h1 class="article-title"><a href="/blog/gulp-setup.html">SMACSSを利用したCSS設計について</a></h1>
+    <h1 class="article-title"><a href="/blog/smacss.html">SMACSSを利用したCSS設計について</a></h1>
     <p class="article-date">2014/09/30</p>
     <p class="article-cat"><a href="/categories/web.html">Web</a></p>
     <div class="article-summary"><p>今までOOCSS、BEMの考えを取り入れたコーディングをしていたのですが、今回SMACSSのルールに従ってコーディングしてみたので考え方と、感想をメモします。</p>
@@ -131,12 +131,12 @@ p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングが�
 <p>p5.jsのサイトからダウンロード、またはCDNで読み込むことができます。<br>
 CDNを使用する場合は下記のコードを追加してください。</p>
 
-<pre><code class="javascript">&lt;script src="//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js"&amp;gt;&lt;/script&amp;gt;
+<pre><code class="javascript">&lt;script src="//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js"&gt;&lt;/script&gt;
 </code></pre>
 
 <h2>基本的な使い方</h2>
 
-<p>書き方はほぼProcessingに近い形...</p></div>
+<p>書き方はほぼProcessingに近い形です。１度使...</p></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -367,7 +367,8 @@ setInterval(loop,1000);
     <h1 class="article-title"><a href="/blog/processingjs.html">Processing.jsを使ってみた</a></h1>
     <p class="article-date">2014/05/18</p>
     <p class="article-cat"><a href="/categories/web.html">Web</a></p>
-    <div class="article-summary"><h2>Processingとは？</h2>
+    <div class="article-summary"><body>
+<h2>Processingとは？</h2>
 
 <p>Processingとは電子アートとビジュアルデザインのためのプログラミング言語です。</p>
 
@@ -376,7 +377,8 @@ setInterval(loop,1000);
 <p>実際、こんなのとか、
 こんなのが書いたりできるプログラミング言語です。</p>
 
-<p>Processingを使うには専用の開発環境をダウンロードする必要があるのですが、Processing.js...</p></div>
+<p>Processingを使うには専用の開発環境をダウンロードする必要があるのですが、Processing.js...</p>
+</body></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -482,8 +484,9 @@ Android2.3でrotateが正常に機能しない状態に遭遇しました。</p>
 <p>例えば下記のような場合</p>
 
 <pre><code class="html">
-&lt;div class="rotate"&amp;gt;&lt;/div&amp;gt;
-&lt;div class="rotate"&amp;gt;&lt;/div...</code></pre></div>
+&lt;div class="rotate"&gt;&lt;/div&gt;
+&lt;div class="rotate"&gt;&lt;/div&gt;
+&lt;div class...</code></pre></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -527,15 +530,17 @@ element...</code></pre></div>
 リストにそれぞれ別の背景画像を設定するときは
 ~~~ html</p>
 
-<p>&lt;ol&gt;
-  &lt;li&gt;リスト１&lt;/li&gt;
-  &lt;li&gt;リスト２&lt;/li&gt;
-  &lt;li&gt;リスト３&lt;/li&gt;
-  &lt;li&gt;リスト４&lt;/li&gt;
-&lt;/ol&gt;
-~~~</p>
+<ol>
+  <li>リスト１</li>
+  <li>リスト２</li>
+  <li>リスト３</li>
+  <li>リスト４</li>
+</ol>
 
-<pre><code class="css">@for ...</code></pre></div>
+<pre><code>
+~~~ css
+@for $i from 1 through 4 {
+  li:nth-of-type(#...</code></pre></div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just
@@ -979,7 +984,7 @@ CSSだけで、装飾などをつけて、ボタンが凹むようなアニメ�
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
   <section class="article">
-    <h1 class="article-title"><a href="/blog/csssasscompass.html">CSSを書くときSassとcompassを使い始めたら幸せになった話</a></h1>
+    <h1 class="article-title"><a href="/blog/css-sass-compass.html">CSSを書くときSassとcompassを使い始めたら幸せになった話</a></h1>
     <p class="article-date">2013/03/04</p>
     <p class="article-cat"><a href="/categories/web.html">Web</a></p>
     <div class="article-summary"><p>コーディングを勉強し始めて、HTML/CSSも書き慣れてきた頃、お友達から<strong>CSS書くならsassとcompassを使ったほうがいいよ！</strong>とアドバイスをもらいました。
@@ -991,44 +996,6 @@ CSSだけで、装飾などをつけて、ボタンが凹むようなアニメ�
 <h2>Sassとは？</h2>
 
 <p><strong>Sass(Syntactically Awesome StyleSheets)</strong>、直訳すると<strong>構文的にすっ...</strong></p></div>
-  </section>
-
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <section class="article">
-    <h1 class="article-title"><a href="/blog/test2.html">タイトル2</a></h1>
-    <p class="article-date">2012/01/02</p>
-    <p class="article-cat"><a href="/categories/web.html">Web</a></p>
-    <div class="article-summary"><p>This is an example article. You probably want to delete it and write your own articles!</p>
-</div>
-  </section>
-
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <section class="article">
-    <h1 class="article-title"><a href="/blog/test1.html">SMACSSを利用したCSS設計について</a></h1>
-    <p class="article-date">2012/01/01</p>
-    <p class="article-cat"><a href="/categories/web.html">Web</a></p>
-    <div class="article-summary"><p>今までOOCSS、BEMの考えを取り入れたコーディングをしていたのですが、今回SMACSSのルールに従ってコーディングしてみたので考え方と、感想をメモします。
-今回コーディングするにあたり、下記を参考にしました。<br>
-詳しい内容に関してはこちらを参考にしていただければと思います。</p>
-
-<pre><code class="css">body{
-  color: red;
-}
-</code></pre>
-
-<pre><code class="javascript">var a;
-function one(){
-  var a = 1;
-  return a;
-}
-
-var a = {
-  a: 1
-}
-</code></pre>
-</div>
   </section>
 
   <!-- use article.summary(250) if you have Nokogiri available to show just

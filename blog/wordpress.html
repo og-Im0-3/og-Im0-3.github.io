@@ -87,7 +87,7 @@ URLにカテゴリIDが表示されるのでそこを調べます。</p>
                 echo &rsquo;&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo; &rsquo;,bloginfo(&lsquo;template</em>url&rsquo;),&rsquo;/cssファイル&rdquo;&gt;&rsquo;;
                 break;
             case カテゴリのID:
-                echo &rsquo;&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo; &rsquo;,bloginfo(&#39;template_url&rsquo;),&rsquo;/cssファイル&rdquo;&gt;&rsquo;;
+                echo &rsquo;<link rel="stylesheet" href=" ',bloginfo('template_url'),'/cssファイル">&rsquo;;
                 break;</p>
 
 <p>&hellip;</p>
@@ -96,7 +96,7 @@ URLにカテゴリIDが表示されるのでそこを調べます。</p>
             echo &#39;&#39;;
             break;
     }
-endif; ?&amp;gt;
+endif; ?&gt;
 </code></pre>
 
 <p>[/php]</p>
@@ -124,10 +124,10 @@ $catID = $cat-&gt;cat_ID;
 <p>[php]
 switch($catID){
             case カテゴリーID:
-                echo &rsquo;&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo; &rsquo;,bloginfo(&#39;template<em>url&rsquo;),&rsquo;/cssファイル&rdquo;&gt;&rsquo;;
+                echo &rsquo;<link rel="stylesheet" href=" ',bloginfo('template_url'),'/cssファイル">&rsquo;;
                 break;
             case カテゴリーID:
-                echo &rsquo;&lt;link rel=&ldquo;stylesheet&rdquo; href=&ldquo; &rsquo;,bloginfo(&#39;template</em>url&rsquo;),&rsquo;/cssファイル&rdquo;&gt;&rsquo;;
+                echo &rsquo;<link rel="stylesheet" href=" ',bloginfo('template_url'),'/cssファイル">&rsquo;;
                 break;</p>
 
 <p>&hellip;</p>

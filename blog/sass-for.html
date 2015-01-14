@@ -79,15 +79,16 @@
 リストにそれぞれ別の背景画像を設定するときは
 ~~~ html</p>
 
-<p>&lt;ol&gt;
-  &lt;li&gt;リスト１&lt;/li&gt;
-  &lt;li&gt;リスト２&lt;/li&gt;
-  &lt;li&gt;リスト３&lt;/li&gt;
-  &lt;li&gt;リスト４&lt;/li&gt;
-&lt;/ol&gt;
-~~~</p>
+<ol>
+  <li>リスト１</li>
+  <li>リスト２</li>
+  <li>リスト３</li>
+  <li>リスト４</li>
+</ol>
 
-<pre><code class="css">@for $i from 1 through 4 {
+<pre><code>
+~~~ css
+@for $i from 1 through 4 {
   li:nth-of-type(#{$i}) {
     background:url(../img/img#{$i}.jpg) no-repeat center left;
   }

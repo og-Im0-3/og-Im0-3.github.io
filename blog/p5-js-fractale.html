@@ -74,7 +74,7 @@ p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングが�
 <p>p5.jsのサイトからダウンロード、またはCDNで読み込むことができます。<br />
 CDNを使用する場合は下記のコードを追加してください。</p>
 
-<pre><code class="javascript">&lt;script src=&quot;//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js&quot;&amp;gt;&lt;/script&amp;gt;
+<pre><code class="javascript">&lt;script src=&quot;//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
 <h2>基本的な使い方</h2>
@@ -154,7 +154,7 @@ ellipse()でx:200px、y:200pxの位置に半径100pxの円を描画していま�
   repeat = 9;
 
 function triangle(){
-  if(w_width &amp;gt; w_height){
+  if(w_width &gt; w_height){
     start_b.x = center_x - center_y + 40;
     start_c.x = center_x + center_y - 40;
   }else{
@@ -187,7 +187,7 @@ function gasket(a, b, c ,n){
   f.x = (c.x + a.x)/2;
   f.y = (c.y + a.y)/2;
 
-  if(count &amp;gt; 1){
+  if(count &gt; 1){
     return setTimeout(function(){
       gasket(a, d, f ,count - 1);
       gasket(b, d, e ,count - 1);
@@ -204,7 +204,7 @@ function setup(){
   createCanvas(w_width, w_height);
   background(0,0);
 
-  if(w_width &amp;gt; w_height){
+  if(w_width &gt; w_height){
     start_b.x = center_x - center_y + 40;
     start_c.x = center_x + center_y - 40;
   }else{

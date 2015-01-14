@@ -1,0 +1,4155 @@
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#base
+基本設定
+:hoverは使わず.hoverを使用する
+##JavaScript : hoverModule
+----------------------------------*/
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', Meiryo, sans-serif;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 2;
+	color: #333;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	color: #cc0000;
+	text-decoration: none;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+a.hover {
+	color: red;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: bold;
+}
+
+::-moz-selection {
+	background: #cc0000;
+	color: #fff;
+}
+
+::selection {
+	background: #cc0000;
+	color: #fff;
+}
+
+a.hover .icon {
+	opacity: .7;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*------------------------
+level2
+２層のスタイル
+------------------------*/
+
+.topicPath {
+	padding: 8px 10px;
+	margin: 0 -20px 16px;
+	background: #5a5a5a;
+	color: white;
+}
+
+.topicPath li {
+	float: left;
+}
+
+.topicPath li:before {
+	content: '>';
+	margin: 0 10px;
+	color: white;
+}
+
+.topicPath li:first-child:before {
+	content: '';
+	margin: 0;
+}
+
+.topicPath li a {
+	color: white;
+}
+
+.main {
+	margin-bottom: 48px;
+}
+
+.main h1,
+.main h2,
+.main h3 {
+	margin: 0 20px;
+}
+
+.main h1 {
+	margin-top: 0px;
+	padding: 12px 12px;
+	border-left: 4px solid #cc0000;
+	background: #f7f7f7;
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.main h2 {
+	margin-top: 48px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	border-bottom: 2px solid #cc0000;
+}
+
+.main h3 {
+	position: relative;
+	margin-top: 24px;
+	padding-left: 18px;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.main h3:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	top: 50%;
+	left: 0;
+	margin-top: -8px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 4px solid #c00;
+}
+
+.main .list {
+	margin: 20px 0;
+	padding: 0 20px;
+}
+
+.main .list li {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-bottom: 8px;
+}
+
+.main p {
+	padding: 0 20px;
+	margin: 18px 0 0;
+}
+
+.sideNav {
+	margin-bottom: 24px;
+}
+
+.sideNav-level1 .sideNav-header {
+	border-top: 4px solid #cc0000;
+	border-bottom: 1px solid #cc0000;
+	color: #cc0000;
+	font-size: 20px;
+	font-size: 2rem;
+	padding: 24px 8px;
+	font-weight: bold;
+}
+
+.sideNav-level2 > li > a {
+	display: block;
+	position: relative;
+	border-bottom: 1px dotted #cccccc;
+	padding: 12px 22px;
+	font-size: 12px;
+	font-size: 1.2rem;
+	color: #333333;
+}
+
+.sideNav-level2 > li > a:before {
+	content: ' ';
+	display: block;
+	width: 8px;
+	height: 12px;
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+.sideNav-level2 > li > a.hover {
+	background: #f7f7f7;
+	color: #333333;
+}
+
+.sideNav-level2 > li > a.active {
+	background: #cc0000;
+	color: white;
+	border-bottom: none;
+}
+
+.sideNav-level2 > li > a.active:before {
+	background-position: 0px -12px;
+}
+
+.dpr-1 .sideNav-level2 > li > a:before {
+	background-image: url(../img/sidenav-dpi1.png);
+}
+
+.dpr-2 .sideNav-level2 > li > a:before {
+	background-image: url(../img/sidenav-dpi2.png);
+	background-size: 8px 36px;
+}
+
+.sideNav-level3 {
+	background: #f7f7f7;
+}
+
+.sideNav-level3 > li > a {
+	display: block;
+	position: relative;
+	border-bottom: 1px dotted #cccccc;
+	padding: 12px 28px;
+	font-size: 12px;
+	font-size: 1.2rem;
+	color: #333333;
+}
+
+.sideNav-level3 > li > a:before {
+	content: ' ';
+	display: block;
+	width: 8px;
+	height: 12px;
+	position: absolute;
+	left: 14px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+.sideNav-level3 > li > a.hover {
+	background: #cccccc;
+	color: white;
+}
+
+.sideNav-level3 > li > a.hover:before {
+	background-position: 0px -12px;
+}
+
+.sideNav-level3 > li > a.active {
+	color: #cc0000;
+	background: #f7f7f7;
+}
+
+.sideNav-level3 > li > a.active:before {
+	background-position: 0px -24px;
+}
+
+.dpr-1 .sideNav-level3 > li > a:before {
+	background-image: url(../img/sidenav-dpi1.png);
+}
+
+.dpr-2 .sideNav-level3 > li > a:before {
+	background-image: url(../img/sidenav-dpi2.png);
+	background-size: 8px 36px;
+}
+
+/*======================================================
+
+grobal
+
+======================================================*/
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*------------------------
+header
+------------------------*/
+
+#gb-header {
+	border-top: 6px solid #cc0000;
+}
+
+#gb-header .container {
+	position: relative;
+}
+
+.gb-header-logo {
+	width: 210px;
+	float: left;
+	line-height: 42px;
+	margin-left: -10px;
+}
+
+.gb-header-logo img {
+	vertical-align: middle;
+}
+
+.gb-header-nav {
+	width: 100%;
+}
+
+.gb-header-nav-box {
+	display: none;
+}
+
+.gb-header-nav-button {
+	width: 44px;
+	height: 44px;
+	margin-right: -20px;
+	padding: 0;
+	float: right;
+	position: relative;
+	background: transparent;
+	border: transparent;
+}
+
+.menuIcon-bar {
+	width: 28px;
+	height: 3px;
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 8px;
+	background: #333333;
+	-webkit-transition: all .1s;
+	transition: all .1s;
+}
+
+.menuIcon-bar.bar1 {
+	top: 10px;
+}
+
+.menuIcon-bar.bar2 {
+	top: 20px;
+}
+
+.menuIcon-bar.bar3 {
+	top: 30px;
+}
+
+.gb-header-nav-button.active {
+	background: #8d8d8d;
+}
+
+.gb-header-nav-button.active .menuIcon-bar {
+	background: white;
+}
+
+.gb-header-nav-button.active .bar1 {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 20px;
+}
+
+.gb-header-nav-button.active .bar2 {
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.gb-header-nav-button.active .bar3 {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: 20px;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*------------------------
+nav
+------------------------*/
+
+#gb-nav {
+	border-top: 1px solid #8d8d8d;
+	display: none;
+}
+
+#gb-nav ul {
+	max-width: 1140px;
+	width: 100%;
+	margin: 0 auto;
+	display: table;
+}
+
+#gb-nav li {
+	box-sizing: border-box;
+}
+
+#gb-nav a {
+	display: block;
+	box-sizing: border-box;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+#gb-nav a.hover,
+#gb-nav a.active {
+	text-decoration: none;
+}
+
+#gb-nav .gb-nav-main li {
+	box-sizing: border-box;
+	border-bottom: 1px solid gray;
+}
+
+#gb-nav .gb-nav-main a {
+	background: #8d8d8d;
+}
+
+#gb-nav .gb-nav-main a.hover,
+#gb-nav .gb-nav-main a.active {
+	background: #333333;
+	color: white;
+}
+
+#gb-nav .gb-nav-main .paragraph {
+	display: inline;
+}
+
+#gb-nav .gb-nav-main .slash {
+	display: inline;
+}
+
+#gb-nav .gb-nav-main .only-tb-sp {
+	display: block;
+}
+
+#gb-nav .gb-nav-sub {
+	display: table;
+	border-bottom: 4px solid #cc0000;
+}
+
+#gb-nav .gb-nav-sub li {
+	display: table-cell;
+	width: 33.333333%;
+	vertical-align: middle;
+}
+
+#gb-nav .gb-nav-sub a {
+	background: #8d8d8d;
+}
+
+#gb-nav .gb-nav-sub a.first {
+	line-height: 48px;
+	height: 68px;
+}
+
+#gb-nav .gb-nav-sub a.active {
+	background: #cc0000;
+	color: white;
+}
+
+#gb-nav .gb-nav-sub span {
+	display: block;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*------------------------
+footer
+------------------------*/
+
+#gb-footer {
+	background: #8d8d8d;
+	color: white;
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+
+#gb-footer small {
+	display: block;
+	text-align: center;
+	padding: 0 0 10px;
+}
+
+#gb-footer aside {
+	text-align: center;
+	padding: 10px 0 0;
+}
+
+#gb-footer aside a {
+	color: white;
+}
+
+#gb-footer aside a:hover {
+	color: #f7f7f7;
+}
+
+#gb-footer aside a:before {
+	content: ' | ';
+}
+
+#gb-footer aside a:first-child:before {
+	content: '';
+}
+
+.gb-footer-topLink {
+	background: #cccccc;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.gb-footer-topLink img {
+	width: 88px;
+}
+
+/*======================================================
+
+module
+
+======================================================*/
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*------------------------
+mainImage
+------------------------*/
+
+.mainImage-box {
+	position: relative;
+	background: #8d8d8d;
+}
+
+.mainImage-box .container {
+	position: relative;
+	height: 200px;
+	margin-top: -200px;
+}
+
+.mainImage-slides {
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+}
+
+.mainImage-slide {
+	position: absolute;
+	max-width: none;
+	width: 1010px;
+	height: 200px;
+	left: 50%;
+	margin-left: -575px;
+}
+
+.mainImage-link {
+	position: absolute;
+	width: 66.66667%;
+	bottom: 20px;
+	left: 20px;
+	z-index: 1;
+}
+
+.mainImage-link img {
+	height: auto;
+}
+
+.mainImage-nav {
+	background: #cccccc;
+	margin-bottom: 20px;
+}
+
+.mainImage-nav ul {
+	display: table;
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.mainImage-nav li {
+	display: table-cell;
+	width: 33.333333%;
+	border-sizing: border-box;
+	border-left: 1px solid #b3b3b3;
+}
+
+.mainImage-nav li:first-child {
+	border: none;
+}
+
+.mainImage-nav a {
+	display: block;
+	padding: 0 20px;
+	line-height: 76px;
+	background: #cccccc;
+	text-align: center;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+	position: relative;
+}
+
+.mainImage-nav a:after {
+	content: ' ';
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -10px;
+	border-top: none;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+}
+
+.mainImage-nav a.hover,
+.mainImage-nav a.active {
+	background: #cc0000;
+}
+
+.mainImage-nav a.active {
+	color: #cc0000;
+}
+
+.mainImage-nav a.active:after {
+	border-bottom-color: #cc0000;
+	border-bottom-color: transparent\9;
+}
+
+.mainImage-nav img {
+	width: 56px;
+	vertical-align: middle;
+}
+
+/*
+#mod-news
+##＜使用例＞
+```
+<section class="mod-news col-pclg-12">
+ 	<header>
+ 		<h1 class="mod-news-header"><img src="../img/h_news.gif" alt=""></h1>
+ 	</header>
+ 	<div class="mod-news-block">
+ 		<a href="topics/index.html">
+ 			<time class="mod-news-date">2014.07.01</time>
+ 			<p class="mod-news-title">タイトルタイトルタイトルタイトル</p>
+ 		</a>
+ 	</div>
+ 	<div class="mod-news-block">
+ 		<a href="topics/index.html">
+ 			<time class="mod-news-date">2014.04.01</time>
+ 			<p class="mod-news-title">タイトルタイトルタイトルタイトル</p>
+ 		</a>
+ 	</div>
+ 	<div class="mod-news-block">
+ 		<a href="topics/index.html">
+ 			<time class="mod-news-date">2014.04.01</time>
+ 			<p class="mod-news-title">タイトルタイトルタイトルタイトル</p>
+ 		</a>
+ 	</div>
+ 	<div class="mod-news-block">
+ 		<a href="topics/index.html">
+ 			<time class="mod-news-date">2014.04.01</time>
+ 			<p class="mod-news-title">タイトルタイトルタイトルタイトル</p>
+ 		</a>
+ 	</div>
+</section>
+```
+*/
+
+.mod-news {
+	margin-bottom: 40px;
+}
+
+.mod-news-header {
+	border-bottom: 2px solid #8d8d8d;
+	padding-bottom: 8px;
+}
+
+.mod-news-block {
+	border-bottom: 1px solid #cccccc;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.mod-news-block a {
+	display: block;
+	padding: 18px 10px;
+	color: #333333;
+}
+
+.mod-news-block a.hover {
+	background: #f7f7f7;
+}
+
+.mod-news-date {
+	padding-right: 20px;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*------------------------
+#button
+
+```
+ <div class="mod-btn mod-btn-large"><a href="/">button</a></div>
+```
+```
+ <div class="mod-btn mod-btn-medium"><a href="/">button</a></div>
+```
+```
+ <div class="mod-btn mod-btn-small"><a href="/">button</a></div>
+```
+------------------------*/
+
+.mod-btn a {
+	display: block;
+	padding: 5px;
+	border-radius: 4px;
+	background: #cc0000;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+.mod-btn a.hover {
+	text-decoration: none;
+	opacity: 0.8;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.mod-btn-large {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.mod-btn-medium {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.mod-btn-small {
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+
+/*
+#mod-tab
+
+JS: controlTab  
+```
+<div class="mod-tab">
+	<ul class="mod-tab-tabrow clearfix">
+		<li><a href="#" class="active">Tab1</a></li>
+		<li><a href="#">Tab2</a></li>
+		<li><a href="#">Tab3</a></li>
+	</ul>
+	<div class="mod-tab-contents">
+		<div class="mod-tab-content"></div>
+		<div class="mod-tab-content"></div>
+		<div class="mod-tab-content"></div>
+  </div>
+</div>
+```
+*/
+
+.mod-tab {
+	margin-bottom: 40px;
+}
+
+.mod-tab-tabrow {
+	width: 100%;
+	display: table;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+.mod-tab-tabrow li {
+	display: table-cell;
+	float: left;
+	width: 100%;
+	margin-bottom: 6px;
+}
+
+.mod-tab-tabrow a {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	border: 2px solid #cccccc;
+	border-radius: 4px;
+	text-align: center;
+	padding: 4px 0;
+	color: #cccccc;
+}
+
+.mod-tab-tabrow a.hover,
+.mod-tab-tabrow a.active {
+	border-color: #333333;
+	color: #333333;
+	background: #f7f7f7;
+}
+
+.mod-tab-tabrow a.active {
+	padding-bottom: 8px;
+	margin-bottom: -2px;
+}
+
+.mod-tab-content {
+	display: none;
+}
+
+.mod-tab-content.active {
+	display: block;
+}
+
+/*
+#mod-icon
+##JavaScript : deviceRatio  
+
+解像度を調べhmtlタグにクラスを追加  
+dpr-1 = 解像度２より低い  
+dpr-2 = 解像度２以上  
+解像度に応じて画像を変更  
+
+###<使用例>  
+```
+<div class="dpr-1">
+<i class="mod-icon mod-icon-bussines"></i>
+</div>
+```
+
+###<内容>  
+業務サポート -- .mod-icon-bussines  
+経理業務サポート -- .mod-icon-bussines-accounting  
+フルフィルメントサービス -- .mod-icon-bussines-fulfillment  
+人事業務サポート -- .mod-icon-bussines-humanaffairf  
+業務運用支援サービス -- .mod-icon-bussines-support  
+  
+人材育成 -- .mod-icon-educatio  
+人材育成関連サービス -- .mod-icon-education-support  
+  
+ITサポート -- .mod-icon-it  
+コンタクトセンターサービス -- .mod-icon-it-contactcenter  
+システム構築・保守サービス -- .mod-icon-it-integration  
+IT資産管理サービス -- .mod-icon-it-property  
+サポートデスクサービス -- .mod-icon-it-supportdesk  
+  
+人材派遣 -- .mod-icon-staff  
+スタッフ派遣サービス -- .mod-icon-staff-enginer  
+ITエンジニア派遣サービス -- .mod-icon-staff-office  
+  
+ユーティリティ -- .mod-icon-utilit  
+ドキュメント電子化サービス -- .mod-icon-utility-document  
+封入封緘発送サービス -- .mod-icon-utility-enclosedsealing  
+フロア管理サービス -- .mod-icon-utility-floor  
+オフィスサポートセンター -- .mod-icon-utility-officesuport  
+  
+法人・コンセプト -- .mod-icon-client-concept  
+法人・資料請求・お問い合わせ -- .mod-icon-client-contact  
+法人・会社紹介 -- .mod-icon-client-corporate  
+  
+お仕事・3minutes キヤノンビズアテンダ -- .mod-icon-staffpage-3minutes  
+お仕事・会社情報 -- .mod-icon-staffpage-corporate  
+お仕事・キヤノンビズアテンダのポジション -- .mod-icon-staffpage-position
+お仕事・エンジニア -- .mod-icon-staffpage-enginer  
+お仕事・事務 -- .mod-icon-staffpage-staff  
+お仕事・エンジニア(白枠) -- .mod-icon-staffpage-enginer2  
+お仕事・事務(白枠) -- .mod-icon-staffpage-staff2  
+*/
+
+.mod-icon {
+	display: block;
+}
+
+.mod-icon-bussines {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-bussines {
+	background-position: 0 -200px;
+}
+
+.dpr-2 .mod-icon-bussines {
+	background-position: 0 -200px;
+}
+
+.mod-icon-bussines-accounting {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-bussines-accounting {
+	background-position: 0 0;
+}
+
+.dpr-2 .mod-icon-bussines-accounting {
+	background-position: 0 0;
+}
+
+.mod-icon-bussines-fulfillment {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-bussines-fulfillment {
+	background-position: 0 -50px;
+}
+
+.dpr-2 .mod-icon-bussines-fulfillment {
+	background-position: 0 -50px;
+}
+
+.mod-icon-bussines-humanaffairs {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-bussines-humanaffairs {
+	background-position: 0 -100px;
+}
+
+.dpr-2 .mod-icon-bussines-humanaffairs {
+	background-position: 0 -100px;
+}
+
+.mod-icon-bussines-support {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-bussines-support {
+	background-position: 0 -150px;
+}
+
+.dpr-2 .mod-icon-bussines-support {
+	background-position: 0 -150px;
+}
+
+.mod-icon-client-concept {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-client-concept {
+	background-position: 0 -250px;
+}
+
+.dpr-2 .mod-icon-client-concept {
+	background-position: 0 -250px;
+}
+
+.mod-icon-client-contact {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-client-contact {
+	background-position: 0 -300px;
+}
+
+.dpr-2 .mod-icon-client-contact {
+	background-position: 0 -300px;
+}
+
+.mod-icon-client-corporate {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-client-corporate {
+	background-position: 0 -350px;
+}
+
+.dpr-2 .mod-icon-client-corporate {
+	background-position: 0 -350px;
+}
+
+.mod-icon-education {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-education {
+	background-position: 0 -450px;
+}
+
+.dpr-2 .mod-icon-education {
+	background-position: 0 -450px;
+}
+
+.mod-icon-education-support {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-education-support {
+	background-position: 0 -400px;
+}
+
+.dpr-2 .mod-icon-education-support {
+	background-position: 0 -400px;
+}
+
+.mod-icon-it {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-it {
+	background-position: 0 -700px;
+}
+
+.dpr-2 .mod-icon-it {
+	background-position: 0 -700px;
+}
+
+.mod-icon-it-contactcenter {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-it-contactcenter {
+	background-position: 0 -500px;
+}
+
+.dpr-2 .mod-icon-it-contactcenter {
+	background-position: 0 -500px;
+}
+
+.mod-icon-it-integration {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-it-integration {
+	background-position: 0 -550px;
+}
+
+.dpr-2 .mod-icon-it-integration {
+	background-position: 0 -550px;
+}
+
+.mod-icon-it-property {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-it-property {
+	background-position: 0 -600px;
+}
+
+.dpr-2 .mod-icon-it-property {
+	background-position: 0 -600px;
+}
+
+.mod-icon-it-supportdesk {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-it-supportdesk {
+	background-position: 0 -650px;
+}
+
+.dpr-2 .mod-icon-it-supportdesk {
+	background-position: 0 -650px;
+}
+
+.mod-icon-staff {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staff {
+	background-position: 0 -850px;
+}
+
+.dpr-2 .mod-icon-staff {
+	background-position: 0 -850px;
+}
+
+.mod-icon-staff-enginer {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staff-enginer {
+	background-position: 0 -750px;
+}
+
+.dpr-2 .mod-icon-staff-enginer {
+	background-position: 0 -750px;
+}
+
+.mod-icon-staff-office {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staff-office {
+	background-position: 0 -800px;
+}
+
+.dpr-2 .mod-icon-staff-office {
+	background-position: 0 -800px;
+}
+
+.mod-icon-staffpage-3minutes {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-3minutes {
+	background-position: 0 -900px;
+}
+
+.dpr-2 .mod-icon-staffpage-3minutes {
+	background-position: 0 -900px;
+}
+
+.mod-icon-staffpage-corporate {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-corporate {
+	background-position: 0 -950px;
+}
+
+.dpr-2 .mod-icon-staffpage-corporate {
+	background-position: 0 -950px;
+}
+
+.mod-icon-staffpage-position {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-position {
+	background-position: 0 -1100px;
+}
+
+.dpr-2 .mod-icon-staffpage-position {
+	background-position: 0 -1100px;
+}
+
+.mod-icon-staffpage-enginer {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-enginer {
+	background-position: 0 -1000px;
+}
+
+.dpr-2 .mod-icon-staffpage-enginer {
+	background-position: 0 -1000px;
+}
+
+.mod-icon-staffpage-enginer2 {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-enginer2 {
+	background-position: 0 -1050px;
+}
+
+.dpr-2 .mod-icon-staffpage-enginer2 {
+	background-position: 0 -1050px;
+}
+
+.mod-icon-staffpage-position {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-position {
+	background-position: 0 -1100px;
+}
+
+.dpr-2 .mod-icon-staffpage-position {
+	background-position: 0 -1100px;
+}
+
+.mod-icon-staffpage-staff {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-staff {
+	background-position: 0 -1150px;
+}
+
+.dpr-2 .mod-icon-staffpage-staff {
+	background-position: 0 -1150px;
+}
+
+.mod-icon-staffpage-staff2 {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-staffpage-staff2 {
+	background-position: 0 -1200px;
+}
+
+.dpr-2 .mod-icon-staffpage-staff2 {
+	background-position: 0 -1200px;
+}
+
+.mod-icon-utility {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-utility {
+	background-position: 0 -1450px;
+}
+
+.dpr-2 .mod-icon-utility {
+	background-position: 0 -1450px;
+}
+
+.mod-icon-utility-document {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-utility-document {
+	background-position: 0 -1250px;
+}
+
+.dpr-2 .mod-icon-utility-document {
+	background-position: 0 -1250px;
+}
+
+.mod-icon-utility-enclosedsealing {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-utility-enclosedsealing {
+	background-position: 0 -1300px;
+}
+
+.dpr-2 .mod-icon-utility-enclosedsealing {
+	background-position: 0 -1300px;
+}
+
+.mod-icon-utility-floor {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-utility-floor {
+	background-position: 0 -1350px;
+}
+
+.dpr-2 .mod-icon-utility-floor {
+	background-position: 0 -1350px;
+}
+
+.mod-icon-utility-officesuport {
+	width: 52px;
+	height: 50px;
+}
+
+.dpr-1 .mod-icon-utility-officesuport {
+	background-position: 0 -1400px;
+}
+
+.dpr-2 .mod-icon-utility-officesuport {
+	background-position: 0 -1400px;
+}
+
+/*======================================================
+
+page style
+
+======================================================*/
+
+/*------- TOP -------*/
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+cba
+----------------------------------*/
+
+.top-bunner {
+	background: #f7f7f7;
+	padding: 20px;
+	text-align: center;
+}
+
+/*------- 法人 -------*/
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#client-image
+法人TOP　メインイメージ
+----------------------------------*/
+
+/*--- top ---*/
+
+.clientImage-box {
+	width: 100%;
+	height: 204px;
+	position: relative;
+	overflow: hidden;
+}
+
+.clientImage-slider .flex-viewport {
+	height: 510px;
+}
+
+.clientImage-slides {
+	position: relative;
+	width: 100%;
+	height: 204px;
+	overflow: hidden;
+}
+
+.clientImage-slides img {
+	height: 204px;
+}
+
+.clientImage-slide {
+	position: absolute;
+	width: 768px;
+	left: 50%;
+	margin-left: -384px;
+	text-align: center;
+}
+
+.clientImage-slide a {
+	width: 100%;
+	text-align: center;
+}
+
+.clientImage-slide a .hover {
+	background: white;
+}
+
+.clientImage-slide .mod-icon {
+	margin: 0 auto;
+}
+
+.clientImage-titles {
+	position: relative;
+	box-sizing: border-box;
+	top: -130px;
+	text-align: center;
+	max-width: 420px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.clientImage-titles img {
+	width: 100%;
+	height: auto;
+}
+
+.clientImage-title {
+	position: absolute;
+	height: auto;
+	padding: 0 10px;
+}
+
+.clientImage-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding: 10px 0 20px;
+	background: #333333;
+	opacity: .9;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+.clientImage-nav-header {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.clientImage-nav-link {
+	padding: 0;
+}
+
+.clientImage-nav-link a {
+	color: white;
+	border: 2px solid white;
+	display: block;
+	text-align: center;
+	padding: 10px;
+}
+
+.clientImage-nav-link a.hover,
+.clientImage-nav-link a.active {
+	background: white;
+	color: #333333;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#client-service
+法人TOP サービス紹介
+----------------------------------*/
+
+.client-service {
+	padding: 40px 0;
+	background: #f7f7f7;
+}
+
+.client-service-header {
+	text-align: center;
+	font-size: 28px;
+	font-size: 2.8rem;
+	margin-bottom: 24px;
+}
+
+.field-header,
+.department-header {
+	color: white;
+	background: #8d8d8d;
+	text-align: center;
+	font-size: 16px;
+	font-size: 1.6rem;
+	padding: 8px 0;
+	margin: 40px 0px;
+}
+
+.field-box {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.field-box a {
+	color: #333333;
+}
+
+.field-box h3 {
+	border-bottom: 1px solid #8d8d8d;
+	font-size: 20px;
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+.field-box li {
+	border-bottom: 1px dotted #8d8d8d;
+}
+
+.field-box li a {
+	padding: 10px 0;
+	display: block;
+}
+
+.field-box li a.hover {
+	background: white;
+}
+
+.field-box .mod-icon {
+	margin: 0 auto;
+}
+
+.department-box {
+	margin: 20px 0 40px;
+}
+
+.department-box .department-box-cat {
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	width: 110px;
+	margin: 0 auto 10px;
+}
+
+.department-box .department-box-cat.it {
+	background: #B01256;
+}
+
+.department-box .department-box-cat.bussines {
+	background: #4946A3;
+}
+
+.department-box .department-box-cat.utility {
+	background: #006BA4;
+}
+
+.department-box .department-box-cat.education {
+	background: #86BE18;
+}
+
+.department-box .department-box-cat.staff {
+	background: #DFBE08;
+}
+
+.department-box h3 {
+	margin: 10px 0;
+	font-size: 16px;
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+.department-box i {
+	margin: 0 auto;
+}
+
+.department-box .department-box-text {
+	padding-bottom: 60px;
+}
+
+.department-box-inner {
+	position: relative;
+	height: 100%;
+}
+
+.department-box-inner .mod-btn {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#client-case
+法人TOPページ
+事例紹介
+----------------------------------*/
+
+.client-case {
+	padding: 40px 0;
+	background: #cccccc;
+	overflow: hidden;
+}
+
+.client-case-header {
+	text-align: center;
+	font-size: 28px;
+	font-size: 2.8rem;
+	margin-bottom: 24px;
+	color: white;
+}
+
+.case-slider {
+	width: 320px;
+	height: 350px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.case-slider-inner {
+	width: 2100px;
+	left: 50%;
+	margin-left: -1040px;
+	position: absolute;
+}
+
+.case-slides {
+	width: 100%;
+}
+
+.case-slide {
+	box-sizing: border-box;
+	width: 280px;
+	padding: 20px;
+	float: left;
+	background: white;
+	border-top: 4px solid #cc0000;
+}
+
+.case-slide .mod-icon {
+	margin: 0 auto;
+}
+
+.case-slide .case-header {
+	font-size: 16px;
+	font-size: 1.6rem;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.case-slide .case-text {
+	margin-bottom: 24px;
+}
+
+.bx-pager {
+	width: 155px;
+	margin: 20px auto;
+}
+
+.bx-pager .bx-pager-item {
+	float: left;
+}
+
+.bx-pager .bx-pager-item a {
+	display: block;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 12px;
+	height: 12px;
+	margin: 5px;
+	border-radius: 50%;
+	background: #8d8d8d;
+}
+
+.bx-pager .bx-pager-item a.active {
+	background: #cc0000;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#client-link
+ページ下部リンク
+----------------------------------*/
+
+.client-link {
+	padding: 40px 0;
+}
+
+.client-link li {
+	margin-bottom: 24px;
+}
+
+.client-link a {
+	display: block;
+	text-align: center;
+	border-top: 4px solid #cc0000;
+	background: #f7f7f7;
+	color: #333333;
+	font-weight: bold;
+	font-size: 18px;
+	font-size: 1.8rem;
+	padding: 30px 0;
+}
+
+.client-link a:hover {
+	border-top: 4px solid ligthen(#cc0000, 10%);
+	background: ligthen(#f7f7f7, 10%);
+}
+
+.client-link .mod-icon {
+	margin: 0 auto;
+}
+
+/*------- 仕事 -------*/
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#staff-mainImage
+----------------------------------*/
+
+.staff-mainImage {
+	position: relative;
+	overflow: hidden;
+	height: 276px;
+	max-height: 554px;
+}
+
+.staff-mainImage-box {
+	min-width: 960px;
+	width: 960px;
+	position: absolute;
+	left: 50%;
+	margin-left: -480px;
+}
+
+.staff-mainImage-box img {
+	width: 100%;
+	max-width: 100%;
+	min-width: 960px;
+}
+
+.staff-mainImage-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+.staff-mainImage-nav p {
+	padding-top: 10px;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0px 0px 3px #999;
+}
+
+.staff-mainImage-nav ul {
+	display: table;
+	width: 100%;
+	max-width: 680px;
+	margin: 0 auto;
+}
+
+.staff-mainImage-nav li {
+	display: block;
+	width: 100%;
+}
+
+.staff-mainImage-nav a {
+	display: block;
+	margin: 0px 10px 10px;
+	padding: 6px;
+	border-radius: 4px;
+	background: #cc0000;
+	font-weight: bold;
+	color: white;
+}
+
+.staff-mainImage-nav span {
+	display: block;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#staff-aboutCorporate
+
+----------------------------------*/
+
+.aboutCorporate {
+	padding-bottom: 40px;
+	background: url(../img/staff/bg_top_about.png) center bottom repeat-x;
+}
+
+.aboutCorporate .mod-icon {
+	margin: 0 auto;
+}
+
+.aboutCorporate-header {
+	width: 100%;
+	padding: 20px 0 20px;
+	font-size: 32px;
+	font-size: 3.2rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.aboutCorporate-box-inner {
+	padding: 20px;
+}
+
+.aboutCorporate-box-header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+.aboutCorporate-box-text {
+	padding-bottom: 20px;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#staff-aboutJob
+##仕事求人を知る
+----------------------------------*/
+
+.aboutJob {
+	background: url(../img/staff/bg_top_job.png) center bottom;
+	padding: 20px 0;
+}
+
+.aboutJob .mod-icon {
+	margin: 0 auto;
+}
+
+.aboutJob-header {
+	font-size: 32px;
+	font-size: 3.2rem;
+	text-align: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.aboutJob-box {
+	margin-bottom: 40px;
+	position: relative;
+	z-index: 0;
+}
+
+.aboutJob-box:first-child {
+	margin-left: 0;
+}
+
+.aboutJob-box:after,
+.aboutJob-box:before {
+	position: absolute;
+	z-index: -1;
+	content: ' ';
+	bottom: 15px;
+	width: 50%;
+	top: 60%;
+	box-shadow: 0 15px 10px #cccccc;
+}
+
+.aboutJob-box:before {
+	-webkit-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	left: 30px;
+}
+
+.aboutJob-box:after {
+	-webkit-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	transform: rotate(3deg);
+	right: 30px;
+}
+
+.aboutJob-box .mod-icon {
+	margin: 0 auto;
+}
+
+.aboutJob-box-inner {
+	padding: 20px;
+	background: white;
+	border-top: 4px solid #cc0000;
+}
+
+.aboutJob-box-header {
+	text-align: center;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	margin-bottom: 24px;
+}
+
+.aboutJob-box-text {
+	font-weight: bold;
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin: 0  auto 24px;
+	max-width: 220px;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#staff-aboutWorker
+----------------------------------*/
+
+.aboutWorker {
+	color: white;
+	position: relative;
+}
+
+.aboutWorker .mod-icon {
+	margin: 0 auto;
+}
+
+.aboutWorker-header {
+	font-size: 32px;
+	font-size: 3.2rem;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	width: 100%;
+	top: 20px;
+}
+
+.aboutWorker-box-it,
+.aboutWorker-box-staff {
+	position: relative;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.aboutWorker-box-inner {
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	padding: 20px 0;
+}
+
+.aboutWorker-box-inner .container {
+	position: relative;
+	z-index: 1;
+}
+
+.aboutWorker-box-inner h2 {
+	text-align: center;
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.aboutWorker-box-inner .mod-icon {
+	margin: 10px auto 20px;
+}
+
+.aboutWorker-box-inner .worker-wrap {
+	margin-bottom: 20px;
+}
+
+.aboutWorker-box-inner .worker-title {
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.aboutWorker-box-it {
+	background-image: url(../img/staff/img_top_worker_it.jpg);
+	background-position: -200px 0;
+	padding: 100px 20px 20px;
+}
+
+.aboutWorker-box-it .worker-wrap:first-child {
+	margin-bottom: 40px;
+}
+
+.aboutWorker-box-staff {
+	background-image: url(../img/staff/img_top_worker_staff.jpg);
+	background-position: -420px 0;
+	background-position: right -200px 0;
+}
+
+.aboutWorker-box-staff .worker-wrap:first-child {
+	margin-bottom: 40px;
+}
+
+.aboutWorker-box-line {
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .3;
+}
+
+.box-line {
+	position: absolute;
+	background-color: white;
+	-webkit-transition: all .08s ease-in;
+	transition: all .08s ease-in;
+}
+
+.box-line-left {
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 0;
+}
+
+.box-line-left.active {
+	height: 100%;
+}
+
+.box-line-bottom {
+	bottom: 0;
+	left: 0;
+	height: 4px;
+	width: 0;
+}
+
+.box-line-bottom.active {
+	width: 100%;
+}
+
+.box-line-right {
+	bottom: 0;
+	right: 0;
+	width: 4px;
+	height: 0;
+}
+
+.box-line-right.active {
+	height: 100%;
+}
+
+.box-line-top {
+	top: 0;
+	right: 0;
+	height: 4px;
+	width: 0;
+}
+
+.box-line-top.active {
+	width: 100%;
+}
+
+.worker-box {
+	opacity: .01;
+	-webkit-transition: all .7s ease-in-out;
+	transition: all .7s ease-in-out;
+}
+
+.worker-box.active {
+	opacity: 1;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#staff-aboutEmployment
+----------------------------------*/
+
+.aboutEmployment {
+	padding: 40px 0;
+}
+
+.aboutEmployment-header {
+	font-size: 32px;
+	font-size: 3.2rem;
+	text-align: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.aboutEmployment-link a {
+	box-sizing: border-box;
+	display: block;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 10px;
+	border: 4px solid #cc0000;
+	color: #cc0000;
+	font-weight: bold;
+	font-size: 18px;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.aboutEmployment-link a.hover {
+	background: #cc0000;
+	color: white;
+}
+
+.aboutEmployment-entry-link {
+	background: #cc0000;
+	padding: 15px;
+	margin-top: 40px;
+}
+
+.aboutEmployment-entry-link .container {
+	position: relative;
+}
+
+.aboutEmployment-entry-link .aboutEmployment-entry-arrow {
+	position: absolute;
+	overflow: hidden;
+	top: 18px;
+	right: 40px;
+	width: 80px;
+	text-align: right;
+}
+
+.aboutEmployment-entry-link .aboutEmployment-entry-arrow img {
+	width: auto;
+	max-width: inherit;
+	margin-left: -50px;
+	-webkit-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+
+.aboutEmployment-entry-link a {
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	color: white;
+	font-weight: bold;
+	border: 0 solid white;
+	display: block;
+	padding: 30px 0;
+	font-size: 24px;
+	font-size: 2.4rem;
+	border-radius: 15px;
+	width: 0;
+}
+
+.aboutEmployment-entry-link a.hover {
+	background: white;
+	color: #cc0000;
+}
+
+.aboutEmployment-entry-link a.hover img {
+	margin-left: 55px;
+}
+
+.aboutEmployment-entry-link a.active {
+	border: 4px solid white;
+	padding: 20px 30px;
+	width: 100%;
+}
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+#staff-mypage
+----------------------------------*/
+
+.staff-mypage {
+	display: none;
+	position: fixed;
+	right: 10px;
+	top: 50%;
+	margin-top: -52px;
+	z-index: 2;
+}
+
+.staff-mypage li {
+	margin-bottom: 10px;
+}
+
+.staff-mypage .tooltip {
+	display: block;
+	position: relative;
+	margin-right: 15px;
+	width: 120px;
+	text-align: center;
+	float: left;
+	color: white;
+	background: #8d8d8d;
+	background: rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	font-size: 16px;
+	font-size: 1.6rem;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.staff-mypage .tooltip:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: -10px;
+	top: 50%;
+	margin-top: -5px;
+	border-top: 5px solid transparent;
+	border-right: none;
+	border-bottom: 5px solid transparent;
+	border-left: 10px solid #8d8d8d;
+	border-left: 10px solid rgba(0, 0, 0, 0.3);
+}
+
+.staff-mypage a {
+	display: block;
+	float: right;
+	text-align: center;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	border: 3px solid white;
+	background: #8d8d8d;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.staff-mypage a.hover {
+	background: #cc0000;
+}
+
+/*======================================================
+
+other
+
+======================================================*/
+
+.dpr-1 .mod-icon-bussines,
+.dpr-1 .mod-icon-bussines-accounting,
+.dpr-1 .mod-icon-bussines-fulfillment,
+.dpr-1 .mod-icon-bussines-humanaffairs,
+.dpr-1 .mod-icon-bussines-support,
+.dpr-1 .mod-icon-client-concept,
+.dpr-1 .mod-icon-client-contact,
+.dpr-1 .mod-icon-client-corporate,
+.dpr-1 .mod-icon-education,
+.dpr-1 .mod-icon-education-support,
+.dpr-1 .mod-icon-it,
+.dpr-1 .mod-icon-it-contactcenter,
+.dpr-1 .mod-icon-it-integration,
+.dpr-1 .mod-icon-it-property,
+.dpr-1 .mod-icon-it-supportdesk,
+.dpr-1 .mod-icon-staff,
+.dpr-1 .mod-icon-staff-enginer,
+.dpr-1 .mod-icon-staff-office,
+.dpr-1 .mod-icon-staffpage-3minutes,
+.dpr-1 .mod-icon-staffpage-corporate,
+.dpr-1 .mod-icon-staffpage-position,
+.dpr-1 .mod-icon-staffpage-enginer,
+.dpr-1 .mod-icon-staffpage-enginer2,
+.dpr-1 .mod-icon-staffpage-staff,
+.dpr-1 .mod-icon-staffpage-staff2,
+.dpr-1 .mod-icon-utility,
+.dpr-1 .mod-icon-utility-document,
+.dpr-1 .mod-icon-utility-enclosedsealing,
+.dpr-1 .mod-icon-utility-floor,
+.dpr-1 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x1-seadb2a054f.png');
+}
+
+.dpr-2 .mod-icon-bussines,
+.dpr-2 .mod-icon-bussines-accounting,
+.dpr-2 .mod-icon-bussines-fulfillment,
+.dpr-2 .mod-icon-bussines-humanaffairs,
+.dpr-2 .mod-icon-bussines-support,
+.dpr-2 .mod-icon-client-concept,
+.dpr-2 .mod-icon-client-contact,
+.dpr-2 .mod-icon-client-corporate,
+.dpr-2 .mod-icon-education,
+.dpr-2 .mod-icon-education-support,
+.dpr-2 .mod-icon-it,
+.dpr-2 .mod-icon-it-contactcenter,
+.dpr-2 .mod-icon-it-integration,
+.dpr-2 .mod-icon-it-property,
+.dpr-2 .mod-icon-it-supportdesk,
+.dpr-2 .mod-icon-staff,
+.dpr-2 .mod-icon-staff-enginer,
+.dpr-2 .mod-icon-staff-office,
+.dpr-2 .mod-icon-staffpage-3minutes,
+.dpr-2 .mod-icon-staffpage-corporate,
+.dpr-2 .mod-icon-staffpage-position,
+.dpr-2 .mod-icon-staffpage-enginer,
+.dpr-2 .mod-icon-staffpage-enginer2,
+.dpr-2 .mod-icon-staffpage-staff,
+.dpr-2 .mod-icon-staffpage-staff2,
+.dpr-2 .mod-icon-utility,
+.dpr-2 .mod-icon-utility-document,
+.dpr-2 .mod-icon-utility-enclosedsealing,
+.dpr-2 .mod-icon-utility-floor,
+.dpr-2 .mod-icon-utility-officesuport {
+	background-image: url('../img/icon-50/x2-sbdf3fb7c02.png');
+	background-size: 52px;
+}
+
+/*----------------------------------
+ex
+----------------------------------*/
+
+.ex-break {
+	display: block;
+}
+
+.clearfix:after,
+.clearfix:before {
+	content: '';
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+@media screen and (min-width: 500px) {
+
+.aboutWorker-box-staff {
+	background-position: -200px 0;
+	background-position: right -200px 0;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+body {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.main h1 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	padding: 24px 18px;
+}
+
+.main h2 {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.main h3 {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.sideNav-level2 > li > a {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.sideNav-level3 > li > a {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.gb-header-logo {
+	width: 300px;
+	line-height: 50px;
+}
+
+.gb-header-nav-button {
+	width: 50px;
+	height: 50px;
+}
+
+.menuIcon-bar {
+	left: 12px;
+}
+
+.menuIcon-bar.bar1 {
+	top: 13px;
+}
+
+.menuIcon-bar.bar2 {
+	top: 23px;
+}
+
+.menuIcon-bar.bar3 {
+	top: 33px;
+}
+
+.gb-header-nav-button.active .bar1 {
+	top: 23px;
+}
+
+.gb-header-nav-button.active .bar3 {
+	top: 23px;
+}
+
+#gb-nav .gb-nav-sub a.first {
+	line-height: 56px;
+	height: 76px;
+}
+
+.mainImage-box .container {
+	height: 280px;
+	margin-top: -280px;
+}
+
+.mainImage-slides {
+	height: 280px;
+}
+
+.mainImage-slide {
+	width: 1414px;
+	height: 280px;
+	margin-left: -808px;
+}
+
+.mainImage-link {
+	width: 41.66667%;
+	bottom: 40px;
+}
+
+.mainImage-nav a {
+	line-height: 100px;
+}
+
+.mainImage-nav img {
+	width: 120px;
+}
+
+.mod-news-block {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.mod-news-date {
+	float: left;
+}
+
+.mod-btn-large {
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+.mod-btn-medium {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.mod-btn-small {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.mod-tab-tabrow {
+	border-bottom: 2px solid #333333;
+	padding-left: 20px;
+}
+
+.mod-tab-tabrow li {
+	width: 15%;
+	margin-right: 4px;
+	margin-bottom: 0px;
+}
+
+.mod-tab-tabrow a {
+	padding: 5px;
+	border-radius: 4px 4px 0 0;
+	border-bottom: none;
+}
+
+.top-bunner {
+	text-align: left;
+}
+
+.clientImage-box {
+	height: 315px;
+}
+
+.clientImage-slides {
+	height: 315px;
+}
+
+.clientImage-slides img {
+	height: 315px;
+}
+
+.clientImage-slide {
+	width: 1186px;
+	margin-left: -593px;
+}
+
+.clientImage-titles {
+	top: -212px;
+	max-width: 620px;
+}
+
+.clientImage-nav-link {
+	padding: 0 20px;
+}
+
+.department-box .department-box-text {
+	padding-bottom: 40px;
+}
+
+.staff-mainImage {
+	height: 380px;
+}
+
+.staff-mainImage-box {
+	min-width: 1440px;
+	width: 1440px;
+	margin-left: -720px;
+}
+
+.staff-mainImage-box img {
+	min-width: 1440px;
+}
+
+.staff-mainImage-nav p {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.staff-mainImage-nav li {
+	display: table-cell;
+	width: 50%;
+}
+
+.staff-mainImage-nav a {
+	margin-bottom: 40px;
+}
+
+.staff-mainImage-nav span {
+	display: inline;
+}
+
+.aboutCorporate-header {
+	font-size: 42px;
+	font-size: 4.2rem;
+}
+
+.aboutCorporate-box-header {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.aboutJob-header {
+	font-size: 42px;
+	font-size: 4.2rem;
+}
+
+.aboutJob-box:first-child {
+	margin-left: 8.33333%;
+}
+
+.aboutJob-box-header {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.aboutWorker-header {
+	font-size: 42px;
+	font-size: 4.2rem;
+}
+
+.aboutWorker-box-inner {
+	padding: 30px;
+}
+
+.aboutWorker-box-inner h2 {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+
+.aboutWorker-box-inner .mod-icon {
+	margin: 10px auto 30px;
+}
+
+.aboutWorker-box-it {
+	background-position: right top;
+}
+
+.aboutWorker-box-it .worker-wrap:first-child {
+	border-right: 3px solid #fff;
+	border-right: 3px solid rgba(255, 255, 255, 0.3);
+	margin-bottom: 20px;
+}
+
+.aboutWorker-box-staff {
+	background-position: left top;
+}
+
+.aboutWorker-box-staff .worker-wrap:first-child {
+	border-right: 3px solid #fff;
+	border-right: 3px solid rgba(255, 255, 255, 0.3);
+	margin-bottom: 20px;
+}
+
+.aboutEmployment-header {
+	font-size: 42px;
+	font-size: 4.2rem;
+}
+
+.aboutEmployment-link a {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	padding: 70px 0 0;
+	text-align: center;
+	border-radius: 50%;
+	margin-bottom: 40px;
+}
+
+.aboutEmployment-entry-link a {
+	font-size: 28px;
+	font-size: 2.8rem;
+}
+
+.ex-break {
+	display: inline;
+}
+
+}
+
+@media only screen and (min-width: 980px) {
+
+.topicPath {
+	background: none;
+	color: #333333;
+	margin: 0 0 0;
+	padding: 16px 0;
+}
+
+.topicPath li:before {
+	color: #333333;
+}
+
+.topicPath li a {
+	color: #cc0000;
+}
+
+#gb-header {
+	border-top: 8px solid #cc0000;
+}
+
+.gb-header-logo {
+	width: 400px;
+	line-height: 78px;
+	margin-left: 0px;
+}
+
+.gb-header-nav-box {
+	display: table;
+	float: right;
+	width: 46.49123%;
+	margin: 5px -10px 0 0;
+}
+
+.gb-header-nav-box li {
+	width: 33.333333%;
+	display: table-cell;
+	box-sizing: border-box;
+	padding: 0 10px;
+	float: left;
+	text-align: center;
+}
+
+.gb-header-nav-box a {
+	height: 60px;
+	display: block;
+	box-sizing: border-box;
+	padding: 15px 0 0;
+	border-bottom: 3px solid #8d8d8d;
+	color: #8d8d8d;
+	line-height: 1.2;
+	font-weight: bold;
+}
+
+.gb-header-nav-box a.active,
+.gb-header-nav-box a.hover {
+	text-decoration: none;
+	border-color: #cc0000;
+	color: #cc0000;
+}
+
+.gb-header-nav-box .home a {
+	height: 60px;
+	padding-top: 23px;
+}
+
+.gb-header-nav-button {
+	display: none;
+	margin-right: 0px;
+}
+
+#gb-nav {
+	display: block;
+	border-top: none;
+	background: #8d8d8d;
+}
+
+#gb-nav ul {
+	max-width: 980px;
+}
+
+#gb-nav li {
+	border-bottom: none;
+	border-right: 1px solid gray;
+}
+
+#gb-nav li:first-child {
+	border-left: 1px solid gray;
+}
+
+#gb-nav a {
+	padding: 20px 10px;
+	height: 65px;
+}
+
+#gb-nav a.hover,
+#gb-nav a.active {
+	background: #333333;
+	color: white;
+	border-bottom: 4px solid #cc0000;
+}
+
+#gb-nav .gb-nav-main li {
+	display: table-cell;
+	vertical-align: middle;
+	border-bottom: none;
+}
+
+#gb-nav .gb-nav-main .paragraph {
+	display: block;
+}
+
+#gb-nav .gb-nav-main .slash {
+	display: none;
+}
+
+#gb-nav .gb-nav-main .twoLine a {
+	line-height: 1.2;
+	padding-top: 18px;
+}
+
+#gb-nav .gb-nav-main .only-tb-sp {
+	display: none;
+}
+
+#gb-nav .gb-nav-client li {
+	width: 16.66667%;
+}
+
+#gb-nav .gb-nav-staff li {
+	width: 14.28571%;
+}
+
+#gb-nav .gb-nav-sub {
+	display: none;
+}
+
+#gb-nav .gb-nav-sub span {
+	display: inline;
+}
+
+#gb-footer {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+#gb-footer small {
+	text-align: left;
+	padding: 0;
+}
+
+#gb-footer aside {
+	padding: 30px 0 0;
+	text-align: left;
+}
+
+#gb-footer aside p {
+	float: left;
+}
+
+#gb-footer aside p:before {
+	content: ' | ';
+}
+
+#gb-footer aside p:first-child:before {
+	content: '';
+}
+
+.gb-footer-topLink img {
+	width: 126px;
+	padding: 20px 0;
+}
+
+.mainImage-box .container {
+	height: 380px;
+	margin-top: -380px;
+}
+
+.mainImage-slides {
+	height: 380px;
+}
+
+.mainImage-slide {
+	width: 1920px;
+	height: 380px;
+	margin-left: -960px;
+}
+
+.mainImage-nav a {
+	line-height: 140px;
+}
+
+.mainImage-nav img {
+	width: auto;
+}
+
+.mod-btn-large {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.mod-btn-medium {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.mod-btn-small {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.mod-tab-tabrow li {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.mod-tab-tabrow a {
+	padding: 6px;
+}
+
+.top-bunner {
+	padding: 0;
+	background: transpaent;
+	text-align: center;
+}
+
+.clientImage-box {
+	height: 372px;
+}
+
+.clientImage-slides {
+	height: 372px;
+}
+
+.clientImage-slides img {
+	height: 372px;
+}
+
+.clientImage-slide {
+	width: 1400px;
+	margin-left: -700px;
+}
+
+.clientImage-titles {
+	top: -242px;
+	max-width: 730px;
+}
+
+.clientImage-nav-header {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.field-box-bottom {
+	margin-left: 16.66666666%;
+}
+
+.staff-mainImage {
+	height: 540px;
+}
+
+.staff-mainImage-box {
+	min-width: 1920px;
+	width: 1920px;
+	margin-left: -960px;
+}
+
+.staff-mainImage-box img {
+	min-width: 1920px;
+}
+
+.staff-mainImage-nav p {
+	font-size: 22px;
+	font-size: 2.2rem;
+}
+
+.aboutWorker-header {
+	top: 40px;
+}
+
+.aboutWorker-box-it,
+.aboutWorker-box-staff {
+	width: 50%;
+	float: left;
+	height: 680px;
+	padding: 120px 0 0;
+}
+
+.aboutWorker-box-inner {
+	position: absolute;
+	width: 430px;
+	padding: 20px;
+}
+
+.aboutWorker-box-inner .worker-title {
+	margin-bottom: 20px;
+}
+
+.aboutWorker-box-inner .worker-detail {
+	margin-bottom: 20px;
+}
+
+.aboutWorker-box-it {
+	background-position: -200px 0;
+}
+
+.aboutWorker-box-it .aboutWorker-box-inner {
+	right: 20px;
+}
+
+.aboutWorker-box-staff {
+	background-position: -200px 0;
+	background-position: right -200px 0;
+}
+
+.aboutWorker-box-staff .aboutWorker-box-inner {
+	left: 20px;
+}
+
+.staff-mypage {
+	display: block;
+}
+
+}
+
+@media only screen and (min-width: 1180px) {
+
+#gb-nav ul {
+	max-width: 1140px;
+}
+
+.mainImage-nav a {
+	line-height: 160px;
+}
+
+.mod-btn-large {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.mod-btn-medium {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.mod-btn-small {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.clientImage-box {
+	height: 452px;
+}
+
+.clientImage-slides {
+	height: 452px;
+}
+
+.clientImage-slides img {
+	height: 452px;
+}
+
+.clientImage-slide {
+	width: 1700px;
+	margin-left: -850px;
+}
+
+.clientImage-titles {
+	top: -292px;
+	max-width: 730px;
+}
+
+.aboutCorporate-box-header {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+
+.aboutJob-box-header {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+
+.aboutWorker-box-it,
+.aboutWorker-box-staff {
+	padding: 160px 0 0;
+}
+
+.aboutWorker-box-inner {
+	width: 530px;
+	padding: 30px;
+}
+
+.aboutWorker-box-it {
+	background-position: right top;
+}
+
+.aboutWorker-box-it .aboutWorker-box-inner {
+	right: 20px;
+}
+
+.aboutWorker-box-staff {
+	background-position: left top;
+}
+
+.aboutWorker-box-staff .aboutWorker-box-inner {
+	background-position: left top;
+	right: 20px;
+}
+
+}
+
+@media screen and (min-width: 1920px) {
+
+.aboutWorker-box-it,
+.aboutWorker-box-staff {
+	background-size: 100%;
+}
+
+}
+
