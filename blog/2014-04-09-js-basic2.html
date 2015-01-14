@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>基礎から学ぶJavaScript.2-コンストラクタについて - 03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- js -->
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- end -->
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">基礎から学ぶJavaScript.2-コンストラクタについて</h1>
+            <p class="article-date">2014/04/09</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <div class="article-body">
+            <p>前回はオブジェクトについて基本的なところを学びました。</p>
+
+<blockquote>
+<a href="http://03log.me/javascript1/">基礎から学ぶJavaScript.1-オブジェクトとは？</a>
+</blockquote>
+
+<p>今回は前回出てきたコンストラクタについて</p>
+
+<h2>コンストラクタとは？</h2>
+
+<p>コンストラクタはオブジェクトを生成するためのテンプレートです。
+前回Object()コンストラクタを使用してオブジェクトを生成しました。</p>
+
+<p>Object()コンストラクタはすでにJavaScriptに用意されたコンストラクタです。
+このようなJavaScriptが予め用意しているコンストラクタを<strong>ネイティブオブジェクトコンストラクタ</strong>と言います。</p>
+
+<p>ってことは自分でコンストラクタはできるの？っていうとできるんです。
+今回は独自のコンスタラクタを定義して、新しくオブジェクトを作ってみます。</p>
+
+<h2>独自のコンストラクタを定義する</h2>
+
+<pre><code class="javascript">var Person = function(){};
+yusuke = new Person;
+yusuke.age = 27;
+
+console.log(yusuke); //Person {age: 27} 
+</code></pre>
+
+<p>コンスタラクタ関数と言うくらいなのでコンストラクタの定義は関数を作るのと変わりません。
+関数を定義すると、その関数をコンストラクタとして使用することができます。
+コンストラクタとして使用する関数は初めの文字を大文字で表記するのがベターです。</p>
+
+<p>今回はPersonというコンストラクタ作って、newでオブジェクトを生成しました。
+ですがこれでは前回Object()でオブジェクトを生成したのとあまり変わりません。</p>
+
+<p>コンストラクタを独自に作るメリットは、事前にプロパティや、メソッドを設定しておくことができることです。</p>
+
+<h3>独自コンストラクタのメリット</h3>
+
+<pre><code class="javascript">var Person = function(name,age){
+  this.name = name;
+  this.say = function(){
+    console.log(&#39;はじめまして&#39;+ name +&#39;です。&#39;);
+  }
+};
+
+var yusuke = new Person(&#39;yusuke&#39;); 
+console.log(yusuke); //Person {name: &quot;yusuke&quot;, say: function}
+yusuke.say(); //はじめましてyusukeです。 
+</code></pre>
+
+<p>コンストラクタを定義した際の<strong>this</strong>は<strong>新しく生成したオブジェクト</strong>を示します。
+またfunctionのカッコの中に引数を設定することではじめに数値を渡すとこが出来ます。
+これを使えば、挨拶をするオブジェクトを複数作ることもできます。</p>
+
+<pre><code class="javascript">var Person = function(name,age){
+  this.name = name;
+  this.say = function(){
+    console.log(&#39;はじめまして&#39;+ name +&#39;です。&#39;);
+  }
+};
+
+var yusuke = new Person(&#39;yusuke&#39;); 
+var ken = new Person(&#39;ken&#39;); 
+yusuke.say(); //はじめましてyusukeです。
+ken.say(); //はじめましてkenです。
+</code></pre>
+
+<p>nameの違う同じ挙動のオブジェクトができました。</p>
+
+<p>そしてもう一つ独自でコンストラクタを作る利点があります。
+それは<strong>プロトタイプ</strong>です。</p>
+
+<p>プロトタイプは今回生成したオブジェクトの汎用な関数として定義できます。
+プロトタイプは生成したオブジェクト全てに影響させることができるのです。</p>
+
+<p>ただプロトタイプは説明が長くなってしまいそうなのでまた次回に。</p>
+
+          </div>
+        </article>
+        <div class="share">
+          <ul>
+            <li class="share-hatena">
+              <a href="http://b.hatena.ne.jp/entry/03log.me" class="hatena-bookmark-button" data-hatena-bookmark-title="03LOG" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </li>
+            <li class="share-facebook">
+              <div class="fb-like" data-href="http://03log.me" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </li>
+            <li class="share-twitter">
+              <a href="https://twitter.com/share" class="twitter-tweet-button" data-via="Im0_3">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </li>
+            <li class="share-g-plus">
+              <div class="g-plusone" data-size="medium"></div>
+            </li>
+            <li>
+              <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>

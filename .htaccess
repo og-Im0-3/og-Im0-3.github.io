@@ -1,0 +1,10 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Redirect permanent http://03log.me/how-to-gulp/ http://03log.me/blog/2014-09-07-gulp-setup.html
+Redirect permanent http://03log.me/deferred/ http://03log.me/blog/2014-08-26-jq-deferred.html
+Redirect permanent http://03log.me/css_smacss/ http://03log.me/blog/2014-09-30-smacss.html
+Redirect permanent http://03log.me/deferred/ http://03log.me/blog/2014-08-26-jq-deferred.html
+Redirect permanent http://03log.me/javascript-function/ http://localhost:4567/blog/2014-07-10-js-function.html
+Redirect permanent http://03log.me/setinterval-settimeout/ http://03log.me/blog/js-setinterval-settimeout.html
+order deny,allow

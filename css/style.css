@@ -5047,9 +5047,10 @@ module
 
 /* line 281, /Users/omi/works/001_blog/source/css/style.scss */
 .page-title {
+  margin-top: 0;
   margin-bottom: 60px; }
 
-/* line 287, /Users/omi/works/001_blog/source/css/style.scss */
+/* line 288, /Users/omi/works/001_blog/source/css/style.scss */
 .copyright {
   text-align: center;
   font-size: 12px;

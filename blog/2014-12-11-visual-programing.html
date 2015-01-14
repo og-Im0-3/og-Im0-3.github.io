@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>ビジュアルや動きをコードで作るProcessing - 03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- js -->
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- end -->
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">ビジュアルや動きをコードで作るProcessing</h1>
+            <p class="article-date">2014/12/11</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <div class="article-body">
+            <p><a href="http://theguild.jp/" target="_blank">THE GUILD</a>の皆さんがやっているインタラクティブ・プログラミング勉強会の記事をみて触発されたので、最近Processingでちょこちょことスケッチを書いています。</p>
+
+<blockquote>
+<strong>インタラクティブ・プログラミング勉強会</strong>
+<a href="http://fladdict.net/blog/2014/10/visual-coding-1.html" target="_blank">インタラクティブ・プログラミング勉強会 第1回 乱数 | fladdict</a>
+<a href="http://cocopon.me/blog/?p=4992" target="_blank">インタラクティブデザイン勉強会 第1回「ランダム」 — フニフニ微生物ができるまで | ここぽんのーと</a>
+<a href="http://chocolu.net/blog/?p=272" title="「インタラクティブ・プログラミング勉強会 第1回 乱数」ー星の瞬きができるまでー | Chitep!" target="_blank">「インタラクティブ・プログラミング勉強会 第1回 乱数」ー星の瞬きができるまでー | Chitep!</a>
+<a href="http://yutmpo.com/blog/archives/269" target="_blank">猿レベルから始めるprocessing 図形を描く</a>
+</blockquote>
+
+<p>そして上記の記事などを参考にしながら自分で作ったのがこちら</p>
+
+<p><a href="http://03log.me/wp/wp-content/uploads/2014/12/tumblr_ng9xxummWk1u5tvj5o1_r1_400.gif"><img src="http://03log.me/wp/wp-content/uploads/2014/12/tumblr_ng9xxummWk1u5tvj5o1_r1_400.gif" alt="tumblr_ng9xxummWk1u5tvj5o1_r1_400" width="400" height="300" class="alignright size-full wp-image-1791" /></a></p>
+
+<p><a href="http://03log.me/wp/wp-content/uploads/2014/12/out1.gif"><img src="http://03log.me/wp/wp-content/uploads/2014/12/out1.gif" alt="out" width="400" height="300" class="alignright size-full wp-image-1786" /></a></p>
+
+<p><a href="http://03log.me/wp/wp-content/uploads/2014/12/tumblr_ngeykwHLnQ1u5tvj5o2_r1_400.gif"><img src="http://03log.me/wp/wp-content/uploads/2014/12/tumblr_ngeykwHLnQ1u5tvj5o2_r1_400.gif" alt="tumblr_ngeykwHLnQ1u5tvj5o2_r1_400" width="400" height="300" class="alignright size-full wp-image-1792" /></a></p>
+
+<p>書いたスケッチをGifアニメーションにするのにこちらを使わせていただきました。</p>
+
+<blockquote>
+<a href="http://cocopon.me/blog/?p=5128" target="_blank">Processing用、お手軽アニメGIF録画クラス「GifRecorder」の導入方法 | ここぽんのーと</a>
+</blockquote>
+
+<p>ProcessingはJavaがベースなので、記法とか調べつつ…
+とにかくまずは触ってなにか作ってみて、そこからどうしたらもっと気持ちよいものができるんだろうと試行錯誤しながら書いてます。</p>
+
+<p>JavaScriptを使ったことがある人であれば<a href="http://processingjs.org/" target="_blank">Processing.js</a>や<a href="http://p5js.org/" target="_blank">p5.js</a>が利用できるので、そちらから初めて見るのもよいかもしれません。
+以前、p5.jsに関しては記事を書いたのでよければご覧ください。
+<a href="http://03log.me/p5js-processing/" target="_blank">processingっぽくかけるp5.jsでフラクタル図形を書いてみた | 03LOG
+</a>
+<a href="http://omi-sketch.tumblr.com/" title="http://omi-sketch.tumblr.com/" target="_blank"></a></p>
+
+<p>tumblrにも作ったもの貯めていくのでよければご覧ください。
+<a href="https://www.tumblr.com/blog/omi-sketch" target="_blank">Omi&rsquo;s sketch</a></p>
+
+          </div>
+        </article>
+        <div class="share">
+          <ul>
+            <li class="share-hatena">
+              <a href="http://b.hatena.ne.jp/entry/03log.me" class="hatena-bookmark-button" data-hatena-bookmark-title="03LOG" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </li>
+            <li class="share-facebook">
+              <div class="fb-like" data-href="http://03log.me" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </li>
+            <li class="share-twitter">
+              <a href="https://twitter.com/share" class="twitter-tweet-button" data-via="Im0_3">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </li>
+            <li class="share-g-plus">
+              <div class="g-plusone" data-size="medium"></div>
+            </li>
+            <li>
+              <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>
