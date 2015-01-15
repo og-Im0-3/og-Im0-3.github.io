@@ -130,24 +130,23 @@ gulpのほうがJSファイルもわかりやすくてよい感じでした。</
 gulp.task(&#39;default&#39;, function() {
   console.log(&#39;hello world&#39;);
 });
-```~~~
-上記を実行してうまくいけば設定完了です。
+</code></pre>
 
-&lt;h2&gt;gulpfile.jsについて&lt;/h2&gt;
+<p>上記を実行してうまくいけば設定完了です。</p>
 
-&lt;h3&gt;var gulp = require(&#39;gulp&#39;);&lt;/h3&gt;
+<h2>gulpfile.jsについて</h2>
 
-Node.jsでモジュールを読み込むときに使用します。
-上記のコードでgulpという変数にgulpのモジュールを入れています。
+<h3>var gulp = require(&lsquo;gulp&rsquo;);</h3>
 
-&lt;h3&gt;gulp.task()&lt;/h3&gt;
+<p>Node.jsでモジュールを読み込むときに使用します。
+上記のコードでgulpという変数にgulpのモジュールを入れています。</p>
 
-タスクを登録します。
-第一引数はタスクの名前です。
+<h3>gulp.task()</h3>
 
+<p>タスクを登録します。
+第一引数はタスクの名前です。</p>
 
-~~~ javascript
-var gulp = require(&#39;gulp&#39;);
+<pre><code class="javascript">var gulp = require(&#39;gulp&#39;);
 
 gulp.task(&#39;default&#39;, function() {
   console.log(&#39;hello world&#39;);
@@ -168,7 +167,7 @@ gulp.task(&#39;hello&#39;, function() {
 });
 </code></pre>
 
-<p>上記のように&lsquo;hello&#39;とした場合は、</p>
+<p>上記のように&#39;hello&#39;とした場合は、</p>
 
 <pre><code>$ gulp hello
 </code></pre>
