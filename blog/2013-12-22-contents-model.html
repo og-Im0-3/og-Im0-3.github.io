@@ -93,22 +93,21 @@
 <p>ul要素のコンテンツモデルは『0個以上のli要素』です。
 つまりul要素の下にはli要素以外は使用してはいけません。</p>
 
-<p>以下は正しいマークアップの例
-~~~ html</p>
+<p>以下は正しいマークアップの例</p>
 
-<ul>
-    <li>東京</li>
-    <li>神奈川</li>
-    <li>千葉</li>
-    <li>埼玉</li>
-</ul>
+<pre><code class="html">&lt;ul&gt;
+    &lt;li&gt;東京&lt;/li&gt;
+    &lt;li&gt;神奈川&lt;/li&gt;
+    &lt;li&gt;千葉&lt;/li&gt;
+    &lt;li&gt;埼玉&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
 
-<pre><code>ちゃんとulの直下にli要素が入っています。
+<p>ちゃんとulの直下にli要素が入っています。</p>
 
-でも以下のマークアップは間違いです。
-~~~ html
+<p>でも以下のマークアップは間違いです。</p>
 
-&lt;ul&gt;
+<pre><code class="html">&lt;ul&gt;
     &lt;a href=&quot;tokyo.html&quot;&gt;&lt;li&gt;東京&lt;/li&gt;&lt;/a&gt;
     &lt;a href=&quot;kanagawa.html&quot;&gt;&lt;li&gt;神奈川&lt;/li&gt;&lt;/a&gt;
     &lt;a href=&quot;chiba.html&quot;&gt;&lt;li&gt;千葉&lt;/li&gt;&lt;/a&gt;
@@ -116,89 +115,104 @@
 &lt;/ul&gt;
 </code></pre>
 
-<p>正しく書き直すとこうなります。
-~~~ html</p>
+<p>正しく書き直すとこうなります。</p>
 
-<ul>
-    <li><a href="tokyo.html">東京</a></li>
-    <li><a href="kanagawa.html">神奈川</a></li>
-    <li><a href="chiba.html">千葉</a></li>
-    <li><a href="saitama.html">埼玉</a></li>
-</ul>
+<pre><code class="html">&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;tokyo.html&quot;&gt;東京&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;kanagawa.html&quot;&gt;神奈川&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;chiba.html&quot;&gt;千葉&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;saitama.html&quot;&gt;埼玉&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
 
-<pre><code>
-li要素のコンテンツモデルはフローコンテンツです。
-カテゴリがフロー・コンテンツのものを中に入れることができます。
+<p>li要素のコンテンツモデルはフローコンテンツです。
+カテゴリがフロー・コンテンツのものを中に入れることができます。</p>
 
-a要素はフロー・コンテンツというカテゴリを持っているので使用することが可能です。
+<p>a要素はフロー・コンテンツというカテゴリを持っているので使用することが可能です。</p>
 
-&lt;h2&gt;カテゴリーの種類&lt;/h2&gt;
-ここで出てきたフロー・コンテンツというのはカテゴリの一種です。
+<h2>カテゴリーの種類</h2>
+
+<p>ここで出てきたフロー・コンテンツというのはカテゴリの一種です。
 カテゴリにはいくつか分類があります。
-ここで主なカテゴリーを紹介します。
+ここで主なカテゴリーを紹介します。</p>
 
-&lt;h3&gt;1．メタデータ・コンテンツ&lt;/h3&gt;
-ドキュメントのメタデータやスタイルの定義などをするときに使用するコンテンツ。
+<h3>1．メタデータ・コンテンツ</h3>
+
+<p>ドキュメントのメタデータやスタイルの定義などをするときに使用するコンテンツ。
 ざっくり言うとブラウザで見たときに、ウインドウ内には表示されないもの。
-ドキュメントの情報を記述するための要素です。
-&lt;blockquote&gt;
+ドキュメントの情報を記述するための要素です。</p>
+
+<blockquote>
 command, link, meta, noscript, script, style, title
-&lt;/blockquote&gt;
+</blockquote>
 
-&lt;h3&gt;2．フロー・コンテンツ&lt;/h3&gt;
-ドキュメント内に現れるコンテンツ全般はフローコンテンツです。
-&lt;blockquote&gt;
+<h3>2．フロー・コンテンツ</h3>
+
+<p>ドキュメント内に現れるコンテンツ全般はフローコンテンツです。</p>
+
+<blockquote>
 a abbr address area (map 要素の子孫の場合) article aside audio b bdi bdo blockquote br button canvas cite code command datalist del details dfn dialog div dl em embed fieldset figure footer form h1 h2 h3 h4 h5 h6 header hgroup hr i iframe img input ins kbd keygen label map mark math menu meter nav noscript object ol output p pre progress q ruby s samp script section select small span strong style (scoped 属性が存在する場合) sub sup svg table textarea time u ul var video wbr テキスト
-&lt;/blockquote&gt;
+</blockquote>
 
-&lt;h3&gt;3．セクショニング・コンテンツ&lt;/h3&gt;
-見出しやフッターの範囲を指定するコンテンツのこと
-&lt;blockquote&gt;
+<h3>3．セクショニング・コンテンツ</h3>
+
+<p>見出しやフッターの範囲を指定するコンテンツのこと</p>
+
+<blockquote>
 article aside nav section
-&lt;/blockquote&gt;
+</blockquote>
 
-&lt;h3&gt;4．ヘッディング・コンテンツ&lt;/h3&gt;
-見出しを表すコンテンツのこと
-&lt;blockquote&gt;
+<h3>4．ヘッディング・コンテンツ</h3>
+
+<p>見出しを表すコンテンツのこと</p>
+
+<blockquote>
 h1 h2 h3 h4 h5 h6 hgroup
-&lt;/blockquote&gt;
+</blockquote>
 
-&lt;h3&gt;5．フレージング・コンテンツ&lt;/h3&gt;
-段落のなかのテキストを指し示す要素のこと
-HTML4でいうインライン要素に近い考え方。
-&lt;blockquote&gt;
+<h3>5．フレージング・コンテンツ</h3>
+
+<p>段落のなかのテキストを指し示す要素のこと
+HTML4でいうインライン要素に近い考え方。</p>
+
+<blockquote>
 a abbr area (map 要素の子孫の場合) audio b bdi bdo br button canvas cite code command datalist del dfn em embed i iframe img input ins kbd keygen label map mark math meter noscript object output progress q ruby s samp script select small span strong sub sup svg textarea time u var video wbr テキスト
-&lt;/blockquote&gt;
-フレージング・コンテンツほとんどはフレージング・コンテンツしか入れることが出来ないようです。
-その例外の代表がa要素です（あとで説明します）
+</blockquote>
 
-&lt;h3&gt;6．エンベディッド・コンテンツ&lt;/h3&gt;
-外部のリソースをインポートするためのコンテンツ。
-画像やビデオ、フレーム、プラグイン、canvasなんかもそれにあたります。
-&lt;blockquote&gt;
+<p>フレージング・コンテンツほとんどはフレージング・コンテンツしか入れることが出来ないようです。
+その例外の代表がa要素です（あとで説明します）</p>
+
+<h3>6．エンベディッド・コンテンツ</h3>
+
+<p>外部のリソースをインポートするためのコンテンツ。
+画像やビデオ、フレーム、プラグイン、canvasなんかもそれにあたります。</p>
+
+<blockquote>
  audio canvas embed iframe img math object svg video
-&lt;/blockquote&gt;
+</blockquote>
 
-&lt;h3&gt;7．インタラクティブ・コンテンツ&lt;/h3&gt;
-ユーザー・インタラクションに特化したコンテンツのことです。
+<h3>7．インタラクティブ・コンテンツ</h3>
+
+<p>ユーザー・インタラクションに特化したコンテンツのことです。
 って言われると分かりづらいですが、簡単いうとブラウザで見た時、操作出来るコンテンツ。
-リンクだったりフォームだったり、クリックとかテキスト入力とか出来るコンテンツ。
-&lt;blockquote&gt;
- a audio (controls 属性が存在する場合) button details embed iframe img (usemap 属性が存在する場合) input (type 属性が hidden 状態でない場合) keygen label menu (type 属性が toolbar 状態の場合) object (usemap 属性が存在する場合) select textarea video (controls 属性が存在する場合)
-&lt;/blockquote&gt;
+リンクだったりフォームだったり、クリックとかテキスト入力とか出来るコンテンツ。</p>
 
-とこのようにカテゴリに分類されています。
+<blockquote>
+ a audio (controls 属性が存在する場合) button details embed iframe img (usemap 属性が存在する場合) input (type 属性が hidden 状態でない場合) keygen label menu (type 属性が toolbar 状態の場合) object (usemap 属性が存在する場合) select textarea video (controls 属性が存在する場合)
+</blockquote>
+
+<p>とこのようにカテゴリに分類されています。
 コンテンツモデルに「フロー・コンテンツ」と書かれていたら
 その中にはフロー・コンテンツしか入れることが出来ないという意味です。
-なので分類はどんなのがあるか覚えておきたいですね。
+なので分類はどんなのがあるか覚えておきたいですね。</p>
 
-&lt;h2&gt;a要素のコンテンツモデル「トランスペアレント」&lt;/h2&gt;
-いろいろと調べてて一番衝撃受けたのがa要素。
+<h2>a要素のコンテンツモデル「トランスペアレント」</h2>
+
+<p>いろいろと調べてて一番衝撃受けたのがa要素。
 HTML4だとa要素はインライン要素だから中にブロック要素入れちゃだめ！って教わってきたけど
-例えば以下のようなマークアップ
-~~~ html
+例えば以下のようなマークアップ</p>
 
-&lt;aside&gt;
+<pre><code class="html">&lt;aside&gt;
     &lt;a href=&quot;index.html&quot;&gt;
         &lt;section&gt;
             &lt;h1&gt;タイトル&lt;/h1&gt;
