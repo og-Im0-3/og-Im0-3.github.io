@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>03LOG</title>
+  <subtitle></subtitle>
+  <id>http://03log.me/</id>
+  <link href="http://03log.me/"/>
+  <link href="http://03log.me/feed.xml" rel="self"/>
+  <updated>2014-12-11T00:00:00+09:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>ビジュアルや動きをコードで作るProcessing</title>
+    <link rel="alternate" href="http://03log.me/blog/2014-12-11-visual-programing.html"/>
+    <id>http://03log.me/blog/2014-12-11-visual-programing.html</id>
+    <published>2014-12-11T00:00:00+09:00</published>
+    <updated>2015-01-19T23:32:47+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://theguild.jp/" target="_blank"&gt;THE GUILD&lt;/a&gt;の皆さんがやっているインタラクティブ・プログラミング勉強会の記事をみて触発されたので、最近Processingでちょこちょことスケッチを書いています。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;strong&gt;インタラクティブ・プログラミング勉強会&lt;/strong&gt;
+&lt;a href="http://fladdict.net/blog/2014/10/visual-coding-1.html" target="_blank"&gt;インタラクティブ・プログラミング勉強会 第1回 乱数 | fladdict&lt;/a&gt;
+&lt;a href="http://cocopon.me/blog/?p=4992" target="_blank"&gt;インタラクティブデザイン勉強会 第1回「ランダム」 — フニフニ微生物ができるまで | ここぽんのーと&lt;/a&gt;
+&lt;a href="http://chocolu.net/blog/?p=272" title="「インタラクティブ・プログラミング勉強会 第1回 乱数」ー星の瞬きができるまでー | Chitep!" target="_blank"&gt;「インタラクティブ・プログラミング勉強会 第1回 乱数」ー星の瞬きができるまでー | Chitep!&lt;/a&gt;
+&lt;a href="http://yutmpo.com/blog/archives/269" target="_blank"&gt;猿レベルから始めるprocessing 図形を描く&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;そして上記の記事などを参考にしながら自分で作ったのがこちら&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/img/2014-12-11/p5_1.gif"&gt;&lt;img src="/img/2014-12-11/p5_1.gif" alt="tumblr_ng9xxummWk1u5tvj5o1_r1_400" width="400" height="300" class="alignright size-full" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/img/2014-12-11/p5_2.gif"&gt;&lt;img src="/img/2014-12-11/p5_2.gif" alt="tumblr_ng9xxummWk1u5tvj5o1_r1_400" width="400" height="300" class="alignright size-full" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/img/2014-12-11/p5_3.gif"&gt;&lt;img src="/img/2014-12-11/p5_3.gif" alt="tumblr_ng9xxummWk1u5tvj5o1_r1_400" width="400" height="400" class="alignright size-full" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;書いたスケッチをGifアニメーションにするのにこちらを使わせていただきました。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;a href="http://cocopon.me/blog/?p=5128" target="_blank"&gt;Processing用、お手軽アニメGIF録画クラス「GifRecorder」の導入方法 | ここぽんのーと&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ProcessingはJavaがベースなので、記法とか調べつつ…
+とにかくまずは触ってなにか作ってみて、そこからどうしたらもっと気持ちよいものができるんだろうと試行錯誤しながら書いてます。&lt;/p&gt;
+
+&lt;p&gt;JavaScriptを使ったことがある人であれば&lt;a href="http://processingjs.org/" target="_blank"&gt;Processing.js&lt;/a&gt;や&lt;a href="http://p5js.org/" target="_blank"&gt;p5.js&lt;/a&gt;が利用できるので、そちらから初めて見るのもよいかもしれません。
+以前、p5.jsに関しては記事を書いたのでよければご覧ください。
+&lt;a href="http://03log.me/p5js-processing/" target="_blank"&gt;processingっぽくかけるp5.jsでフラクタル図形を書いてみた | 03LOG
+&lt;/a&gt;
+&lt;a href="http://omi-sketch.tumblr.com/" title="http://omi-sketch.tumblr.com/" target="_blank"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;tumblrにも作ったもの貯めていくのでよければご覧ください。
+&lt;a href="https://www.tumblr.com/blog/omi-sketch" target="_blank"&gt;Omi&amp;rsquo;s sketch&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>SMACSSを利用したCSS設計について</title>
+    <link rel="alternate" href="http://03log.me/blog/2014-09-30-smacss.html"/>
+    <id>http://03log.me/blog/2014-09-30-smacss.html</id>
+    <published>2014-09-30T00:00:00+09:00</published>
+    <updated>2015-01-09T01:06:46+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;今までOOCSS、BEMの考えを取り入れたコーディングをしていたのですが、今回SMACSSのルールに従ってコーディングしてみたので考え方と、感想をメモします。&lt;/p&gt;
+
+&lt;p&gt;今回コーディングするにあたり、下記を参考にしました。&lt;br /&gt;
+詳しい内容に関してはこちらを参考にしていただければと思います。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;a href="https://smacss.com/" target="_blank"&gt;Scalable and Modular Architecture for CSS&lt;/a&gt;  
+&lt;a href="https://app.codegrid.net/entry/template-smacss-1" target="_blank"&gt;知っておきたいHTMLテンプレート設計法 - SMACSSのルール 1 | CodeGrid&lt;/a&gt;  
+&lt;/blockquote&gt;
+
+&lt;h2&gt;SMACSSとは？&lt;/h2&gt;
+
+&lt;p&gt;SMACSSはScalable and Modular Architecture for CSSの略です。&lt;br /&gt;
+&lt;a href="https://smacss.com/" target="_blank"&gt;Scalable and Modular Architecture for CSS&lt;/a&gt;にはCSSをより体系立て、より構造化させることで制作とメンテナンスをより容易に行うテクニックと書かれています。&lt;/p&gt;
+
+&lt;h2&gt;SMACSSの考え方&lt;/h2&gt;
+
+&lt;p&gt;SMACSSには五つのルールが存在します。&lt;br /&gt;
+Base - ベースルール&lt;br /&gt;
+Layout - レイアウトルール&lt;br /&gt;
+Module - モジュールルール&lt;br /&gt;
+State - 状態（ステート）ルール&lt;br /&gt;
+Theme - テーマルール&lt;/p&gt;
+
+&lt;h3&gt;Base - ベースルール&lt;/h3&gt;
+
+&lt;p&gt;ベースはサイトのデフォルトのスタイル設定です。
+&lt;strong&gt;Reset.css&lt;/strong&gt;や&lt;strong&gt;Nomalize.css&lt;/strong&gt;もこちらに含まれます。
+他によくベースで設定するものをあげるとするとベースのフォントサイズや行間、a要素の文字色や:hoverなど、タグに直接設定するものはベースルールとして記述します。&lt;/p&gt;
+
+&lt;h3&gt;Layout - レイアウトルール&lt;/h3&gt;
+
+&lt;p&gt;レイアウトは大枠を指定するためのルールです。
+ヘッダー、フッター、ナビゲーション、メインコンテンツ、サイドバーなど、よくIDを使用して指定する要素が、レイアウトになります。
+また、例えばページ内で段組みになっている部分の枠の部分などもレイアウトとして扱います。&lt;/p&gt;
+
+&lt;p&gt;このルールにはIDを使用するか、layout-やl-などの接頭語をつけることをSMACSSでは推奨しています。&lt;/p&gt;
+
+&lt;h3&gt;Module - モジュールルール&lt;/h3&gt;
+
+&lt;p&gt;モジュールは名前の通りモジュールを表すスタイルです。
+BEMのBlock、Elementの考え方と似ています。
+クラス名の書き方はモジュール名-サブクラス名の順番で書きます。
+下記はモジュールルールを使用した例です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;div class=&amp;quot;l-column&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;module&amp;quot;&amp;gt;
+    &amp;lt;h1 class=&amp;quot;module-title&amp;quot;&amp;gt;タイトル&amp;lt;/h1&amp;gt;
+    &amp;lt;p class=&amp;quot;module-description&amp;quot;&amp;gt;説明&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;.l-column{
+  width: 200px;
+  margin: 0 auto;
+}
+
+.module{
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.module-title{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.module-description{
+  font-size: 14px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例えば上記のように記述します。.moduleがBEMでいうBlock、-でつないだものがElementにあたります。
+そして全体の幅などはレイアウトで指定することで、いろんなところで使い回しやすいModuleができます。
+またSMACSSは子孫セレクタや子セレクタの使用も許されています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;div class=&amp;quot;l-column&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;module&amp;quot;&amp;gt;
+    &amp;lt;h1&amp;gt;タイトル&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;説明&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;.l-column{
+  width: 200px;
+  margin: 0 auto;
+}
+
+.module{
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.module &amp;gt; h1{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.module &amp;gt; p{
+  font-size: 14px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;タイトルと説明の部分のクラスをとり、上記のようなコードに変更しました。
+ただし上記のような書き方をする場合はCSSの影響範囲や、HTMLの変更が無いかなど注意が必要です。&lt;/p&gt;
+
+&lt;h3&gt;State - 状態（ステート）ルール&lt;/h3&gt;
+
+&lt;p&gt;ステートはモジュールの状態を表すためのルールです。
+例えば、.is-disable、.is-active、.is-current、といったような状態を示すClassをつけることで、見た目の変更を行ったりするときに使います。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;div class=&amp;quot;l-column&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;module is-disable&amp;quot;&amp;gt;
+    &amp;lt;h1 class=&amp;quot;module-title&amp;quot;&amp;gt;タイトル&amp;lt;/h1&amp;gt;
+    &amp;lt;p class=&amp;quot;module-description&amp;quot;&amp;gt;説明&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;.module.is-disable{
+  display: none;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記の例では、.is-disableをつけることでoduleを非表示にする例です。&lt;/p&gt;
+
+&lt;h3&gt;Theme - テーマルール&lt;/h3&gt;
+
+&lt;p&gt;テーマは全体のスタイルを変更する場合に使うクラスです。
+テーマは後から読み込ませたり、クラスを付加してあとからスタイルを変更させる場合に使います。
+普段は使う必要がないかもしれませんが、状況に応じて使用します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;.body{
+  color: #000;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;たとえば上記のCSSの後に、次のCSSを読み込ませた場合&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;.body{
+  color: #f00;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;全体の文字色は赤色に変更されます。&lt;/p&gt;
+
+&lt;h2&gt;SMACSSでコーディングしてみて&lt;/h2&gt;
+
+&lt;p&gt;ここまで、SMACSSについてまとめてきましたが、今回私が個人的によいなと思ったところ、注意が必要だと感じたところをまとめました。&lt;/p&gt;
+
+&lt;h3&gt;よいなと思ったところ。&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OOCSSよりも構造がはっきりとわかりやすい。&lt;/li&gt;
+&lt;li&gt;BEMよりもクラス名が単調になりにくい。&lt;/li&gt;
+&lt;li&gt;Moduleを使い回ししやすい。&lt;/li&gt;
+&lt;li&gt;接頭語の考え方(レイアウト:.l- / 状態.is-)が参考になった。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;注意が必要なと感じたところ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CSSの強固さはBEMよりは劣る。&lt;/li&gt;
+&lt;li&gt;ルールを明確にする必要があるためコーディング前のCSSの設計がとても重要。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以前はBEMを参考に自分なりルールで構築を行っていたのですが、今回SMACSSを使用してみてこのルールは自分の中でもCSSをより理解しやすくできるように感じました。
+大規模な開発では世の中にあるさまざまなCSS設計からいろいろと学び、より強固なCSS設計を行っていくのが今後必要だなと感じました。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>わかりやすくて軽快なビルドシステム gulpのはじめ方</title>
+    <link rel="alternate" href="http://03log.me/blog/2014-09-07-gulp-setup.html"/>
+    <id>http://03log.me/blog/2014-09-07-gulp-setup.html</id>
+    <published>2014-09-07T00:00:00+09:00</published>
+    <updated>2015-01-15T23:26:28+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;gulpを触ってみたら使い勝手がかなりよかったので、gulpの使い方をメモ。&lt;/p&gt;
+
+&lt;h2&gt;gulpとは&lt;/h2&gt;
+
+&lt;p&gt;Node.jsを使用したビルドシステムです。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;a href="http://gulpjs.com/"&gt;gulp.js - the streaming build system&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;gruntのように構築時に便利な処理を自動で実行させることができます。
+gulpとgruntを使ってみた感想ですが、gruntはプラグインがある一つの機能をまとめて実行するのに対して、gulpは細かな機能を組み合わせて使用するようなイメージです。
+gulpのほうがJSファイルもわかりやすくてよい感じでした。&lt;/p&gt;
+
+&lt;p&gt;gulpを使用するには&lt;a href="http://nodejs.org/"&gt;node.js&lt;/a&gt;が必要なのでダウンロードをしておいてください。&lt;/p&gt;
+
+&lt;h2&gt;package.jsonを準備する&lt;/h2&gt;
+
+&lt;p&gt;まずgulpのプラグインを管理するためにpackage.jsonを準備する必要があります。
+使用するフォルダまで移動して下記を実行します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;すると質問形式で、ファイルが自動的に構築されます。&lt;/p&gt;
+
+&lt;p&gt;package.jsonについて詳しく知りたい方は下記の内容を参考に。
+&lt;a href="http://liberty-technology.biz/PublicItems/npm/package.json.html"&gt;npm package.json 日本語版 取扱説明書&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ここではとりあえず、package.jsonが準備できればOKです。&lt;/p&gt;
+
+&lt;h2&gt;gulpのインストール&lt;/h2&gt;
+
+&lt;p&gt;package.jsonが準備できたら、次はgulpのインストールです。
+まずはターミナルで以下を実行します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-gでグローバル環境にインストールされ、どこからでもgulpを使えるようになります。
+何もつけないとローカルでインストールされます。&lt;/p&gt;
+
+&lt;p&gt;次にpackage.jsonの入っているディレクトリまで移動して、以下を実行します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install --save-dev gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;できたらgulpfile.jsを用意してとりあえず下記の内容を記入します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+
+gulp.task(&amp;#39;default&amp;#39;, function() {
+  console.log(&amp;#39;hello world&amp;#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記を実行してうまくいけば設定完了です。&lt;/p&gt;
+
+&lt;h2&gt;gulpfile.jsについて&lt;/h2&gt;
+
+&lt;h3&gt;var gulp = require(&amp;lsquo;gulp&amp;rsquo;);&lt;/h3&gt;
+
+&lt;p&gt;Node.jsでモジュールを読み込むときに使用します。
+上記のコードでgulpという変数にgulpのモジュールを入れています。&lt;/p&gt;
+
+&lt;h3&gt;gulp.task()&lt;/h3&gt;
+
+&lt;p&gt;タスクを登録します。
+第一引数はタスクの名前です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+
+gulp.task(&amp;#39;default&amp;#39;, function() {
+  console.log(&amp;#39;hello world&amp;#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;名前をdefaultと指定すると&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;で実行ができます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+
+gulp.task(&amp;#39;hello&amp;#39;, function() {
+  console.log(&amp;#39;hello world&amp;#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記のように&amp;#39;hello&amp;#39;とした場合は、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gulp hello
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;で実行可能です。&lt;/p&gt;
+
+&lt;p&gt;第２引数にはタスクを複数指定することもできます。
+複数指定する場合は配列にタスク名を入れます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+
+gulp.task(&amp;#39;hello&amp;#39;, function() {
+  console.log(&amp;#39;hello&amp;#39;);
+});
+
+gulp.task(&amp;#39;world&amp;#39;, function() {
+  console.log(&amp;#39;world&amp;#39;);
+});
+
+gulp.task(&amp;#39;default&amp;#39;, [&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記の状態で&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;を実行した場合helloとworldが実行されます。&lt;/p&gt;
+
+&lt;h3&gt;gulp.watch()&lt;/h3&gt;
+
+&lt;p&gt;ファイルを監視する際に使用します。
+第一引数に監視したいファイルのpathを入れます。
+第二引数には実行したいタスク名を入れます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+
+gulp.tast(&amp;#39;watch&amp;#39;, function(){
+  console.log(&amp;#39;change&amp;#39;);
+});
+
+gulp.task(&amp;#39;default&amp;#39;, function() {
+  gulp.watch(&amp;#39;htdocs/css/style.css&amp;#39;, [&amp;#39;watch&amp;#39;]);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記の場合、gulpを実行した後style.cssを変更するとwatchが実行されます。&lt;/p&gt;
+
+&lt;h3&gt;gulp.src()、gulp.dest()&lt;/h3&gt;
+
+&lt;p&gt;gulp.src()はタスクを実行するファイルを指定します。
+gulp.dest()はタスクを実行した後のファイルの保存先です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+
+gulp.task(&amp;#39;watch&amp;#39;, function(){
+  gulp.src(&amp;#39;htdocs/css/style.css&amp;#39;)
+    .pipe(gulp.dest(&amp;#39;htdocs/css_copy/&amp;#39;));
+});
+
+gulp.task(&amp;#39;default&amp;#39;, function() {
+  gulp.watch(&amp;#39;htdocs/css/style.css&amp;#39;, [&amp;#39;watch&amp;#39;]);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gulpを実行してstyle.cssを変更すると、新たにcss_copyフォルダ内に同じファイルが作成されます。
+gulp.src()に対してpipe()で処理をつなげて、gulp.dest()で書き出しを行うというようなイメージです。
+上記のgulp.src()の後ろに様々なプラグインをつなげることで便利な処理をいろいろと実行できるようになります。&lt;/p&gt;
+
+&lt;h2&gt;プラグインを使用してみる&lt;/h2&gt;
+
+&lt;p&gt;gulpには様々なプラグインが用意されています。
+&lt;a href="http://gulpjs.com/plugins/"&gt;gulp.js plugin registry&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今回はSassをコンパイルするプラグインを使用します。
+まずは下記を実行し、ローカルにgulp-sassをインストールします。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install --savave-dev gulp-sass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;インストールしたらgulpfile.jsを以下のように変更します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var gulp = require(&amp;#39;gulp&amp;#39;);
+var sass = require(&amp;#39;gulp-sass&amp;#39;);
+
+gulp.task(&amp;#39;watch&amp;#39;, function(){
+  gulp.src(&amp;#39;htdocs/scss/style.scss&amp;#39;)
+    .pipe(sass())
+    .pipe(gulp.dest(&amp;#39;htdocs/css/&amp;#39;));
+});
+
+gulp.task(&amp;#39;default&amp;#39;, function() {
+  gulp.watch(&amp;#39;htdocs/scss/style.scss&amp;#39;, [&amp;#39;watch&amp;#39;]);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;require()でgulp-sassを呼び出します。
+gulp.watch()はscssファイルを指定して、監視します。
+gulp.src()でコンパイルするファイルを指定して、.pipe()でgulp-sassを実行します。
+実行した後のコンパイル先をgulp.dest()で指定します。
+さらにほかにも機能を追加したいときは.pipe(sass())の後ろに連結していけば様々な処理を自分で組み合わせて行うことができます。&lt;/p&gt;
+
+&lt;p&gt;今回使ってみて、個人的にはgruntよりもJSファイルがわかりやすく、管理しやすいように感じました。
+また処理がgulpの方が軽快です。
+いろいろと情報もいっぱいあるので調べてみれば結構簡単にいけそうです。&lt;/p&gt;
+
+&lt;p&gt;まだ使い初めなので、もし間違いなどございましたらご指摘いただけたら幸いです。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>processingっぽくかけるp5.jsでフラクタル図形を書いてみた</title>
+    <link rel="alternate" href="http://03log.me/blog/2014-08-31-p5-js-fractale.html"/>
+    <id>http://03log.me/blog/2014-08-31-p5-js-fractale.html</id>
+    <published>2014-08-31T00:00:00+09:00</published>
+    <updated>2015-01-09T01:06:17+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;p5.jsを使ってみたのでメモ。&lt;br /&gt;
+p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングができるライブラリです。&lt;/p&gt;
+
+&lt;h2&gt;使い方&lt;/h2&gt;
+
+&lt;p&gt;p5.jsのサイトからダウンロード、またはCDNで読み込むことができます。&lt;br /&gt;
+CDNを使用する場合は下記のコードを追加してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;&amp;lt;script src=&amp;quot;//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;基本的な使い方&lt;/h2&gt;
+
+&lt;p&gt;書き方はほぼProcessingに近い形です。１度使ったことある人はとっても扱いやすいと思います。&lt;/p&gt;
+
+&lt;p&gt;ベースは下記のように書きます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;function setup(){
+
+}
+
+function draw(){
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;setup()内に、画面サイズなどの初期設定を書きます。&lt;br /&gt;
+そしてdraw()の中に描画のためのコードを書きます。&lt;/p&gt;
+
+&lt;p&gt;setup()起動時に一回だけ実行され、draw()はループされ、何度も実行されます。&lt;/p&gt;
+
+&lt;p&gt;円を書きたい場合は下記のように書きます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;function setup(){
+  createCanvas(400, 400);
+}
+
+function draw(){
+  ellipse(200, 200, 100 ,100);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;createCanvas()でcanvasのサイズを指定できます。&lt;br /&gt;
+ellipse()でx:200px、y:200pxの位置に半径100pxの円を描画しています。&lt;br /&gt;
+たったこれだけ。簡単ですね。&lt;/p&gt;
+
+&lt;p&gt;ほかにもいろいろできるのですがその辺はLearnのページからExampleをみるとわかりやすいです。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;a href="http://p5js.org/learn/" target="_blank"&gt;Learn - p5.js&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;またp5.jsにはp5.sound libraryというWeb Audio APIを扱うことのできるライブラリと、p5.dom libraryというDOMを扱うことのできるライブラリが用意されています。&lt;br /&gt;
+上記のライブラリを使用する場合は別途読み込むことが必要になります。&lt;/p&gt;
+
+&lt;p&gt;ProcessingとのP5.jsとの違いはこちらのページにまとめられいますので参考にしてください。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;a href="https://github.com/lmccart/p5.js/wiki/Processing-transition" target="_blank"&gt;Processing transition · lmccart/p5.js&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;シェルピンスキーのギャスケットを書いてみた&lt;/h2&gt;
+
+&lt;p&gt;という訳で何か書いてみようと思ったので、初のフラクタル図形にチャレンジ。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;a href="http://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%83%94%E3%83%B3%E3%82%B9%E3%82%AD%E3%83%BC%E3%81%AE%E3%82%AE%E3%83%A3%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88" target="_blank"&gt;シェルピンスキーのギャスケット - Wikipedia&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;いろいろ調べてみた中で一番簡単にかけそうだったのでシェルピンスキーのギャスケットという図形を書いてみました。&lt;br /&gt;
+再帰関数をつかって処理をループさせて書いています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://03log.me/demo/gasket/"&gt;DEMO&lt;/a&gt;はこちらから&lt;/p&gt;
+
+&lt;p&gt;コードはこんな感じになっています。&lt;br /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var start_a = {},
+  start_b = {},
+  start_c = {},
+  triangle_height,
+  triangle_length,
+  w_width,
+  w_height,
+  center_x,
+  center_y,
+  repeat = 9;
+
+function triangle(){
+  if(w_width &amp;gt; w_height){
+    start_b.x = center_x - center_y + 40;
+    start_c.x = center_x + center_y - 40;
+  }else{
+    start_b.x = 40;
+    start_c.x = w_width - 40;
+  }
+
+  triangle_length = start_c.x - start_b.x;
+  triangle_height = sqrt(3) * triangle_length / 2;
+  start_b.y = (w_height - triangle_height) / 2 + triangle_height;
+  start_c.y = start_b.y;
+
+  start_a.x = triangle_length / 2 + start_b.x;
+  start_a.y = start_b.y - triangle_height;
+}
+
+function gasket(a, b, c ,n){
+  var count = n,
+  d = {},
+  e = {},
+  f = {};
+  stroke(255, 255, 255);
+  noFill();
+  triangle(a.x, a.y, b.x, b.y, c.x, c.y);
+
+  d.x = (a.x + b.x)/2;
+  d.y = (a.y + b.y)/2;
+  e.x = (b.x + c.x)/2;
+  e.y = (b.y + c.y)/2;
+  f.x = (c.x + a.x)/2;
+  f.y = (c.y + a.y)/2;
+
+  if(count &amp;gt; 1){
+    return setTimeout(function(){
+      gasket(a, d, f ,count - 1);
+      gasket(b, d, e ,count - 1);
+      gasket(c, e, f ,count - 1);
+    },500);
+  }
+}
+
+function setup(){
+  w_width = windowWidth;
+  w_height = windowHeight;
+  center_x = w_width / 2;
+  center_y = w_height / 2;
+  createCanvas(w_width, w_height);
+  background(0,0);
+
+  if(w_width &amp;gt; w_height){
+    start_b.x = center_x - center_y + 40;
+    start_c.x = center_x + center_y - 40;
+  }else{
+    start_b.x = 40;
+    start_c.x = w_width - 40;
+  }
+
+  triangle_length = start_c.x - start_b.x;
+  triangle_height = sqrt(3) * triangle_length / 2;
+  start_b.y = (w_height - triangle_height) / 2 + triangle_height;
+  start_c.y = start_b.y;
+
+  start_a.x = triangle_length / 2 + start_b.x;
+  start_a.y = start_b.y - triangle_height;
+
+  triangle();
+  gasket(start_a, start_b, start_c, repeat);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;もうちょい効率よくかけるのかなーといろいろ考えたんですが、短時間で書いたらとりあえずこんな感じになりました。&lt;/p&gt;
+
+&lt;p&gt;お手軽に図形を書くには使いやすく書きやすかったです。Processingとほぼ同じようにかけるのと、基本はJavaScriptなのでProcessing・JavaScriptを書いたことある人には使いやすいと思います。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>【JavaScript】配列で重複したものをはじく</title>
+    <link rel="alternate" href="http://03log.me/blog/2014-08-29-js-array-remove.html"/>
+    <id>http://03log.me/blog/2014-08-29-js-array-remove.html</id>
+    <published>2014-08-29T00:00:00+09:00</published>
+    <updated>2015-01-09T00:34:17+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;配列内で重複したものをはじくっていう処理を書いたのでメモ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var array = [&amp;#39;A&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;D&amp;#39;,&amp;#39;B&amp;#39;];
+var sort = [];
+var flag;
+sort.push(array[0]);
+
+for(var i = 0; i &amp;lt; array.length; i++){
+  flag = true;
+  for(var j = 0; j &amp;lt; sort.length; j++){
+    if(array[i] === sort[j]){
+      flag = false;
+    }
+  }
+
+  if(flag){
+    sort.push(array[i]);
+  }
+}
+
+console.log(sort);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;配列内の値をひとつづつチェックしていって、別の配列にpushする。
+array[i]とsort[j]が一致してしまったときはflagにfalseを入れpushしないようにする。&lt;/p&gt;
+
+&lt;p&gt;今回はIE8も対応するので使いないけど、ECMAScript 5からArray.filter()という便利なものがあるそうです。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;a href="http://qiita.com/cocottejs/items/7afe6d5f27ee7c36c61f" target="_blank"&gt;JavaScript - 配列の重複をはじく、もしくは重複を取り出す - Qiita&lt;/a&gt;
+&lt;a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"&gt;Array.filter - JavaScript | MDN&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Array.filter()を使って書き直すと&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var array = [&amp;#39;A&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;D&amp;#39;,&amp;#39;B&amp;#39;];
+var sort = array.filter(function (x, i, self) {
+  return self.indexOf(x) === i;
+});
+console.log(sort);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;すごい短くなります。便利！&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>jQuery.Deferredについてまとめてみた</title>
+    <link rel="alternate" href="http://03log.me/blog/2014-08-26-jq-deferred.html"/>
+    <id>http://03log.me/blog/2014-08-26-jq-deferred.html</id>
+    <published>2014-08-26T00:00:00+09:00</published>
+    <updated>2015-01-09T00:31:17+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;jQuery.Deferred()についてわからない部分もあったのでいろいろと調べてみました。&lt;/p&gt;
+
+&lt;h2&gt;$.Deferred()について&lt;/h2&gt;
+
+&lt;p&gt;・Deferrdオブジェクトは非同期処理を監視するためのオブジェクト&lt;br /&gt;
+・Deferrdオブジェクトの中にはPromiseオブジェクトというオブジェクトが内包している
+・PromiseオブジェクトはDeferrdの状態を保持している。&lt;br /&gt;
+状態は３種類&lt;br /&gt;
+pending 処理中の状態&lt;br /&gt;
+resolve 処理が成功したときの状態&lt;br /&gt;
+rejected　処理が失敗したときの状態&lt;br /&gt;
+・DeferredオブジェクトはPromiseの中身を変更する役割&lt;/p&gt;
+
+&lt;h2&gt;deferredの使い方&lt;/h2&gt;
+
+&lt;p&gt;deferredは下記のように使用します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var func  = function (){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&amp;#39;delay!&amp;#39;);
+        d.resolve();//Deferredオブジェクトをresolveに変更
+    },1000);
+    return d.promise();//Promiseオブジェクトだけを返す
+};
+
+var promise = func();
+promise.done(function(){
+    console.log(&amp;#39;resolved!&amp;#39;);
+}).fail(function(){
+    console.log(&amp;#39;rejected!&amp;#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;func内でdeferredオブジェクトを呼び出して、funcが実行されたときにdefferredオブジェクトのpromiseを返します。
+かえってきたオブジェクトによって.done()、.fail()が実行されます。&lt;/p&gt;
+
+&lt;h3&gt;deferred.resolve()&lt;/h3&gt;
+
+&lt;p&gt;Deferredオブジェクトをresolveの状態に変更する&lt;/p&gt;
+
+&lt;h3&gt;deferred.rejected()&lt;/h3&gt;
+
+&lt;p&gt;Deferredオブジェクトをrejectedの状態に変更する&lt;/p&gt;
+
+&lt;h3&gt;deferred.promise()&lt;/h3&gt;
+
+&lt;p&gt;DeferredオブジェクトのPromiseオブジェクトを返す&lt;/p&gt;
+
+&lt;h3&gt;deferred.done()&lt;/h3&gt;
+
+&lt;p&gt;Deferredオブジェクトがresolveの時実行する&lt;/p&gt;
+
+&lt;h3&gt;deferred.fail()&lt;/h3&gt;
+
+&lt;p&gt;Deferredオブジェクトがrejectedの時実行する&lt;/p&gt;
+
+&lt;h2&gt;deferred.then()について&lt;/h2&gt;
+
+&lt;h3&gt;deferred.then()&lt;/h3&gt;
+
+&lt;p&gt;done()とfail()をいっぺんに記述することができる。&lt;br /&gt;
+先ほどのコードをthen()を使って書くとこうなる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var func  = function (){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&amp;#39;delay!&amp;#39;);
+        d.resolve();//Deferredオブジェクトをresolveに変更
+    },1000);
+    return d.promise();//Promiseオブジェクトだけを返す
+};
+
+var promise = func();
+promise.then(function(){
+    console.log(&amp;#39;resolved!&amp;#39;);
+},function(){
+    console.log(&amp;#39;rejected!&amp;#39;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;またdeferred.then()は新たにDeferredオブジェクトを返す&lt;br /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;var func = function func(){
+    var d = new $.Deferred;
+    setTimeout(function(){
+        console.log(&amp;#39;delay!&amp;#39;);
+        d.resolve();
+    },1000);
+    return d.promise();
+};
+
+func()
+.then(func)
+.then(func)
+.then(func);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記のコードはそれぞれのdeferred.then()がDeferredオブジェクトを返すため、1秒ごとにconsole.logが実行される。&lt;/p&gt;
+
+&lt;h2&gt;deferred.when()について&lt;/h2&gt;
+
+&lt;h3&gt;deferred.when()&lt;/h3&gt;
+
+&lt;p&gt;複数  のDeferredオブジェクトをまとめて、新たにDeferredオブジェクトを返す。&lt;br /&gt;
+下記のように使用する。&lt;/p&gt;
+
+&lt;p&gt;[code lang=javascript]
+$.when(func(), func(), func())
+.done(hello1);
+[/code]&lt;/p&gt;
+
+&lt;p&gt;when()の中がすべてresolovedの場合はresolovedになる。&lt;br /&gt;
+rejectedが一つでも含まれるの場合はrejectedになる。&lt;br /&gt;
+pendingの状態の場合は処理が進まない。&lt;/p&gt;
+
+&lt;h2&gt;jQuery.ajax()・jQuery.getJSON()について&lt;/h2&gt;
+
+&lt;p&gt;ajaxなどで返されるjqXHRオブジェクトに対しても.done(),.fail(),.then()が使用できます
+またリクエスト完了時に実行される.always()も使用可能です。&lt;/p&gt;
+
+&lt;p&gt;[code lang=javascript]
+$.ajax({
+    url: &amp;ldquo;data.json&amp;rdquo;,
+    data: data,
+    dataType: &amp;ldquo;json&amp;rdquo;
+}).done(function(){
+    console.log(&amp;#039;done!&amp;#039;);
+}).fail(function(){
+    console.log(&amp;#039;fail!&amp;#039;);
+}).always(function(){
+    console.log(&amp;#039;complete!&amp;#039;);
+});
+[/code]&lt;/p&gt;
+
+&lt;p&gt;下記のサイトを参考にさせていただきました。ありがとうございました。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;a href="http://techblog.yahoo.co.jp/programming/jquery-deferred/" target="_blank"&gt;爆速でわかるjQuery.Deferred超入門&lt;/a&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
+</feed>
