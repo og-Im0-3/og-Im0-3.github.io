@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://03log.me/blog/2015-01-15-middleman-blog.html"/>
     <id>http://03log.me/blog/2015-01-15-middleman-blog.html</id>
     <published>2015-01-15T00:00:00+09:00</published>
-    <updated>2015-01-20T11:45:56+09:00</updated>
+    <updated>2015-01-20T11:57:57+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -118,7 +118,7 @@ Middlemanはコマンドラインで静的ファイルを生成しているの�
 &lt;p&gt;これとGithubPagesを合わせて使うとローカルだけでブログの作成、確認、公開ができるので、WordPressよりも手軽に更新が行えるようになりました。&lt;br&gt;
 日本語ドキュメントもあるので静的サイトジェネレーターがどんな物かわからない人や、コマンドラインになじみのない人はここから初めて見るのもいいかもしれません。  &lt;/p&gt;
 
-&lt;p&gt;静的サイトジェネレーターはほかにもJekyllやOctopressやHexoなどいろいろあるので、いろいろためしてみたいですね。&lt;/p&gt;
+&lt;p&gt;静的サイトジェネレーターはほかにも&lt;a href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt;や&lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt;や&lt;a href="http://hexo.io/"&gt;Hexo&lt;/a&gt;などいろいろあるので、いろいろためしてみたいですね。&lt;/p&gt;
 
 &lt;p&gt;次回はMiddlemanで作ったブログをGithubPagesで公開する手順を紹介いたします。&lt;/p&gt;
 </content>

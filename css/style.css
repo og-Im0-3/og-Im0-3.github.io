@@ -324,7 +324,7 @@ html {
 body {
   font-family: Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 16px;
-  line-height: 2.1;
+  line-height: 1.8;
   color: #333333;
   background-color: #fff; }
 
@@ -372,7 +372,7 @@ img {
 /* line 93, /Users/omi/works/001_blog/source/css/bootstrap/_scaffolding.scss */
 .img-thumbnail {
   padding: 4px;
-  line-height: 2.1;
+  line-height: 1.8;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -388,8 +388,8 @@ img {
 
 /* line 113, /Users/omi/works/001_blog/source/css/bootstrap/_scaffolding.scss */
 hr {
-  margin-top: 33px;
-  margin-bottom: 33px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   border: 0;
   border-top: 1px solid #e2e2e2; }
 
@@ -443,8 +443,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 33px;
-  margin-bottom: 16.5px; }
+  margin-top: 24px;
+  margin-bottom: 12px; }
   /* line 30, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
   h1 small,
   h1 .small, .h1 small,
@@ -461,8 +461,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 16.5px;
-  margin-bottom: 16.5px; }
+  margin-top: 12px;
+  margin-bottom: 12px; }
   /* line 41, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
   h4 small,
   h4 .small, .h4 small,
@@ -501,11 +501,11 @@ h6, .h6 {
 
 /* line 58, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 p {
-  margin: 0 0 33px; }
+  margin: 0 0 24px; }
 
 /* line 62, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 .lead {
-  margin-bottom: 33px;
+  margin-bottom: 24px;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.4; }
@@ -647,15 +647,15 @@ a.bg-danger:hover {
 
 /* line 138, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 .page-header {
-  padding-bottom: 15.5px;
-  margin: 66px 0 33px;
+  padding-bottom: 11px;
+  margin: 48px 0 24px;
   border-bottom: 1px solid #e2e2e2; }
 
 /* line 149, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 16.5px; }
+  margin-bottom: 12px; }
   /* line 153, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
   ul ul,
   ul ol,
@@ -682,12 +682,12 @@ ol {
 /* line 185, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 dl {
   margin-top: 0;
-  margin-bottom: 33px; }
+  margin-bottom: 24px; }
 
 /* line 189, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 dt,
 dd {
-  line-height: 2.1; }
+  line-height: 1.8; }
 
 /* line 193, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 dt {
@@ -731,8 +731,8 @@ abbr[data-original-title] {
 
 /* line 241, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 blockquote {
-  padding: 16.5px 33px;
-  margin: 0 0 33px;
+  padding: 12px 24px;
+  margin: 0 0 24px;
   font-size: 20px;
   border-left: 5px solid #e2e2e2; }
   /* line 250, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
@@ -746,7 +746,7 @@ blockquote {
   blockquote .small {
     display: block;
     font-size: 80%;
-    line-height: 2.1;
+    line-height: 1.8;
     color: #777777; }
     /* line 265, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
     blockquote footer:before,
@@ -781,9 +781,9 @@ blockquote.pull-right {
 
 /* line 294, /Users/omi/works/001_blog/source/css/bootstrap/_type.scss */
 address {
-  margin-bottom: 33px;
+  margin-bottom: 24px;
   font-style: normal;
-  line-height: 2.1; }
+  line-height: 1.8; }
 
 /* line 7, /Users/omi/works/001_blog/source/css/bootstrap/_code.scss */
 code,
@@ -818,10 +818,10 @@ kbd {
 /* line 41, /Users/omi/works/001_blog/source/css/bootstrap/_code.scss */
 pre {
   display: block;
-  padding: 16px;
-  margin: 0 0 16.5px;
+  padding: 11.5px;
+  margin: 0 0 12px;
   font-size: 15px;
-  line-height: 2.1;
+  line-height: 1.8;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -1752,7 +1752,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 33px; }
+  margin-bottom: 24px; }
   /* line 31, /Users/omi/works/001_blog/source/css/bootstrap/_tables.scss */
   .table > thead > tr > th,
   .table > thead > tr > td,
@@ -1761,7 +1761,7 @@ th {
   .table > tfoot > tr > th,
   .table > tfoot > tr > td {
     padding: 8px;
-    line-height: 2.1;
+    line-height: 1.8;
     vertical-align: top;
     border-top: 1px solid #ddd; }
   /* line 41, /Users/omi/works/001_blog/source/css/bootstrap/_tables.scss */
@@ -1927,7 +1927,7 @@ table th[class*="col-"] {
     /* line 171, /Users/omi/works/001_blog/source/css/bootstrap/_tables.scss */
     .table-responsive {
       width: 100%;
-      margin-bottom: 24.75px;
+      margin-bottom: 18px;
       overflow-y: hidden;
       -ms-overflow-style: -ms-autohiding-scrollbar;
       border: 1px solid #ddd; }
@@ -1980,7 +1980,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 33px;
+  margin-bottom: 24px;
   font-size: 24px;
   line-height: inherit;
   color: #333333;
@@ -2032,17 +2032,17 @@ output {
   display: block;
   padding-top: 7px;
   font-size: 16px;
-  line-height: 2.1;
+  line-height: 1.8;
   color: #555555; }
 
 /* line 115, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
 .form-control {
   display: block;
   width: 100%;
-  height: 47px;
+  height: 38px;
   padding: 6px 12px;
   font-size: 16px;
-  line-height: 2.1;
+  line-height: 1.8;
   color: #555555;
   background-color: #fff;
   background-image: none;
@@ -2086,7 +2086,7 @@ input[type="search"] {
   input[type="time"],
   input[type="datetime-local"],
   input[type="month"] {
-    line-height: 47px; }
+    line-height: 38px; }
 
   /* line 184, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
@@ -2137,7 +2137,7 @@ input[type="search"] {
   /* line 220, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
   .radio label,
   .checkbox label {
-    min-height: 33px;
+    min-height: 24px;
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
@@ -2265,7 +2265,7 @@ select[multiple].input-lg,
   position: relative; }
   /* line 329, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
   .has-feedback .form-control {
-    padding-right: 58.75px; }
+    padding-right: 47.5px; }
 
 /* line 334, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
 .form-control-feedback {
@@ -2274,9 +2274,9 @@ select[multiple].input-lg,
   right: 0;
   z-index: 2;
   display: block;
-  width: 47px;
-  height: 47px;
-  line-height: 47px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
   text-align: center;
   pointer-events: none; }
 
@@ -2373,7 +2373,7 @@ select[multiple].input-lg,
 
 /* line 371, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
 .has-feedback label ~ .form-control-feedback {
-  top: 38px; }
+  top: 29px; }
 /* line 374, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0; }
@@ -2446,7 +2446,7 @@ select[multiple].input-lg,
 /* line 502, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 40px; }
+  min-height: 31px; }
 /* line 508, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2491,7 +2491,7 @@ select[multiple].input-lg,
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 16px;
-  line-height: 2.1;
+  line-height: 1.8;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2793,7 +2793,7 @@ tbody.collapse.in {
   /* line 58, /Users/omi/works/001_blog/source/css/bootstrap/_dropdowns.scss */
   .dropdown-menu .divider {
     height: 1px;
-    margin: 15.5px 0;
+    margin: 11px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   /* line 63, /Users/omi/works/001_blog/source/css/bootstrap/_dropdowns.scss */
@@ -2802,7 +2802,7 @@ tbody.collapse.in {
     padding: 3px 20px;
     clear: both;
     font-weight: normal;
-    line-height: 2.1;
+    line-height: 1.8;
     color: #333333;
     white-space: nowrap; }
 
@@ -2852,7 +2852,7 @@ tbody.collapse.in {
   display: block;
   padding: 3px 20px;
   font-size: 14px;
-  line-height: 2.1;
+  line-height: 1.8;
   color: #777777;
   white-space: nowrap; }
 
@@ -3253,7 +3253,7 @@ tbody.collapse.in {
   /* line 59, /Users/omi/works/001_blog/source/css/bootstrap/_navs.scss */
   .nav .nav-divider {
     height: 1px;
-    margin: 15.5px 0;
+    margin: 11px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   /* line 66, /Users/omi/works/001_blog/source/css/bootstrap/_navs.scss */
@@ -3270,7 +3270,7 @@ tbody.collapse.in {
     /* line 84, /Users/omi/works/001_blog/source/css/bootstrap/_navs.scss */
     .nav-tabs > li > a {
       margin-right: 2px;
-      line-height: 2.1;
+      line-height: 1.8;
       border: 1px solid transparent;
       border-radius: 4px 4px 0 0; }
       /* line 89, /Users/omi/works/001_blog/source/css/bootstrap/_navs.scss */
@@ -3375,7 +3375,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 33px;
+  margin-bottom: 24px;
   border: 1px solid transparent; }
   /* line 14, /Users/omi/works/001_blog/source/css/bootstrap/mixins/_clearfix.scss */
   .navbar:before, .navbar:after {
@@ -3502,9 +3502,9 @@ tbody.collapse.in {
 /* line 164, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 8.5px 15px;
+  padding: 13px 15px;
   font-size: 18px;
-  line-height: 33px;
+  line-height: 24px;
   height: 50px; }
   /* line 171, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
   .navbar-brand:hover, .navbar-brand:focus {
@@ -3549,12 +3549,12 @@ tbody.collapse.in {
 
 /* line 235, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 4.25px -15px; }
+  margin: 6.5px -15px; }
   /* line 238, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 33px; }
+    line-height: 24px; }
   @media (max-width: 767px) {
     /* line 246, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
     .navbar-nav .open .dropdown-menu {
@@ -3571,7 +3571,7 @@ tbody.collapse.in {
         padding: 5px 15px 5px 25px; }
       /* line 258, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
       .navbar-nav .open .dropdown-menu > li > a {
-        line-height: 33px; }
+        line-height: 24px; }
         /* line 260, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
         .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
           background-image: none; } }
@@ -3585,8 +3585,8 @@ tbody.collapse.in {
         float: left; }
         /* line 275, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
         .navbar-nav > li > a {
-          padding-top: 8.5px;
-          padding-bottom: 8.5px; } }
+          padding-top: 13px;
+          padding-bottom: 13px; } }
 
 /* line 289, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
 .navbar-form {
@@ -3596,8 +3596,8 @@ tbody.collapse.in {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 1.5px;
-  margin-bottom: 1.5px; }
+  margin-top: 6px;
+  margin-bottom: 6px; }
   @media (min-width: 768px) {
     /* line 410, /Users/omi/works/001_blog/source/css/bootstrap/_forms.scss */
     .navbar-form .form-group {
@@ -3680,8 +3680,8 @@ tbody.collapse.in {
 
 /* line 345, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 1.5px;
-  margin-bottom: 1.5px; }
+  margin-top: 6px;
+  margin-bottom: 6px; }
   /* line 348, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
     margin-top: 8.5px;
@@ -3693,8 +3693,8 @@ tbody.collapse.in {
 
 /* line 361, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 8.5px;
-  margin-bottom: 8.5px; }
+  margin-top: 13px;
+  margin-bottom: 13px; }
   @media (min-width: 768px) {
     /* line 361, /Users/omi/works/001_blog/source/css/bootstrap/_navbar.scss */
     .navbar-text {
@@ -3879,7 +3879,7 @@ tbody.collapse.in {
 /* line 6, /Users/omi/works/001_blog/source/css/bootstrap/_breadcrumbs.scss */
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 33px;
+  margin-bottom: 24px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px; }
@@ -3899,8 +3899,8 @@ tbody.collapse.in {
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 33px;
-  line-height: 2.1;
+  margin-bottom: 24px;
+  line-height: 1.8;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -4128,7 +4128,7 @@ a.list-group-item-danger {
 
 /* line 7, /Users/omi/works/001_blog/source/css/bootstrap/_panels.scss */
 .panel {
-  margin-bottom: 33px;
+  margin-bottom: 24px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -4347,7 +4347,7 @@ a.list-group-item-danger {
 
 /* line 212, /Users/omi/works/001_blog/source/css/bootstrap/_panels.scss */
 .panel-group {
-  margin-bottom: 33px; }
+  margin-bottom: 24px; }
   /* line 216, /Users/omi/works/001_blog/source/css/bootstrap/_panels.scss */
   .panel-group .panel {
     margin-bottom: 0;
@@ -4982,34 +4982,35 @@ module
     letter-spacing: 0.05em; }
   /* line 188, /Users/omi/works/001_blog/source/css/style.scss */
   .article-body pre {
+    margin-bottom: 24px;
     background: #444;
     border: none; }
-  /* line 193, /Users/omi/works/001_blog/source/css/style.scss */
+  /* line 194, /Users/omi/works/001_blog/source/css/style.scss */
   .article-body blockquote {
     font-size: 18px; }
-    /* line 196, /Users/omi/works/001_blog/source/css/style.scss */
+    /* line 197, /Users/omi/works/001_blog/source/css/style.scss */
     .article-body blockquote a {
       display: block; }
 
-/* line 205, /Users/omi/works/001_blog/source/css/style.scss */
+/* line 206, /Users/omi/works/001_blog/source/css/style.scss */
 .articles .article {
   position: relative;
   padding: 10px 0 10px 20px;
   border-left: 8px solid #c1c1c1; }
-  /* line 210, /Users/omi/works/001_blog/source/css/style.scss */
+  /* line 211, /Users/omi/works/001_blog/source/css/style.scss */
   .articles .article-title {
     text-align: left;
     font-size: 18px; }
-    /* line 214, /Users/omi/works/001_blog/source/css/style.scss */
+    /* line 215, /Users/omi/works/001_blog/source/css/style.scss */
     .articles .article-title a {
       color: #333333; }
-      /* line 217, /Users/omi/works/001_blog/source/css/style.scss */
+      /* line 218, /Users/omi/works/001_blog/source/css/style.scss */
       .articles .article-title a:hover {
         color: gray; }
-  /* line 229, /Users/omi/works/001_blog/source/css/style.scss */
+  /* line 230, /Users/omi/works/001_blog/source/css/style.scss */
   .articles .article-summary {
     font-size: 14px !important; }
-    /* line 232, /Users/omi/works/001_blog/source/css/style.scss */
+    /* line 233, /Users/omi/works/001_blog/source/css/style.scss */
     .articles .article-summary h1, .articles .article-summary h2, .articles .article-summary h3, .articles .article-summary h4, .articles .article-summary h5, .articles .article-summary h6,
     .articles .article-summary div,
     .articles .article-summary p,
@@ -5020,37 +5021,37 @@ module
       border: none;
       margin: 0;
       padding: 0; }
-    /* line 244, /Users/omi/works/001_blog/source/css/style.scss */
+    /* line 245, /Users/omi/works/001_blog/source/css/style.scss */
     .articles .article-summary pre, .articles .article-summary iframe, .articles .article-summary img, .articles .article-summary br {
       display: none; }
 
-/* line 252, /Users/omi/works/001_blog/source/css/style.scss */
+/* line 253, /Users/omi/works/001_blog/source/css/style.scss */
 .share {
   border-bottom: 1px solid #c1c1c1;
   box-shadow: 0px 1px 0 0 #fff;
   padding-bottom: 40px;
   margin-bottom: 40px; }
-  /* line 259, /Users/omi/works/001_blog/source/css/style.scss */
+  /* line 260, /Users/omi/works/001_blog/source/css/style.scss */
   .share ul {
     padding: 0; }
-  /* line 263, /Users/omi/works/001_blog/source/css/style.scss */
+  /* line 264, /Users/omi/works/001_blog/source/css/style.scss */
   .share li {
     list-style-type: none;
     float: left;
     margin-right: 10px; }
-  /* line 269, /Users/omi/works/001_blog/source/css/style.scss */
+  /* line 270, /Users/omi/works/001_blog/source/css/style.scss */
   .share .share-facebook {
     margin-top: -12px; }
-  /* line 273, /Users/omi/works/001_blog/source/css/style.scss */
+  /* line 274, /Users/omi/works/001_blog/source/css/style.scss */
   .share .share-g-plus, .share .share-twitter {
     margin-right: 0px; }
 
-/* line 281, /Users/omi/works/001_blog/source/css/style.scss */
+/* line 282, /Users/omi/works/001_blog/source/css/style.scss */
 .page-title {
   margin-top: 0;
   margin-bottom: 60px; }
 
-/* line 288, /Users/omi/works/001_blog/source/css/style.scss */
+/* line 289, /Users/omi/works/001_blog/source/css/style.scss */
 .copyright {
   text-align: center;
   font-size: 12px;
