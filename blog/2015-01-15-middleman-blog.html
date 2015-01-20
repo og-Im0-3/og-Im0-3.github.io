@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>MiddlemanでブログをはじめるときのTips - 03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- js -->
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46748938-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- end -->
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">MiddlemanでブログをはじめるときのTips</h1>
+            <p class="article-date">2015/01/15</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <div class="article-body">
+            <p>年もあけて新たにブログをWordPressから、Middleman + GithubPagesを使用したものに変更しました。</p>
+
+<p><a href="https://middlemanapp.com/jp/">Middleman</a>とはRuby製の静的サイトジェネレーターです。<br>
+Middlemanには以下のような特徴があります。</p>
+
+<ul>
+<li>ERbを使用してテンプレートの作成が可能。</li>
+<li>Haml、Sass、CoffeeScriptのサポートを搭載</li>
+<li>Markdownでのページ作成も可能</li>
+<li>日本語ドキュメントあり</li>
+</ul>
+
+<p>こちらで生成された静的サイトをGithubPagesで公開してブログを更新しています。<br>
+Middlemanはコマンドラインで静的ファイルを生成しているのでデータベースは不要です。<br>
+ブラウザ上での管理画面などもないため、デスクトップ上で完結しています。</p>
+
+<h2>Middleman導入と使い方</h2>
+
+<h3>インストール</h3>
+
+<p>Rubyをインストールしたらコマンドラインで</p>
+
+<pre><code>$ gem install middleman
+</code></pre>
+
+<p>と入力してMiddlemanをインストールします。</p>
+
+<h3>環境を作る</h3>
+
+<p>環境を準備するにはコマンドラインで環境を作りたいフォルダへ移動します。</p>
+
+<pre><code>$ cd &lt;フォルダのパス&gt;
+</code></pre>
+
+<p>移動したら、以下のコマンドを実行してください。</p>
+
+<pre><code>$ middleman init my_project
+</code></pre>
+
+<p>コマンドを実行すると<code>my_project</code>という名前でフォルダが作成され、中には必要なファイルが一式作成されます。</p>
+
+<h3>開発の手順</h3>
+
+<p>まずプロジェクトフォルダへ移動します。</p>
+
+<pre><code>$ cd my_project
+</code></pre>
+
+<p>移動したら、以下のコマンドを実行してください。</p>
+
+<pre><code>$ bundle exec middleman server
+</code></pre>
+
+<p>コマンドを実行するとローカルサーバを起動します。<br>
+ブラウザで<code>http://localhost:4567/</code>を確認すると現在の状態を確認することができます。</p>
+
+<p>sourceフォルダ内を変更すると、サーバー上で変更の確認ができます。</p>
+
+<p>サイトが完成したら、最後に静的ファイルとして生成を行います。<br>
+以下のコマンドを実行します。</p>
+
+<pre><code>$ bundle exec middleman build
+</code></pre>
+
+<p>コマンドを実行するとbuildフォルダが生成され、中に静的サイトの状態でファイルが作成されます。</p>
+
+<h3>ブログとしてMiddlemanを使う</h3>
+
+<p>Middlemanにはブログ機能が拡張機能として用意されています。<br>
+またテンプレートが用意されていて、ブログ用テンプレートも準備されています。<br>
+テンプレートを使用してプロジェクトを作成する際は下記のコマンドを実行します。</p>
+
+<pre><code>$ middleman init my_project --template=blog
+</code></pre>
+
+<p>実行すると拡張機能であるブログ機能が追加された状態で、そのに合わせたファイルが生成されます。</p>
+
+<p>プロジェクトをすでに作成している場合はgemfileに以下を追加します。</p>
+
+<pre><code>gem &quot;middleman-blog&quot;
+</code></pre>
+
+<p>gemfileに追加したら、コマンドラインから以下を実行します。</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>実行すると<code>middleman-blog</code>がインストールされブログ機能が使用が可能です。
+ブログはMarkdownで書いて公開が可能です。</p>
+
+<h2>使用する際に必要なこと</h2>
+
+<p>MiddlemanはRubyで動いているた、やはりRubyをちょこっとでも知っていると使いやすいです。<br>
+またBundlerというRuby言語用のパッケージ管理システムを使用しています。<br>
+コマンドラインでインストールする際、先頭に<code>gem</code>をつけてインストールものを管理できます。<br>
+使い方は簡単なのでBundlerについてちょっと勉強しておくとよいと思います。</p>
+
+<p>これとGithubPagesを合わせて使うとローカルだけでブログの作成、確認、公開ができるので、WordPressよりも手軽に更新が行えるようになりました。<br>
+日本語ドキュメントもあるので静的サイトジェネレーターがどんな物かわからない人や、コマンドラインになじみのない人はここから初めて見るのもいいかもしれません。  </p>
+
+<p>静的サイトジェネレーターはほかにもJekyllやOctopressやHexoなどいろいろあるので、いろいろためしてみたいですね。</p>
+
+<p>次回はMiddlemanで作ったブログをGithubPagesで公開する手順を紹介いたします。</p>
+
+          </div>
+        </article>
+        <div class="share">
+          <ul>
+            <li class="share-hatena">
+              <a href="http://b.hatena.ne.jp/entry//blog/2015-01-15-middleman-blog.html" class="hatena-bookmark-button" data-hatena-bookmark-title="03LOG" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </li>
+            <li class="share-facebook">
+              <div class="fb-like" data-href="/blog/2015-01-15-middleman-blog.html" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </li>
+            <li class="share-twitter">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="Im0_3">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </li>
+            <li class="share-g-plus">
+              <div class="g-plusone" data-size="medium"></div>
+            </li>
+            <li>
+              <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+            </li>
+          </ul>
+        </div>
+        <div class="comment">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = '03log-comment'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>

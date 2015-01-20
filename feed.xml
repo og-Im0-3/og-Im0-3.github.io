@@ -5,10 +5,124 @@
   <id>http://03log.me/</id>
   <link href="http://03log.me/"/>
   <link href="http://03log.me/feed.xml" rel="self"/>
-  <updated>2014-12-11T00:00:00+09:00</updated>
+  <updated>2015-01-15T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>MiddlemanでブログをはじめるときのTips</title>
+    <link rel="alternate" href="http://03log.me/blog/2015-01-15-middleman-blog.html"/>
+    <id>http://03log.me/blog/2015-01-15-middleman-blog.html</id>
+    <published>2015-01-15T00:00:00+09:00</published>
+    <updated>2015-01-20T11:45:56+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;年もあけて新たにブログをWordPressから、Middleman + GithubPagesを使用したものに変更しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://middlemanapp.com/jp/"&gt;Middleman&lt;/a&gt;とはRuby製の静的サイトジェネレーターです。&lt;br&gt;
+Middlemanには以下のような特徴があります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ERbを使用してテンプレートの作成が可能。&lt;/li&gt;
+&lt;li&gt;Haml、Sass、CoffeeScriptのサポートを搭載&lt;/li&gt;
+&lt;li&gt;Markdownでのページ作成も可能&lt;/li&gt;
+&lt;li&gt;日本語ドキュメントあり&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらで生成された静的サイトをGithubPagesで公開してブログを更新しています。&lt;br&gt;
+Middlemanはコマンドラインで静的ファイルを生成しているのでデータベースは不要です。&lt;br&gt;
+ブラウザ上での管理画面などもないため、デスクトップ上で完結しています。&lt;/p&gt;
+
+&lt;h2&gt;Middleman導入と使い方&lt;/h2&gt;
+
+&lt;h3&gt;インストール&lt;/h3&gt;
+
+&lt;p&gt;Rubyをインストールしたらコマンドラインで&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install middleman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と入力してMiddlemanをインストールします。&lt;/p&gt;
+
+&lt;h3&gt;環境を作る&lt;/h3&gt;
+
+&lt;p&gt;環境を準備するにはコマンドラインで環境を作りたいフォルダへ移動します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd &amp;lt;フォルダのパス&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;移動したら、以下のコマンドを実行してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ middleman init my_project
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コマンドを実行すると&lt;code&gt;my_project&lt;/code&gt;という名前でフォルダが作成され、中には必要なファイルが一式作成されます。&lt;/p&gt;
+
+&lt;h3&gt;開発の手順&lt;/h3&gt;
+
+&lt;p&gt;まずプロジェクトフォルダへ移動します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd my_project
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;移動したら、以下のコマンドを実行してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle exec middleman server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コマンドを実行するとローカルサーバを起動します。&lt;br&gt;
+ブラウザで&lt;code&gt;http://localhost:4567/&lt;/code&gt;を確認すると現在の状態を確認することができます。&lt;/p&gt;
+
+&lt;p&gt;sourceフォルダ内を変更すると、サーバー上で変更の確認ができます。&lt;/p&gt;
+
+&lt;p&gt;サイトが完成したら、最後に静的ファイルとして生成を行います。&lt;br&gt;
+以下のコマンドを実行します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle exec middleman build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コマンドを実行するとbuildフォルダが生成され、中に静的サイトの状態でファイルが作成されます。&lt;/p&gt;
+
+&lt;h3&gt;ブログとしてMiddlemanを使う&lt;/h3&gt;
+
+&lt;p&gt;Middlemanにはブログ機能が拡張機能として用意されています。&lt;br&gt;
+またテンプレートが用意されていて、ブログ用テンプレートも準備されています。&lt;br&gt;
+テンプレートを使用してプロジェクトを作成する際は下記のコマンドを実行します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ middleman init my_project --template=blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実行すると拡張機能であるブログ機能が追加された状態で、そのに合わせたファイルが生成されます。&lt;/p&gt;
+
+&lt;p&gt;プロジェクトをすでに作成している場合はgemfileに以下を追加します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem &amp;quot;middleman-blog&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gemfileに追加したら、コマンドラインから以下を実行します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実行すると&lt;code&gt;middleman-blog&lt;/code&gt;がインストールされブログ機能が使用が可能です。
+ブログはMarkdownで書いて公開が可能です。&lt;/p&gt;
+
+&lt;h2&gt;使用する際に必要なこと&lt;/h2&gt;
+
+&lt;p&gt;MiddlemanはRubyで動いているた、やはりRubyをちょこっとでも知っていると使いやすいです。&lt;br&gt;
+またBundlerというRuby言語用のパッケージ管理システムを使用しています。&lt;br&gt;
+コマンドラインでインストールする際、先頭に&lt;code&gt;gem&lt;/code&gt;をつけてインストールものを管理できます。&lt;br&gt;
+使い方は簡単なのでBundlerについてちょっと勉強しておくとよいと思います。&lt;/p&gt;
+
+&lt;p&gt;これとGithubPagesを合わせて使うとローカルだけでブログの作成、確認、公開ができるので、WordPressよりも手軽に更新が行えるようになりました。&lt;br&gt;
+日本語ドキュメントもあるので静的サイトジェネレーターがどんな物かわからない人や、コマンドラインになじみのない人はここから初めて見るのもいいかもしれません。  &lt;/p&gt;
+
+&lt;p&gt;静的サイトジェネレーターはほかにもJekyllやOctopressやHexoなどいろいろあるので、いろいろためしてみたいですね。&lt;/p&gt;
+
+&lt;p&gt;次回はMiddlemanで作ったブログをGithubPagesで公開する手順を紹介いたします。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>ビジュアルや動きをコードで作るProcessing</title>
     <link rel="alternate" href="http://03log.me/blog/2014-12-11-visual-programing.html"/>
@@ -671,157 +785,6 @@ console.log(sort);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;すごい短くなります。便利！&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>jQuery.Deferredについてまとめてみた</title>
-    <link rel="alternate" href="http://03log.me/blog/2014-08-26-jq-deferred.html"/>
-    <id>http://03log.me/blog/2014-08-26-jq-deferred.html</id>
-    <published>2014-08-26T00:00:00+09:00</published>
-    <updated>2015-01-09T00:31:17+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;jQuery.Deferred()についてわからない部分もあったのでいろいろと調べてみました。&lt;/p&gt;
-
-&lt;h2&gt;$.Deferred()について&lt;/h2&gt;
-
-&lt;p&gt;・Deferrdオブジェクトは非同期処理を監視するためのオブジェクト&lt;br /&gt;
-・Deferrdオブジェクトの中にはPromiseオブジェクトというオブジェクトが内包している
-・PromiseオブジェクトはDeferrdの状態を保持している。&lt;br /&gt;
-状態は３種類&lt;br /&gt;
-pending 処理中の状態&lt;br /&gt;
-resolve 処理が成功したときの状態&lt;br /&gt;
-rejected　処理が失敗したときの状態&lt;br /&gt;
-・DeferredオブジェクトはPromiseの中身を変更する役割&lt;/p&gt;
-
-&lt;h2&gt;deferredの使い方&lt;/h2&gt;
-
-&lt;p&gt;deferredは下記のように使用します。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="javascript"&gt;var func  = function (){
-    var d = new $.Deferred;
-    setTimeout(function(){
-        console.log(&amp;#39;delay!&amp;#39;);
-        d.resolve();//Deferredオブジェクトをresolveに変更
-    },1000);
-    return d.promise();//Promiseオブジェクトだけを返す
-};
-
-var promise = func();
-promise.done(function(){
-    console.log(&amp;#39;resolved!&amp;#39;);
-}).fail(function(){
-    console.log(&amp;#39;rejected!&amp;#39;);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;func内でdeferredオブジェクトを呼び出して、funcが実行されたときにdefferredオブジェクトのpromiseを返します。
-かえってきたオブジェクトによって.done()、.fail()が実行されます。&lt;/p&gt;
-
-&lt;h3&gt;deferred.resolve()&lt;/h3&gt;
-
-&lt;p&gt;Deferredオブジェクトをresolveの状態に変更する&lt;/p&gt;
-
-&lt;h3&gt;deferred.rejected()&lt;/h3&gt;
-
-&lt;p&gt;Deferredオブジェクトをrejectedの状態に変更する&lt;/p&gt;
-
-&lt;h3&gt;deferred.promise()&lt;/h3&gt;
-
-&lt;p&gt;DeferredオブジェクトのPromiseオブジェクトを返す&lt;/p&gt;
-
-&lt;h3&gt;deferred.done()&lt;/h3&gt;
-
-&lt;p&gt;Deferredオブジェクトがresolveの時実行する&lt;/p&gt;
-
-&lt;h3&gt;deferred.fail()&lt;/h3&gt;
-
-&lt;p&gt;Deferredオブジェクトがrejectedの時実行する&lt;/p&gt;
-
-&lt;h2&gt;deferred.then()について&lt;/h2&gt;
-
-&lt;h3&gt;deferred.then()&lt;/h3&gt;
-
-&lt;p&gt;done()とfail()をいっぺんに記述することができる。&lt;br /&gt;
-先ほどのコードをthen()を使って書くとこうなる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="javascript"&gt;var func  = function (){
-    var d = new $.Deferred;
-    setTimeout(function(){
-        console.log(&amp;#39;delay!&amp;#39;);
-        d.resolve();//Deferredオブジェクトをresolveに変更
-    },1000);
-    return d.promise();//Promiseオブジェクトだけを返す
-};
-
-var promise = func();
-promise.then(function(){
-    console.log(&amp;#39;resolved!&amp;#39;);
-},function(){
-    console.log(&amp;#39;rejected!&amp;#39;);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;またdeferred.then()は新たにDeferredオブジェクトを返す&lt;br /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="javascript"&gt;var func = function func(){
-    var d = new $.Deferred;
-    setTimeout(function(){
-        console.log(&amp;#39;delay!&amp;#39;);
-        d.resolve();
-    },1000);
-    return d.promise();
-};
-
-func()
-.then(func)
-.then(func)
-.then(func);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上記のコードはそれぞれのdeferred.then()がDeferredオブジェクトを返すため、1秒ごとにconsole.logが実行される。&lt;/p&gt;
-
-&lt;h2&gt;deferred.when()について&lt;/h2&gt;
-
-&lt;h3&gt;deferred.when()&lt;/h3&gt;
-
-&lt;p&gt;複数  のDeferredオブジェクトをまとめて、新たにDeferredオブジェクトを返す。&lt;br /&gt;
-下記のように使用する。&lt;/p&gt;
-
-&lt;p&gt;[code lang=javascript]
-$.when(func(), func(), func())
-.done(hello1);
-[/code]&lt;/p&gt;
-
-&lt;p&gt;when()の中がすべてresolovedの場合はresolovedになる。&lt;br /&gt;
-rejectedが一つでも含まれるの場合はrejectedになる。&lt;br /&gt;
-pendingの状態の場合は処理が進まない。&lt;/p&gt;
-
-&lt;h2&gt;jQuery.ajax()・jQuery.getJSON()について&lt;/h2&gt;
-
-&lt;p&gt;ajaxなどで返されるjqXHRオブジェクトに対しても.done(),.fail(),.then()が使用できます
-またリクエスト完了時に実行される.always()も使用可能です。&lt;/p&gt;
-
-&lt;p&gt;[code lang=javascript]
-$.ajax({
-    url: &amp;ldquo;data.json&amp;rdquo;,
-    data: data,
-    dataType: &amp;ldquo;json&amp;rdquo;
-}).done(function(){
-    console.log(&amp;#039;done!&amp;#039;);
-}).fail(function(){
-    console.log(&amp;#039;fail!&amp;#039;);
-}).always(function(){
-    console.log(&amp;#039;complete!&amp;#039;);
-});
-[/code]&lt;/p&gt;
-
-&lt;p&gt;下記のサイトを参考にさせていただきました。ありがとうございました。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;a href="http://techblog.yahoo.co.jp/programming/jquery-deferred/" target="_blank"&gt;爆速でわかるjQuery.Deferred超入門&lt;/a&gt;
-&lt;/blockquote&gt;
 </content>
   </entry>
 </feed>
