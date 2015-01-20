@@ -5,16 +5,16 @@
   <id>http://03log.me/</id>
   <link href="http://03log.me/"/>
   <link href="http://03log.me/feed.xml" rel="self"/>
-  <updated>2015-01-15T00:00:00+09:00</updated>
+  <updated>2015-01-19T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
     <title>MiddlemanでブログをはじめるときのTips</title>
-    <link rel="alternate" href="http://03log.me/blog/2015-01-15-middleman-blog.html"/>
-    <id>http://03log.me/blog/2015-01-15-middleman-blog.html</id>
-    <published>2015-01-15T00:00:00+09:00</published>
-    <updated>2015-01-20T11:57:57+09:00</updated>
+    <link rel="alternate" href="http://03log.me/blog/2015-01-19-middleman-blog.html"/>
+    <id>http://03log.me/blog/2015-01-19-middleman-blog.html</id>
+    <published>2015-01-19T00:00:00+09:00</published>
+    <updated>2015-01-20T12:00:31+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
