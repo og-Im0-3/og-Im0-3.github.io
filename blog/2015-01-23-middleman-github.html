@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Middlemanで作ったブログをGithubで公開する - 03LOG</title>
+    <meta name="discription" content="content">
+    <meta name="keyword" content="Web, ウェブデザイン, フロントエンド, HTML, CSS, JavaScript">
+    <meta property="og:url" content="http:03log.me">
+    <meta property="og:site_name" content="03LOG">
+    <meta property="og:img" content="content">
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <!-- css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/dark.min.css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- js -->
+    <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/bootstrap/collapse.js"></script>
+    <script src="/js/common.js"></script>
+    <!-- google + -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'ja'}
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46748938-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <!-- fb-jssdk -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=276693132522757&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- end -->
+    <header class="l-header navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo navbar-brand"><img src="/img/logo.svg" alt="" width="62"></a>
+        </div>
+        <nav id="navbar" class="l-nav navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/web.html">Web</a></li>
+            <li><a href="/categories/design.html">Design</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container l-content">
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">Middlemanで作ったブログをGithubで公開する</h1>
+            <p class="article-date">2015/01/23</p>
+            <p class="article-cat"><a href="/categories/web.html">Web</a></p>
+          </header>
+          <div class="article-body">
+            <p><a href="/blog/2015-01-19-middleman-blog.html">前回</a>の続きです。<br>
+Middlemanで作ったブログをGithubで公開したときに参考にしたものをまとめました。<br>
+主に行ったのは以下の内容です。</p>
+
+<ul>
+<li>独自ドメインでGithubPagesを使用する。</li>
+<li>ムームードメインで取得したドメインを使用する</li>
+</ul>
+
+<h2>独自ドメインでGithubPagesを使用する</h2>
+
+<p>GithubPagesでMiddlemanで作った静的サイトを公開する手順は以下の記事を参考にしました。<br>
+<a href="http://blog.coiney.com/2013/06/21/host-middleman-blog-on-github/">middleman-blogをgithubでホストする - Coiney Developer Blog</a>  </p>
+
+<p>GithubPagesは公開リポジトリで作成すると無料でページを公開することができるという便利な機能です。<br>
+データベースや動的なサイトは公開できませんが、静的サイトを手軽に公開できます。  </p>
+
+<h3>独自ドメインを使用するには？</h3>
+
+<p>独自ドメインを使用するにはorganizationアカウントかプロジェクトアカウントを利用する必要があります。<br>
+organizationとは簡単にいうとグループアカウントです。<br>
+チームでリポジトリを管理する場合にはorganizationアカウントで行います。  </p>
+
+<p>Githubアカウントを既に持っている際は画面右上にあるメニューから作成が可能です。</p>
+
+<p><img alt="Github organizationアカウントを作成する" src="/img/2015-01-23/GitHub.png" /></p>
+
+<p>アカウントを作成する場合はまだ登録していないメールアドレスが必要なので事前に準備しましょう。<br>
+今回はOrganizationアカウントで行いました。</p>
+
+<h3>OrganizationでGithubPagesを使用する場合</h3>
+
+<p>Organizationの場合はレポジトリ名をusername/username.github.ioとしなければなりません。<br>
+また、masterブランチのコンテンツが公開されます。</p>
+
+<h2>Githubにデプロイするための環境を作る</h2>
+
+<p>基本はMiddlemanでbuildしたファイルをmasterブランチにデプロイすればいいのですが、Middlemanには<a href="https://github.com/karlfreeman/middleman-deploy">middleman-deploy</a>という拡張機能があるのでそれを使うことにしました。</p>
+
+<p>使い方は、まず<code>Gemfiles</code>に以下を追加して</p>
+
+<pre><code>gem &#39;middleman-deploy&#39;
+</code></pre>
+
+<p>コマンドラインでインストールを行います。</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<p>config.rbに以下を使いします。</p>
+
+<pre><code>activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = &#39;master&#39;
+end
+</code></pre>
+
+<p>あとはコマンドラインでbuildした後にdeployするだけです。</p>
+
+<pre><code>$ bundle exec middleman build
+$ bundle exec middleman deploy
+</code></pre>
+
+<h2>ムームードメインで取得したドメインを使用する</h2>
+
+<p>ムームードメインでドメインを取得していたのですが、Apex Aliasの設定が必要ということで、こちらの記事を参考にGithubPagesのドメイン変更を行いました。<br>
+<a href="http://hamasyou.com/blog/2014/03/05/github-pages-custom-domain/">ムームードメイン+GitHub Pagesで独自ドメインを使う方法 - それはBooks</a></p>
+
+<p>この手順で独自ドメインで無事Middlemanで作成したblogを公開することができました。</p>
+
+          </div>
+        </article>
+        <div class="share">
+          <ul>
+            <li class="share-hatena">
+              <a href="http://b.hatena.ne.jp/entry//blog/2015-01-23-middleman-github.html" class="hatena-bookmark-button" data-hatena-bookmark-title="03LOG" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </li>
+            <li class="share-facebook">
+              <div class="fb-like" data-href="/blog/2015-01-23-middleman-github.html" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </li>
+            <li class="share-twitter">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="Im0_3">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </li>
+            <li class="share-g-plus">
+              <div class="g-plusone" data-size="medium"></div>
+            </li>
+            <li>
+              <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+            </li>
+          </ul>
+        </div>
+        <div class="comment">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = '03log-comment'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    <footer class="l-footer">
+      <p class="copyright">&copy;2014 03LOG</p>
+    </footer>
+  </body>
+</html>

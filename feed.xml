@@ -5,10 +5,90 @@
   <id>http://03log.me/</id>
   <link href="http://03log.me/"/>
   <link href="http://03log.me/feed.xml" rel="self"/>
-  <updated>2015-01-19T00:00:00+09:00</updated>
+  <updated>2015-01-23T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Middlemanで作ったブログをGithubで公開する</title>
+    <link rel="alternate" href="http://03log.me/blog/2015-01-23-middleman-github.html"/>
+    <id>http://03log.me/blog/2015-01-23-middleman-github.html</id>
+    <published>2015-01-23T00:00:00+09:00</published>
+    <updated>2015-01-24T00:56:01+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="/blog/2015-01-19-middleman-blog.html"&gt;前回&lt;/a&gt;の続きです。&lt;br&gt;
+Middlemanで作ったブログをGithubで公開したときに参考にしたものをまとめました。&lt;br&gt;
+主に行ったのは以下の内容です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;独自ドメインでGithubPagesを使用する。&lt;/li&gt;
+&lt;li&gt;ムームードメインで取得したドメインを使用する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;独自ドメインでGithubPagesを使用する&lt;/h2&gt;
+
+&lt;p&gt;GithubPagesでMiddlemanで作った静的サイトを公開する手順は以下の記事を参考にしました。&lt;br&gt;
+&lt;a href="http://blog.coiney.com/2013/06/21/host-middleman-blog-on-github/"&gt;middleman-blogをgithubでホストする - Coiney Developer Blog&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;GithubPagesは公開リポジトリで作成すると無料でページを公開することができるという便利な機能です。&lt;br&gt;
+データベースや動的なサイトは公開できませんが、静的サイトを手軽に公開できます。  &lt;/p&gt;
+
+&lt;h3&gt;独自ドメインを使用するには？&lt;/h3&gt;
+
+&lt;p&gt;独自ドメインを使用するにはorganizationアカウントかプロジェクトアカウントを利用する必要があります。&lt;br&gt;
+organizationとは簡単にいうとグループアカウントです。&lt;br&gt;
+チームでリポジトリを管理する場合にはorganizationアカウントで行います。  &lt;/p&gt;
+
+&lt;p&gt;Githubアカウントを既に持っている際は画面右上にあるメニューから作成が可能です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Github organizationアカウントを作成する" src="/img/2015-01-23/GitHub.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;アカウントを作成する場合はまだ登録していないメールアドレスが必要なので事前に準備しましょう。&lt;br&gt;
+今回はOrganizationアカウントで行いました。&lt;/p&gt;
+
+&lt;h3&gt;OrganizationでGithubPagesを使用する場合&lt;/h3&gt;
+
+&lt;p&gt;Organizationの場合はレポジトリ名をusername/username.github.ioとしなければなりません。&lt;br&gt;
+また、masterブランチのコンテンツが公開されます。&lt;/p&gt;
+
+&lt;h2&gt;Githubにデプロイするための環境を作る&lt;/h2&gt;
+
+&lt;p&gt;基本はMiddlemanでbuildしたファイルをmasterブランチにデプロイすればいいのですが、Middlemanには&lt;a href="https://github.com/karlfreeman/middleman-deploy"&gt;middleman-deploy&lt;/a&gt;という拡張機能があるのでそれを使うことにしました。&lt;/p&gt;
+
+&lt;p&gt;使い方は、まず&lt;code&gt;Gemfiles&lt;/code&gt;に以下を追加して&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem &amp;#39;middleman-deploy&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コマンドラインでインストールを行います。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;config.rbに以下を使いします。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = &amp;#39;master&amp;#39;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;あとはコマンドラインでbuildした後にdeployするだけです。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle exec middleman build
+$ bundle exec middleman deploy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;ムームードメインで取得したドメインを使用する&lt;/h2&gt;
+
+&lt;p&gt;ムームードメインでドメインを取得していたのですが、Apex Aliasの設定が必要ということで、こちらの記事を参考にGithubPagesのドメイン変更を行いました。&lt;br&gt;
+&lt;a href="http://hamasyou.com/blog/2014/03/05/github-pages-custom-domain/"&gt;ムームードメイン+GitHub Pagesで独自ドメインを使う方法 - それはBooks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この手順で独自ドメインで無事Middlemanで作成したblogを公開することができました。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>MiddlemanでブログをはじめるときのTips</title>
     <link rel="alternate" href="http://03log.me/blog/2015-01-19-middleman-blog.html"/>
@@ -731,60 +811,6 @@ function setup(){
 &lt;p&gt;もうちょい効率よくかけるのかなーといろいろ考えたんですが、短時間で書いたらとりあえずこんな感じになりました。&lt;/p&gt;
 
 &lt;p&gt;お手軽に図形を書くには使いやすく書きやすかったです。Processingとほぼ同じようにかけるのと、基本はJavaScriptなのでProcessing・JavaScriptを書いたことある人には使いやすいと思います。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>【JavaScript】配列で重複したものをはじく</title>
-    <link rel="alternate" href="http://03log.me/blog/2014-08-29-js-array-remove.html"/>
-    <id>http://03log.me/blog/2014-08-29-js-array-remove.html</id>
-    <published>2014-08-29T00:00:00+09:00</published>
-    <updated>2015-01-09T00:34:17+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;配列内で重複したものをはじくっていう処理を書いたのでメモ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="javascript"&gt;var array = [&amp;#39;A&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;D&amp;#39;,&amp;#39;B&amp;#39;];
-var sort = [];
-var flag;
-sort.push(array[0]);
-
-for(var i = 0; i &amp;lt; array.length; i++){
-  flag = true;
-  for(var j = 0; j &amp;lt; sort.length; j++){
-    if(array[i] === sort[j]){
-      flag = false;
-    }
-  }
-
-  if(flag){
-    sort.push(array[i]);
-  }
-}
-
-console.log(sort);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;配列内の値をひとつづつチェックしていって、別の配列にpushする。
-array[i]とsort[j]が一致してしまったときはflagにfalseを入れpushしないようにする。&lt;/p&gt;
-
-&lt;p&gt;今回はIE8も対応するので使いないけど、ECMAScript 5からArray.filter()という便利なものがあるそうです。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;a href="http://qiita.com/cocottejs/items/7afe6d5f27ee7c36c61f" target="_blank"&gt;JavaScript - 配列の重複をはじく、もしくは重複を取り出す - Qiita&lt;/a&gt;
-&lt;a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank"&gt;Array.filter - JavaScript | MDN&lt;/a&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Array.filter()を使って書き直すと&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class="javascript"&gt;var array = [&amp;#39;A&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;A&amp;#39;,&amp;#39;C&amp;#39;,&amp;#39;D&amp;#39;,&amp;#39;B&amp;#39;];
-var sort = array.filter(function (x, i, self) {
-  return self.indexOf(x) === i;
-});
-console.log(sort);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;すごい短くなります。便利！&lt;/p&gt;
 </content>
   </entry>
 </feed>
