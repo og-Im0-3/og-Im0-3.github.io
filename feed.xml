@@ -18,7 +18,7 @@
     <author>
       <name>Omi Yusuke</name>
     </author>
-    <category/>
+    <category>Web</category>
     <content type="html">&lt;p&gt;&lt;a href="/blog/2015-01-19-middleman-blog.html"&gt;前回&lt;/a&gt;の続きです。&lt;br&gt;
 Middlemanで作ったブログをGithubで公開したときに参考にしたものをまとめました。&lt;br&gt;
 主に行ったのは以下の内容です。&lt;/p&gt;
@@ -99,7 +99,7 @@ $ bundle exec middleman deploy
     <author>
       <name>Omi Yusuke</name>
     </author>
-    <category/>
+    <category>Web</category>
     <content type="html">&lt;p&gt;年もあけて新たにブログをWordPressから、Middleman + GithubPagesを使用したものに変更しました。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://middlemanapp.com/jp/"&gt;Middleman&lt;/a&gt;とはRuby製の静的サイトジェネレーターです。&lt;br&gt;
@@ -214,7 +214,7 @@ Middlemanはコマンドラインで静的ファイルを生成しているの�
     <author>
       <name>Omi Yusuke</name>
     </author>
-    <category/>
+    <category>Web</category>
     <content type="html">&lt;p&gt;&lt;a href="http://theguild.jp/" target="_blank"&gt;THE GUILD&lt;/a&gt;の皆さんがやっているインタラクティブ・プログラミング勉強会の記事をみて触発されたので、最近Processingでちょこちょことスケッチを書いています。&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -261,7 +261,7 @@ Middlemanはコマンドラインで静的ファイルを生成しているの�
     <author>
       <name>Omi Yusuke</name>
     </author>
-    <category/>
+    <category>Web</category>
     <content type="html">&lt;p&gt;今までOOCSS、BEMの考えを取り入れたコーディングをしていたのですが、今回SMACSSのルールに従ってコーディングしてみたので考え方と、感想をメモします。&lt;/p&gt;
 
 &lt;p&gt;今回コーディングするにあたり、下記を参考にしました。&lt;br /&gt;
@@ -443,7 +443,7 @@ BEMのBlock、Elementの考え方と似ています。
     <author>
       <name>Omi Yusuke</name>
     </author>
-    <category/>
+    <category>Web</category>
     <content type="html">&lt;p&gt;gulpを触ってみたら使い勝手がかなりよかったので、gulpの使い方をメモ。&lt;/p&gt;
 
 &lt;h2&gt;gulpとは&lt;/h2&gt;
@@ -654,7 +654,7 @@ gulp.src()でコンパイルするファイルを指定して、.pipe()でgulp-s
     <author>
       <name>Omi Yusuke</name>
     </author>
-    <category/>
+    <category>Web</category>
     <content type="html">&lt;p&gt;p5.jsを使ってみたのでメモ。&lt;br /&gt;
 p5.jsはJavaScriptでProcessingっぽくビジュアルプログラミングができるライブラリです。&lt;/p&gt;
 
