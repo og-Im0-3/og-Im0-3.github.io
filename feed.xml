@@ -9,7 +9,7 @@
   <author>
     <name>Omi Yusuke</name>
   </author>
-  <item>
+  <entry>
     <title>Middlemanで作ったブログをGithubで公開する</title>
     <link rel="alternate" href="http://03log.me/blog/2015-01-23-middleman-github.html"/>
     <id>http://03log.me/blog/2015-01-23-middleman-github.html</id>
@@ -89,8 +89,8 @@ $ bundle exec middleman deploy
 
 &lt;p&gt;この手順で独自ドメインで無事Middlemanで作成したblogを公開することができました。&lt;/p&gt;
 </content>
-  </item>
-  <item>
+  </entry>
+  <entry>
     <title>MiddlemanでブログをはじめるときのTips</title>
     <link rel="alternate" href="http://03log.me/blog/2015-01-19-middleman-blog.html"/>
     <id>http://03log.me/blog/2015-01-19-middleman-blog.html</id>
@@ -204,8 +204,8 @@ Middlemanはコマンドラインで静的ファイルを生成しているの�
 
 &lt;p&gt;次回はMiddlemanで作ったブログをGithubPagesで公開する手順を紹介いたします。&lt;/p&gt;
 </content>
-  </item>
-  <item>
+  </entry>
+  <entry>
     <title>ビジュアルや動きをコードで作るProcessing</title>
     <link rel="alternate" href="http://03log.me/blog/2014-12-11-visual-programing.html"/>
     <id>http://03log.me/blog/2014-12-11-visual-programing.html</id>
@@ -251,8 +251,8 @@ Middlemanはコマンドラインで静的ファイルを生成しているの�
 &lt;p&gt;tumblrにも作ったもの貯めていくのでよければご覧ください。
 &lt;a href="https://www.tumblr.com/blog/omi-sketch" target="_blank"&gt;Omi&amp;rsquo;s sketch&lt;/a&gt;&lt;/p&gt;
 </content>
-  </item>
-  <item>
+  </entry>
+  <entry>
     <title>SMACSSを利用したCSS設計について</title>
     <link rel="alternate" href="http://03log.me/blog/2014-09-30-smacss.html"/>
     <id>http://03log.me/blog/2014-09-30-smacss.html</id>
@@ -433,8 +433,8 @@ BEMのBlock、Elementの考え方と似ています。
 &lt;p&gt;以前はBEMを参考に自分なりルールで構築を行っていたのですが、今回SMACSSを使用してみてこのルールは自分の中でもCSSをより理解しやすくできるように感じました。
 大規模な開発では世の中にあるさまざまなCSS設計からいろいろと学び、より強固なCSS設計を行っていくのが今後必要だなと感じました。&lt;/p&gt;
 </content>
-  </item>
-  <item>
+  </entry>
+  <entry>
     <title>わかりやすくて軽快なビルドシステム gulpのはじめ方</title>
     <link rel="alternate" href="http://03log.me/blog/2014-09-07-gulp-setup.html"/>
     <id>http://03log.me/blog/2014-09-07-gulp-setup.html</id>
@@ -644,8 +644,8 @@ gulp.src()でコンパイルするファイルを指定して、.pipe()でgulp-s
 
 &lt;p&gt;まだ使い初めなので、もし間違いなどございましたらご指摘いただけたら幸いです。&lt;/p&gt;
 </content>
-  </item>
-  <item>
+  </entry>
+  <entry>
     <title>processingっぽくかけるp5.jsでフラクタル図形を書いてみた</title>
     <link rel="alternate" href="http://03log.me/blog/2014-08-31-p5-js-fractale.html"/>
     <id>http://03log.me/blog/2014-08-31-p5-js-fractale.html</id>
@@ -818,5 +818,5 @@ function setup(){
 
 &lt;p&gt;お手軽に図形を書くには使いやすく書きやすかったです。Processingとほぼ同じようにかけるのと、基本はJavaScriptなのでProcessing・JavaScriptを書いたことある人には使いやすいと思います。&lt;/p&gt;
 </content>
-  </item>
+  </entry>
 </feed>
